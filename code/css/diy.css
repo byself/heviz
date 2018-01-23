@@ -1,0 +1,26 @@
+/**
+    create by wangzili on 2018/1/22
+ */
+
+.diy-card{
+    position: relative;
+    margin-top: .5rem;
+}
+
+.diy-card img{
+    display: block;
+    width: 100%;
+    heigit: auto;
+}
+
+.diy-card .text{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    text-align: center;
+    font-size: .7rem;
+    color:#FFF;
+    background-color: rgba(133, 106, 175, .8);
+}

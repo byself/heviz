@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- //
+            1. 样式文件加载有先后顺序：normalize.css -> common.css
+            2. normalize.css是重置样式，必须首先被加载；
+            3. main.css是公共样式;
+         //-->
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../css/common.css">
+        <link rel="stylesheet" href="../..//js/vendor/swiper/css/swiper.min.css">
+        <link rel="stylesheet" href="../../css/index.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <header class="head">
+                <div class="logo">
+                    <img src="../../images/logo.png" alt="HEVIZ">
+                </div>
+
+                <div class="head-left">
+                    <div class="bell-box">
+                        <div class="bell-count"><span>6</span></div>
+                    </div>
+                </div>
+
+                <div class="head-right">
+                    <div class="cart-box">
+                        <div class="cart-count"><span>6</span></div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main" id="main">
+                <div class="index-mod" id="mod1">
+                    <a href=""><img src="../../images/thumb-video.jpg" alt=""></a>
+                </div>
+
+                <div class="index-mod" id="mod2">
+                    <a href=""><img src="../../images/img01.jpg" alt=""></a>
+                </div>
+
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url('../../images/slide01.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide02.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide03.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide04.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide05.jpg')"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </main>
+
+            <footer class="foot">
+                <div class="page-tabs">
+                    <a class="page-tab page-home on" href="/pages/index/">
+                        <i class="icon"></i>
+                        <div>首页</div>
+                    </a>
+                    <a class="page-tab page-product" href="/pages/product/">
+                        <i class="icon"></i>
+                        <div>系列</div>
+                    </a>
+                    <a class="page-tab page-diy" href="/pages/diy/">
+                        <i class="icon"></i>
+                        <div>定制</div>
+                    </a>
+                    <a class="page-tab page-search" href="/pages/search/">
+                        <i class="icon"></i>
+                        <div>发现</div>
+                    </a>
+                    <a class="page-tab page-user" href="/pages/user/">
+                        <i class="icon"></i>
+                        <div>我的</div>
+                    </a>
+                </div>
+            </footer>
+        </div>
+
+        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+
+        <script>
+
+            $(function(){
+
+                var swiper = new Swiper('.swiper-container', {
+                    direction: 'vertical',
+                    allowTouchMove: false,
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                });
+
+
+                var mod1Height = $("#mod1").outerHeight(true);
+                var mod2Height = $("#mod2").outerHeight(true);
+
+                console.log("contentHeight:", mod1Height + mod2Height)
+
+                $("#main").scroll(function(){
+                    var scrollTop = $("#main").scrollTop();
+
+                    console.log("scrollTop:", scrollTop);
+                    console.log("scrollTop2:", Math.abs(scrollTop - mod1Height - mod2Height));
+
+                    if(  Math.abs(scrollTop - mod1Height - mod2Height) < 1 ){
+                        swiper.allowTouchMove = true;
+                    }
+                });
+
+            })
+
+        </script>
+    </body>
+</html>

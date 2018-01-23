@@ -1,0 +1,138 @@
+/**
+    create by wangzili on 2018/1/23
+ */
+
+.head{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 2.8rem;
+    border-bottom: 1px solid #a3a3a3;
+    background-color: #FFF;
+}
+
+.logo{
+    padding: .25rem 0;
+    text-align: center;
+}
+
+.logo img{
+    width: 110px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.head-left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.bell-box{
+    position: relative;
+    margin: .75rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url("../images/icon-bells.png") no-repeat;
+    background-size: 100% auto;
+}
+
+.bell-count{
+    position: absolute;
+    right: -.3rem;
+    top: -.3rem;
+    min-width: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .6rem;
+    color: #FFF;
+    border-radius: .4rem;
+    background-color: #f00;
+    text-align: center;
+}
+
+.bell-count span{
+    padding:0 4px;
+}
+
+.head-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.cart-box{
+    position: relative;
+    margin: .75rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url("../images/icon-cart.png") no-repeat;
+    background-size: 100% auto;
+}
+
+.cart-count{
+    position: absolute;
+    right: -.3rem;
+    top: -.3rem;
+    min-width: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .6rem;
+    color: #FFF;
+    border-radius: .4rem;
+    background-color: #f00;
+    text-align: center;
+}
+
+.cart-count span{
+    padding:0 4px;
+}
+
+.main{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.index-mod img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* 重写swiper样式 */
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide{
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 50% 50%;
+}
+
+.swiper-pagination-bullet{
+    width: 3px;
+    height: 16px;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.swiper-pagination-bullet-active{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets{
+    right: 36px;
+}
