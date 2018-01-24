@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>定制</title>
+        <title>来石定制</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,13 +16,15 @@
             3. main.css是公共样式;
          //-->
         <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../..//js/vendor/videojs/video.min.css">
+
         <link rel="stylesheet" href="../../css/common.css">
         <link rel="stylesheet" href="../../css/diy.css">
     </head>
     <body>
         <div class="container">
             <header class="topnav">
-                <div class="topnav-title">定制</div>
+                <div class="topnav-title">来石定制</div>
                 <div class="topnav-left">
                     <a class="btn-back"></a>
                 </div>
@@ -30,19 +32,13 @@
 
             <main class="main">
 
-                <div class="diy-cards">
-                    <div class="diy-card">
-                        <a href="diy.html">
-                            <img src="../../images/img-diy-01.jpg" alt="个性定制" />
-                            <div class="text">个性定制</div>
-                        </a>
-                    </div>
-                    <div class="diy-card">
-                        <a href="photoDiy.html">
-                            <img src="../../images/img-diy-02.jpg" alt="照片定制" />
-                            <div class="text">照片定制</div>
-                        </a>
-                    </div>
+                <div class="video-container">
+                    <video id="video" class="video-js vjs-big-play-centered"></video>
+                </div>
+
+                <div class="diy-ls-btn">
+                    <img src="../../images/diy-ls-01.jpg" alt="开始定制">
+                    <a class="ls-btn" href="lsDetail.html">开始定制</a>
                 </div>
 
             </main>
@@ -75,5 +71,35 @@
 
         <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="../../js/vendor/videojs/video.min.js"></script>
+
+        <script>
+            $(function() {
+
+                videojs("video", {
+                    loop: true,
+                    autoplay: false,
+                    muted: true,
+                    preload: "auto",
+                    poster: "../../images/diy-video.jpg",
+                    fluid: true,
+                    controls: true,
+                    sources: [{
+                        src: 'http://vjs.zencdn.net/v/oceans.mp4',
+                        type: 'video/mp4'
+                    }, {
+                        src: 'http://vjs.zencdn.net/v/oceans.webm',
+                        type: 'video/webm'
+                    }],
+                    controlBar: {
+                        captionsButton: false,
+                        chaptersButton: false,
+                        liveDisplay: false,
+                        playbackRateMenuButton: false,
+                        subtitlesButton: false
+                    }
+                });
+            })
+        </script>
     </body>
 </html>

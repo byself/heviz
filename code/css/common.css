@@ -36,6 +36,8 @@ html, body{
     bottom: 0;
     left: 0;
     right: 0;
+    max-width: 37.5rem;
+    margin: 0 auto;
     height: 3.75rem;
     border-top: 1px solid #a3a3a3;
     background-color: #FFF;
@@ -101,6 +103,7 @@ html, body{
     z-index: 999;
     position: fixed;
     top: 0;
+    max-width: 37.5rem;
     width: 100%;
     height: 2.25rem;
     border-bottom: 1px solid #a3a3a3;
@@ -127,4 +130,35 @@ html, body{
     height: 1.25rem;
     background: url("../images/icon-back.png") no-repeat;
     background-size: 100% auto;
+}
+
+/* 重写swiper样式 */
+.page-slide{
+    height: 100%;
+}
+
+.page-slide .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.page-slide .swiper-slide{
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 50% 50%;
+}
+
+.page-slide .swiper-pagination-bullet{
+    width: 3px;
+    height: 16px;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.page-slide .swiper-pagination-bullet-active{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.page-slide .swiper-container-vertical>.swiper-pagination-bullets{
+    right: 36px;
 }

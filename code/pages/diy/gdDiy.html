@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>定制</title>
+        <title>高端定制</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,13 +16,16 @@
             3. main.css是公共样式;
          //-->
         <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../..//js/vendor/swiper/css/swiper.min.css">
+
+
         <link rel="stylesheet" href="../../css/common.css">
         <link rel="stylesheet" href="../../css/diy.css">
     </head>
     <body>
         <div class="container">
             <header class="topnav">
-                <div class="topnav-title">定制</div>
+                <div class="topnav-title">高端定制</div>
                 <div class="topnav-left">
                     <a class="btn-back"></a>
                 </div>
@@ -30,18 +33,20 @@
 
             <main class="main">
 
-                <div class="diy-cards">
-                    <div class="diy-card">
-                        <a href="diy.html">
-                            <img src="../../images/img-diy-01.jpg" alt="个性定制" />
-                            <div class="text">个性定制</div>
-                        </a>
-                    </div>
-                    <div class="diy-card">
-                        <a href="photoDiy.html">
-                            <img src="../../images/img-diy-02.jpg" alt="照片定制" />
-                            <div class="text">照片定制</div>
-                        </a>
+                <div class="page-slide">
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image: url('../../images/diy-slide-01.jpg')"></div>
+                            <div class="swiper-slide" style="background-image: url('../../images/diy-slide-02.jpg')"></div>
+                            <div class="swiper-slide" style="background-image: url('../../images/diy-slide-03.jpg')">
+
+                                <div class="slide-btn">开始您的定制 ></div>
+
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
 
@@ -75,5 +80,22 @@
 
         <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+        <script>
+
+            $(function(){
+
+                var swiper = new Swiper('.swiper-container', {
+                    direction: 'vertical',
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                });
+
+            });
+
+        </script>
     </body>
 </html>

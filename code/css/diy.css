@@ -17,10 +17,105 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.25rem;
-    line-height: 2.25rem;
+    height: 2.75rem;
+    line-height: 2.75rem;
     text-align: center;
     font-size: .7rem;
     color:#FFF;
     background-color: rgba(133, 106, 175, .8);
+}
+
+.main{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 37.5rem;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+
+/* 高端定制 */
+.slide-btn{
+    position: absolute;
+    bottom: 3.5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 7.05rem;
+    height: 1.65rem;
+    text-align: center;
+    line-height:1.65rem;
+    font-size: .65rem;
+    color: #e7e7e7;
+    border: 1px solid #ffffff;
+}
+
+/* 重写swiper样式 */
+.page-slide .swiper-slide{
+    background-size: 100% 100%;
+}
+
+/* 来石定制 */
+.video-dimensions.vjs-fluid{
+    padding-top: 100%;
+}
+
+.video-container{
+    margin-top: .5rem;
+}
+
+.diy-ls-btn{
+    position: relative;
+    margin-top: .5rem;
+}
+
+.diy-ls-btn img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.diy-ls-btn .ls-btn{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2.5rem;
+    margin: auto;
+    width: 5.75rem;
+    height: 1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: .7rem;
+    color: #856aaf;
+    border-radius: .75rem;
+    background-color: #FFF;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    text-decoration: none;
+}
+
+.ls-swiper{
+    height: 6rem;
+    border-bottom: 1px solid #a3a3a3;
+}
+
+.ls-swiper .swiper-slide{
+    width: 4.4rem;
+    text-align: center;
+    font-size: .75rem;
+    border-bottom: 2px solid #FFF;
+}
+
+.ls-swiper .swiper-slide img{
+    margin-bottom: .4rem;
+    width: 3rem;
+    height: auto;
+}
+
+.ls-swiper .swiper-slide.swiper-slide-active{
+    border-color:#4a387b;
+    color: #4a387b;
 }

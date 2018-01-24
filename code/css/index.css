@@ -6,6 +6,7 @@
     z-index: 999;
     position: fixed;
     top: 0;
+    max-width: 37.5rem;
     width: 100%;
     height: 2.8rem;
     border-bottom: 1px solid #a3a3a3;
@@ -97,44 +98,22 @@
     right: 0;
     top: 0;
     bottom: 0;
+    margin: auto;
+    max-width: 37.5rem;
     padding-top: 0;
     padding-bottom: 0;
     overflow: auto;
     -webkit-overflow-scrolling: touch
 }
 
+.index-mod{
+    margin-bottom: 1rem;
+}
+
 .index-mod img{
     width: 100%;
     height: auto;
-}
-
-
-/* 重写swiper样式 */
-
-.swiper-container {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide{
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: 50% 50%;
-}
-
-.swiper-pagination-bullet{
-    width: 3px;
-    height: 16px;
-    border-radius: 0;
-    background-color: rgba(255, 255, 255, .5);
-}
-
-.swiper-pagination-bullet-active{
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.swiper-container-vertical>.swiper-pagination-bullets{
-    right: 36px;
+    vertical-align: middle;
 }
 
 /* videojs样式重写 */

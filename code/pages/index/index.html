@@ -16,10 +16,10 @@
             3. main.css是公共样式;
          //-->
         <link rel="stylesheet" href="../../css/normalize.css">
-        <link rel="stylesheet" href="../../css/common.css">
         <link rel="stylesheet" href="../..//js/vendor/swiper/css/swiper.min.css">
         <link rel="stylesheet" href="../..//js/vendor/videojs/video.min.css">
 
+        <link rel="stylesheet" href="../../css/common.css">
         <link rel="stylesheet" href="../../css/index.css">
     </head>
     <body>
@@ -52,17 +52,19 @@
                     <a href=""><img src="../../images/img01.jpg" alt=""></a>
                 </div>
 
-                <!-- Swiper -->
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image: url('../../images/slide01.jpg')"></div>
-                        <div class="swiper-slide" style="background-image: url('../../images/slide02.jpg')"></div>
-                        <div class="swiper-slide" style="background-image: url('../../images/slide03.jpg')"></div>
-                        <div class="swiper-slide" style="background-image: url('../../images/slide04.jpg')"></div>
-                        <div class="swiper-slide" style="background-image: url('../../images/slide05.jpg')"></div>
+                <div class="page-slide">
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image: url('../../images/slide01.jpg')"></div>
+                            <div class="swiper-slide" style="background-image: url('../../images/slide02.jpg')"></div>
+                            <div class="swiper-slide" style="background-image: url('../../images/slide03.jpg')"></div>
+                            <div class="swiper-slide" style="background-image: url('../../images/slide04.jpg')"></div>
+                            <div class="swiper-slide" style="background-image: url('../../images/slide05.jpg')"></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
                 </div>
             </main>
 
@@ -147,13 +149,11 @@
                 var mod1Height = $("#mod1").outerHeight(true);
                 var mod2Height = $("#mod2").outerHeight(true);
 
-                console.log("contentHeight:", mod1Height + mod2Height)
-
                 $("#main").scroll(function(){
                     var scrollTop = $("#main").scrollTop();
-
-                    console.log("scrollTop:", scrollTop);
-                    console.log("scrollTop2:", Math.abs(scrollTop - mod1Height - mod2Height));
+//
+//                    console.log("scrollTop:", scrollTop);
+//                    console.log("scrollTop2:", Math.abs(scrollTop - mod1Height - mod2Height));
 
                     if(  Math.abs(scrollTop - mod1Height - mod2Height) < 1 ){
                         swiper.allowTouchMove = true;
