@@ -136,3 +136,8 @@
 .swiper-container-vertical>.swiper-pagination-bullets{
     right: 36px;
 }
+
+/* videojs样式重写 */
+.video-dimensions.vjs-fluid{
+    padding-top: 133%;
+}
