@@ -16,12 +16,14 @@
             3. main.css是公共样式;
          //-->
         <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../..//js/vendor/swiper/css/swiper.min.css">
+
         <link rel="stylesheet" href="../../css/common.css">
         <link rel="stylesheet" href="../../css/diy.css">
     </head>
     <body>
         <header class="topnav">
-            <div class="topnav-title">定制</div>
+            <div class="topnav-title">照片定制</div>
             <div class="topnav-left">
                 <a class="btn-back"></a>
             </div>
@@ -29,18 +31,17 @@
 
         <main class="main-topnav main-foot">
 
-            <div class="diy-cards">
-                <div class="diy-card">
-                    <a href="">
-                        <img src="../../images/img-diy-01.jpg" alt="个性定制" />
-                        <div class="text">个性定制</div>
-                    </a>
-                </div>
-                <div class="diy-card">
-                    <a href="">
-                        <img src="../../images/img-diy-02.jpg" alt="照片定制" />
-                        <div class="text">照片定制</div>
-                    </a>
+            <div class="diyText">
+                <div class="diyText">
+                    <div class="text-box">
+                        <p>1、珠宝定制需支付100元设计费，设计师将根据用户需求提供两版设计稿。</p>
+                        <p>2、设计费将放入您的“会员中心-赠送余额”，可用于商品订单支付，并能与其他优惠券活动叠加使用，赠送余额不可提现。</p>
+                        <p>3、设计稿可在“我的定制”中查看，短信和站内信将同时提醒您注意查收。</p>
+                        <p>4、您若对设计稿满意，请直接确认，支付订单全额。若对设计稿有修改需求，可再次与设计师沟通，并确定终稿。</p>
+                        <p>5、终稿确认后，将进入珠宝制作环节设计稿无法进行修改。</p>
+                        <p>温馨提示：与设计师沟通详尽是确保成品让您满意的重要条件之一。</p>
+                        <p><img src="../../images/img01.jpg" alt=""></p>
+                    </div>
                 </div>
             </div>
 
@@ -73,5 +74,22 @@
 
         <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+        <script>
+
+            $(function(){
+
+                var swiper = new Swiper('.swiper-container', {
+                    direction: 'vertical',
+                    observer:true,
+                    autoHeight: true,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                });
+
+            });
+
+        </script>
     </body>
 </html>

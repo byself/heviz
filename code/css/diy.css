@@ -51,7 +51,8 @@
     line-height:1.65rem;
     font-size: .65rem;
     color: #e7e7e7;
-    border: 1px solid #ffffff;
+    border: 1px solid #fff;
+    text-decoration: none;
 }
 
 /* 重写swiper样式 */
@@ -97,25 +98,203 @@
     text-decoration: none;
 }
 
+/* 重写swiper */
 .ls-swiper{
-    height: 6rem;
-    border-bottom: 1px solid #a3a3a3;
+    /*height: 6rem;*/
 }
 
 .ls-swiper .swiper-slide{
+    position: relative;
+    padding: 18px 0;
     width: 4.4rem;
     text-align: center;
     font-size: .75rem;
-    border-bottom: 2px solid #FFF;
+    border-bottom: 1px solid #a3a3a3;
 }
 
 .ls-swiper .swiper-slide img{
-    margin-bottom: .4rem;
+    margin-bottom: 7px;
     width: 3rem;
     height: auto;
 }
 
-.ls-swiper .swiper-slide.swiper-slide-active{
-    border-color:#4a387b;
+.ls-swiper .swiper-slide.on{
     color: #4a387b;
 }
+
+.ls-swiper .swiper-slide.on::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background-color:#4a387b;
+}
+
+/* end swiper */
+
+.ls-content-item{
+    background-color: #f5f1ff;
+}
+
+.ls-content-btns{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.ls-content-btns a{
+    display: inline-block;
+    margin: 0 .5rem;
+    width: 5.75rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    font-size: .7rem;
+    text-decoration: none;
+    border: 1px solid #372c48;
+    border-radius: .8rem;
+    color: #372c48;
+}
+
+.ls-content-img{
+    margin: .5rem 0;
+}
+
+/* 提交订单 */
+
+.diyPay{
+    padding-top: 2rem;
+}
+
+.diyPay{
+    text-align: center;
+}
+
+.diyPay .icon{
+    width: 2rem;
+    height: auto;
+}
+
+.diyPay h2{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: .75rem;
+}
+
+.diyPay p{
+    font-size: .65rem;
+    text-align: left;
+    text-indent: 28%;
+}
+
+.diyPay .price{
+    color: #F00;
+    font-weight: 700;
+    font-size: .7rem;
+}
+
+.diyPay .icon-wechat,
+.diyPay .icon-fee{
+    display: inline-block;
+    margin-right: .3rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    vertical-align: middle;
+}
+
+.diyPay .icon-wechat{
+    background-image: url(../images/icon-wechat.png);
+}
+
+.diyPay .icon-fee{
+    background-image: url(../images/icon-fee.png);
+}
+
+.diyPay .btn-pay{
+    display: block;
+    margin: 1.5rem auto 0;
+    max-width: 17rem;
+    width: 80%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: .65rem;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #856aaf;
+}
+
+.diyPay-tips{
+    margin: 1.5rem auto 0;
+    max-width: 17rem;
+    width: 80%;
+}
+
+.diyPay-tips p{
+    margin: 0;
+    font-size: .65rem;
+    line-height: 1.2rem;
+    color: #7d7c82;
+    text-indent: 0;
+    text-align: justify;
+}
+
+/* 定制文案 */
+.diyText .text-box{
+    margin: .5rem .75rem;
+    padding: .75rem;
+    font-size: .65rem;
+    line-height: 1.1rem;
+    text-align: justify;
+    background-color: #f4f3f7;
+}
+
+.diyText .text-box p{
+    margin: .5rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>婚戒定制</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- //
+            1. 样式文件加载有先后顺序：normalize.css -> common.css
+            2. normalize.css是重置样式，必须首先被加载；
+            3. main.css是公共样式;
+         //-->
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../..//js/vendor/swiper/css/swiper.min.css">
+
+        <link rel="stylesheet" href="../../css/common.css">
+        <link rel="stylesheet" href="../../css/diy.css">
+    </head>
+    <body>
+        <header class="topnav">
+            <div class="topnav-title">婚戒定制</div>
+            <div class="topnav-left">
+                <a class="btn-back"></a>
+            </div>
+        </header>
+
+        <main class="main-topnav">
+
+            <div class="ls-swiper">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide on">
+                            <div>周年婚戒</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>结婚钻戒</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>订婚钻戒</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>周年婚戒</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>结婚钻戒</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>订婚钻戒</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ls-content">
+
+                <div class="ls-content-img">
+                    <img src="../../images/diy-video.jpg" alt="">
+                </div>
+
+                <div class="ls-content-item">
+                    <img src="../../images/diy-video.jpg" alt="">
+                    <div class="ls-content-btns">
+                        <a href="hjShow.html">设计咨询</a>
+                        <a href="hjShow.html">查看详情</a>
+                    </div>
+                </div>
+
+                <div class="ls-content-item">
+                    <img src="../../images/diy-video.jpg" alt="">
+                    <div class="ls-content-btns">
+                        <a href="hjShow.html">设计咨询</a>
+                        <a href="hjShow.html">查看详情</a>
+                    </div>
+                </div>
+
+                <div class="ls-content-item">
+                    <img src="../../images/diy-video.jpg" alt="">
+                    <div class="ls-content-btns">
+                        <a href="hjShow.html">设计咨询</a>
+                        <a href="hjShow.html">查看详情</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+        <script>
+
+            $(function(){
+
+                var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 3
+                });
+
+                swiper.on("tap", function(e){
+                    var $target = $(e.target).closest(".swiper-slide");
+
+                    $target.addClass("on").siblings().removeClass("on");
+
+                    alert($target.index());
+
+                })
+
+            });
+
+        </script>
+    </body>
+</html>

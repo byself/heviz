@@ -6,23 +6,23 @@ html, body{
     font-size: 20px;  /* 设置根字体大小，下文使用rem */
 }
 
-/**
-    所有页面最大宽度为750px;
- */
-.container{
-    flex-direction: row;
-    margin: 0 auto;
+.main-page{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     max-width: 37.5rem;
-    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-.head{
-
-}
-
-/* 有topnav head 和 foot的页面用 */
-.main{
+.main-topnav{
     padding-top: 2.25rem;  /*值等于topnav的高度*/
+}
+
+.main-foot{
     padding-bottom: 3.75rem;  /*值等于foot的高度*/
 }
 
@@ -37,7 +37,7 @@ html, body{
     left: 0;
     right: 0;
     max-width: 37.5rem;
-    margin: 0 auto;
+    margin: auto;
     height: 3.75rem;
     border-top: 1px solid #a3a3a3;
     background-color: #FFF;
@@ -103,8 +103,10 @@ html, body{
     z-index: 999;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     max-width: 37.5rem;
-    width: 100%;
     height: 2.25rem;
     border-bottom: 1px solid #a3a3a3;
     background-color: #FFF;
@@ -161,4 +163,15 @@ html, body{
 
 .page-slide .swiper-container-vertical>.swiper-pagination-bullets{
     right: 36px;
+}
+
+.page-slide .swiper-wrapper{
+    transition-timing-function: ease-in;
+}
+
+/* 图片自适应 */
+img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
 }

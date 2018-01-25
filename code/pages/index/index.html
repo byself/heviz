@@ -24,75 +24,73 @@
     </head>
     <body>
 
-        <div class="container">
-            <header class="head">
-                <div class="logo">
-                    <img src="../../images/logo.png" alt="HEVIZ">
-                </div>
+        <header class="head">
+            <div class="logo">
+                <img src="../../images/logo.png" alt="HEVIZ">
+            </div>
 
-                <div class="head-left">
-                    <div class="bell-box">
-                        <div class="bell-count"><span>6</span></div>
+            <div class="head-left">
+                <div class="bell-box">
+                    <div class="bell-count"><span>6</span></div>
+                </div>
+            </div>
+
+            <div class="head-right">
+                <div class="cart-box">
+                    <div class="cart-count"><span>6</span></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main" id="main">
+            <div class="index-mod" id="mod1">
+                <video id="video" class="video-js vjs-big-play-centered"></video>
+            </div>
+
+            <div class="index-mod" id="mod2">
+                <a href=""><img src="../../images/img01.jpg" alt=""></a>
+            </div>
+
+            <div class="page-slide">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url('../../images/slide01.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide02.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide03.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide04.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide05.jpg')"></div>
                     </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
+            </div>
+        </main>
 
-                <div class="head-right">
-                    <div class="cart-box">
-                        <div class="cart-count"><span>6</span></div>
-                    </div>
-                </div>
-            </header>
-
-            <main class="main" id="main">
-                <div class="index-mod" id="mod1">
-                    <video id="video" class="video-js vjs-big-play-centered"></video>
-                </div>
-
-                <div class="index-mod" id="mod2">
-                    <a href=""><img src="../../images/img01.jpg" alt=""></a>
-                </div>
-
-                <div class="page-slide">
-                    <!-- Swiper -->
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" style="background-image: url('../../images/slide01.jpg')"></div>
-                            <div class="swiper-slide" style="background-image: url('../../images/slide02.jpg')"></div>
-                            <div class="swiper-slide" style="background-image: url('../../images/slide03.jpg')"></div>
-                            <div class="swiper-slide" style="background-image: url('../../images/slide04.jpg')"></div>
-                            <div class="swiper-slide" style="background-image: url('../../images/slide05.jpg')"></div>
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="foot">
-                <div class="page-tabs">
-                    <a class="page-tab page-home on" href="/pages/index/">
-                        <i class="icon"></i>
-                        <div>首页</div>
-                    </a>
-                    <a class="page-tab page-product" href="/pages/product/">
-                        <i class="icon"></i>
-                        <div>系列</div>
-                    </a>
-                    <a class="page-tab page-diy" href="/pages/diy/">
-                        <i class="icon"></i>
-                        <div>定制</div>
-                    </a>
-                    <a class="page-tab page-search" href="/pages/search/">
-                        <i class="icon"></i>
-                        <div>发现</div>
-                    </a>
-                    <a class="page-tab page-user" href="/pages/user/">
-                        <i class="icon"></i>
-                        <div>我的</div>
-                    </a>
-                </div>
-            </footer>
-        </div>
+        <footer class="foot">
+            <div class="page-tabs">
+                <a class="page-tab page-home on" href="/pages/index/">
+                    <i class="icon"></i>
+                    <div>首页</div>
+                </a>
+                <a class="page-tab page-product" href="/pages/product/">
+                    <i class="icon"></i>
+                    <div>系列</div>
+                </a>
+                <a class="page-tab page-diy" href="/pages/diy/">
+                    <i class="icon"></i>
+                    <div>定制</div>
+                </a>
+                <a class="page-tab page-search" href="/pages/search/">
+                    <i class="icon"></i>
+                    <div>发现</div>
+                </a>
+                <a class="page-tab page-user" href="/pages/user/">
+                    <i class="icon"></i>
+                    <div>我的</div>
+                </a>
+            </div>
+        </footer>
 
         <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="../../js/vendor/jquery-3.2.1.min.js"></script>

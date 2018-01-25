@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>照片定制</title>
+        <title>提交订单</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,12 +16,15 @@
             3. main.css是公共样式;
          //-->
         <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../..//js/vendor/swiper/css/swiper.min.css">
+
+
         <link rel="stylesheet" href="../../css/common.css">
         <link rel="stylesheet" href="../../css/diy.css">
     </head>
     <body>
         <header class="topnav">
-            <div class="topnav-title">定制</div>
+            <div class="topnav-title">提交订单</div>
             <div class="topnav-left">
                 <a class="btn-back"></a>
             </div>
@@ -29,18 +32,16 @@
 
         <main class="main-topnav main-foot">
 
-            <div class="diy-cards">
-                <div class="diy-card">
-                    <a href="">
-                        <img src="../../images/img-diy-01.jpg" alt="个性定制" />
-                        <div class="text">个性定制</div>
-                    </a>
-                </div>
-                <div class="diy-card">
-                    <a href="">
-                        <img src="../../images/img-diy-02.jpg" alt="照片定制" />
-                        <div class="text">照片定制</div>
-                    </a>
+            <div class="diyPay">
+                <img class="icon" src="../../images/icon-back.png" alt="">
+                <h2>定制需求已提交成功，请尽快支付设计费</h2>
+                <p><i class="icon-wechat"></i>支付方式：微信支付</p>
+                <p><i class="icon-fee"></i>支付设计费：<span class="price">¥100</span></p>
+                <a href="" class="btn-pay">支付</a>
+                <div class="diyPay-tips">
+                    <p>温馨提示：</p>
+                    <p>1、设计费在支付成功之后，自动转化成赠送余额，可在“会员中心”查看。</p>
+                    <p>2、此赠送余额可在商品订单支付中抵扣。</p>
                 </div>
             </div>
 
@@ -73,5 +74,22 @@
 
         <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+        <script>
+
+            $(function(){
+
+                var swiper = new Swiper('.swiper-container', {
+                    direction: 'vertical',
+                    observer:true,
+                    autoHeight: true,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                });
+
+            });
+
+        </script>
     </body>
 </html>
