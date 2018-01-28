@@ -12,10 +12,13 @@ html, body{
     right: 0;
     top: 0;
     bottom: 0;
-    margin: auto;
-    max-width: 37.5rem;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+}
+
+.main{
+    margin: auto;
+    max-width: 37.5rem;
 }
 
 .main-topnav{
@@ -123,6 +126,7 @@ html, body{
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
     padding: .5rem;
 }
 
@@ -131,6 +135,88 @@ html, body{
     width: 1.25rem;
     height: 1.25rem;
     background: url("../images/icon-back.png") no-repeat;
+    background-size: 100% auto;
+}
+
+.topnav-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.topnav .menu{
+    padding: .5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.topnav-right .btn-menu{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/icon-menu.png") no-repeat;
+    background-size: 100% auto;
+}
+
+.topnav .menu .dropdown{
+    padding: .5rem .65rem 1rem;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 2.25rem;
+    right: .5rem;
+    background-color: #000;
+    opacity: .4;
+    transform: scale(0);
+    transition: all .3s ease-out;
+    transform-origin: top right;
+}
+
+.topnav .menu .dropdown.show{
+    transform: scale(1);
+}
+
+.topnav .menu .dropdown a{
+    display: block;
+    padding: .6rem;
+    font-size: .65rem;
+    color: #FFF;
+    border-bottom: 1px dashed #FFF;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.topnav-input{
+    position: relative;
+    margin: .45rem auto;
+    padding: 0 1.65rem 0 .65rem;
+    width: 50%;
+    height: 1.3rem;
+    line-height: 1.1rem;
+    border: 1px solid #5c5277;
+    border-radius: .65rem;
+}
+
+.topnav-input .input{
+    padding: 0;
+    width: 100%;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    border: 0;
+    outline: none;
+    font-size: .65rem;
+}
+
+.topnav-input .btn-search{
+    position: absolute;
+    top: .15rem;
+    right: .65rem;
+    padding: 0;
+    width: 1rem;
+    height: 1rem;
+    border: 0;
+    background: url("../images/icon-find.png") no-repeat;
     background-size: 100% auto;
 }
 
@@ -174,4 +260,15 @@ img{
     width: 100%;
     height: auto;
     vertical-align: middle;
+}
+
+/* loading */
+.loading{
+    padding: 1rem 0;
+    text-align: center;
+    font-size: .6rem;
+    color: #ccc;
+}
+.loading img{
+    width: 2.5rem;
 }

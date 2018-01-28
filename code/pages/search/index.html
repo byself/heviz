@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>发现</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- //
+            1. 样式文件加载有先后顺序：normalize.css -> common.css
+            2. normalize.css是重置样式，必须首先被加载；
+            3. main.css是公共样式;
+         //-->
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../..//js/vendor/swiper/css/swiper.min.css">
+
+        <link rel="stylesheet" href="../../css/common.css">
+        <link rel="stylesheet" href="../../css/search.css">
+    </head>
+    <body>
+        <header class="topnav">
+            <div class="topnav-title">发现</div>
+            <div class="topnav-left">
+                <a class="btn-back"></a>
+            </div>
+        </header>
+
+        <main class="main main-topnav main-foot">
+
+            <div class="search-container">
+
+                <div class="search-swiper">
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide on">
+                                <img src="../../images/img02.png" alt=""/>
+                                <div>全部发现</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../images/img03.png" alt=""/>
+                                <div>精选案例</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../images/img04.png" alt=""/>
+                                <div>客户故事</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../images/img05.png" alt=""/>
+                                <div>设计师</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="waterfall">
+
+                    <ul>
+                        <li>
+                            <a href="searchDetail.html">
+                                <img src="../../images/img11.jpg" alt="">
+                                <h2>来自星星的礼物</h2>
+                                <p>在这个世界上，有那么一群孩子，他们和其他人一样感受着这个世界...</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="searchDetail.html">
+                                <img src="../../images/img12.jpg" alt="">
+                                <h2>来自星星的礼物</h2>
+                                <p>在这个世界上，有那么一群孩子，他们和其他人一样感受着这个世界...</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="searchDetail.html">
+                                <img src="../../images/img12.jpg" alt="">
+                                <h2>来自星星的礼物</h2>
+                                <p>在这个世界上，有那么一群孩子，他们和其他人一样感受着这个世界...</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="searchDetail.html">
+                                <img src="../../images/img11.jpg" alt="">
+                                <h2>来自星星的礼物</h2>
+                                <p>在这个世界上，有那么一群孩子，他们和其他人一样感受着这个世界...</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="searchDetail.html">
+                                <img src="../../images/img08.jpg" alt="">
+                                <h2>来自星星的礼物</h2>
+                                <p>在这个世界上，有那么一群孩子，他们和其他人一样感受着这个世界...</p>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="loading">
+                        <img src="../../images/loadding.svg" alt="">
+                        <div class="loading-text">加载中...</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="foot">
+            <div class="page-tabs">
+                <a class="page-tab page-home on" href="/pages/index/">
+                    <i class="icon"></i>
+                    <div>首页</div>
+                </a>
+                <a class="page-tab page-product" href="/pages/product/">
+                    <i class="icon"></i>
+                    <div>系列</div>
+                </a>
+                <a class="page-tab page-diy" href="/pages/diy/">
+                    <i class="icon"></i>
+                    <div>定制</div>
+                </a>
+                <a class="page-tab page-search" href="/pages/search/">
+                    <i class="icon"></i>
+                    <div>发现</div>
+                </a>
+                <a class="page-tab page-user" href="/pages/user/">
+                    <i class="icon"></i>
+                    <div>我的</div>
+                </a>
+            </div>
+        </footer>
+
+        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+        <script>
+
+            $(function(){
+
+                var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 4
+                });
+
+                swiper.on("tap", function(e){
+                    var $target = $(e.target).closest(".swiper-slide");
+
+                    $target.addClass("on").siblings().removeClass("on");
+
+                    alert($target.index());
+
+                })
+
+            });
+
+        </script>
+    </body>
+</html>

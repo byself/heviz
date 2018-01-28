@@ -16,14 +16,15 @@
             3. main.css是公共样式;
          //-->
         <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../..//js/vendor/swiper/css/swiper.min.css">
 
         <link rel="stylesheet" href="../../css/common.css">
-        <link rel="stylesheet" href="../../css/diy.css">
+        <link rel="stylesheet" href="../../css/search.css">
         <link rel="stylesheet" href="../../css/product.css">
     </head>
     <body>
         <header class="topnav">
-            <div class="topnav-title">支付成功</div>
+            <div class="topnav-title">来自星星的礼物</div>
             <div class="topnav-left">
                 <a class="btn-back"></a>
             </div>
@@ -31,19 +32,34 @@
 
         <main class="main main-topnav main-foot">
 
-            <div class="diyPaySuccess">
+            <div class="searchDetail">
 
-                <div class="diyPay">
-                    <img class="icon" src="../../images/icon-smile.png" alt="">
-                    <h2>订单支付成功 !</h2>
-                    <p><i class="icon-wechat"></i>支付方式：微信支付</p>
-                    <p><i class="icon-fee"></i>支付设计费：<span class="price">¥100</span></p>
-
-                    <div class="diyPay-btns">
-                        <a href="" class="btn-pay btn-prev">查看订单</a>
-                        <a href="/pages/index/index.html" class="btn-pay">回到首页</a>
+                <div class="search-detail-swiper">
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="../../images/search-slide-01.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="../../images/search-slide-01.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="../../images/search-slide-01.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="../../images/search-slide-01.jpg" alt=""></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
                     </div>
+                </div>
 
+                <div class="search-detail-content">
+                    <h2>来自星星的礼物</h2>
+                    <div class="info">
+                        <span><img src="../../images/img02.png" alt="">精选案例</span>
+                        <span class="date">2018-1-18</span>
+                    </div>
+                    
+                    <div class="body">
+                        <p>在这个世界上，有那么一群孩子，他们和其他人一样感受着这个世界，但却无法像常人一样表达喜怒哀乐，在这个世界上，有那么一群孩子，他们和其他人一样感受着这个世界，但却无法像常人一样表达喜怒哀乐...</p>
+                        <p>在这个世界上，有那么一群孩子，他们和其他人一样感受着这个世界，但却无法像常人一样表达喜怒哀乐...</p>
+                        <p>在这个世界上，有那么一群孩子，他们和其他人一样感受着这个世界，但却无法像常人一样表达喜怒哀乐在这个世界上，有那么一群孩子，他们和其他人一样感受着这个世界，但却无法像常人一样表达喜怒哀乐...</p>
+                    </div>
                 </div>
 
                 <div class="sku-tj">
@@ -138,6 +154,8 @@
 
         <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+
 
         <script>
             function favSKU(e){
@@ -150,6 +168,14 @@
                 }
 
             }
+            
+            $(function () {
+                var swiper = new Swiper('.swiper-container', {
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                });
+            })
         </script>
     </body>
 </html>

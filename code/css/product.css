@@ -1,0 +1,96 @@
+/**
+    create by wangzili on 2018/1/28
+ */
+
+
+
+/* 商品推荐 */
+
+.sku-tj{
+    padding-top: 2rem;
+}
+
+.sku-tj-title{
+    padding-bottom: .5rem;
+    text-align: center;
+    font-size: 1rem;
+    background: url("../images/img07.png") no-repeat 50% 100%;
+    background-size: 135px auto;
+}
+
+.sku-list{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.sku-list ul{
+    padding: 0;
+    margin: 0 .35rem;
+    list-style: none;
+    overflow: hidden;
+}
+
+.sku-list li{
+    float: left;
+    position: relative;
+    width: 50%;
+    margin: .2rem 0;
+}
+
+.sku-list li a{
+    display: block;
+    margin: 0 .2rem;
+    padding: .5rem;
+    text-decoration: none;
+    background-color: #FFF;
+}
+
+.sku-list li h2{
+    margin-bottom: .2rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .7rem;
+    color: #333;
+    overflow: hidden;
+}
+
+.sku-list li .price{
+    font-size: .8rem;
+    color: #c00;
+}
+
+.sku-list .fav{
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("../images/icon-fav.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.sku-list .fav.on{
+    background-position:0 -1rem;
+}
+
+/* end 商品推荐 */
+
+.skuIndex{
+
+}
+
+.skuIndex-swiper{
+    border-bottom: 1px solid #DDD;
+}
+
+.sku-mod{
+    margin-top: .5rem;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    background-color: #f5f3f9;
+}
+
+.sku-img{
+    margin-top: 1rem;
+}
