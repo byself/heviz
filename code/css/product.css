@@ -94,3 +94,163 @@
 .sku-img{
     margin-top: 1rem;
 }
+
+/* 列表页 */
+
+.skuList{
+    background-color:#f4f3f7;
+}
+
+.sku-list-swiper{
+    margin-top: .5rem;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    background-color:#FFF;
+}
+
+.sku-list-swiper .swiper-container{
+    padding: 1rem 0;
+}
+
+.sku-list-swiper .swiper-slide{
+    width: 9rem;
+    height: 12.2rem;
+}
+
+.sku-sort-swiper{
+    margin-top: .5rem;
+}
+
+.skuList .sku-list{
+    padding-top: 0;
+}
+
+/* 重写swiper：发现 */
+
+.sku-sort-swiper .swiper-slide{
+    position: relative;
+    padding: 18px 0;
+    width: 4.4rem;
+    text-align: center;
+    font-size: .75rem;
+    opacity: .3;
+}
+
+.sku-sort-swiper .swiper-slide img{
+    margin-bottom: 7px;
+    width: 3.5rem;
+    height: auto;
+    transition: all .3s ease-out;
+}
+
+.sku-sort-swiper .swiper-slide.on{
+    color: #4a387b;
+    opacity: 1;
+}
+
+/* end swiper */
+
+/* 商品详情 */
+.productDetail{
+    background-color: #f4f3f7;
+}
+.productDetail .swiper-pagination{
+    right: 1.5rem;
+    left: auto;
+    width: 2.5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    font-size: .6rem;
+    color:#FFF;
+    border-radius: 0.55rem;
+    background-color:#856aaf;
+
+}
+
+.productDetail-info{
+    padding: .5rem 0 1rem;
+    text-align: center;
+    background-color: #FFF;
+}
+
+.productDetail-info h1{
+    font-size: .9rem;
+}
+
+.productDetail-info h2{
+    font-size: .7rem;
+}
+
+.productDetail-info span{
+    color: #C00;
+    font-size: .9rem;
+}
+
+
+/* 条目 */
+.cells{
+    border-top: 1px solid #aea5c7;
+    border-bottom: 1px solid #aea5c7;
+    background-color: #FFF;
+}
+
+.cell{
+    display: flex;
+    flex-direction: row;
+    padding: .75rem .5rem .75rem .8rem;
+    font-size: .75rem;
+    line-height: 1.1rem;
+}
+
+.cell .label{
+    flex: 1;
+    color:#666;
+}
+
+.cell .state{
+    color:#666;
+}
+
+.cell .arrow {
+    margin-left: .5rem;
+    width: 1rem;
+}
+
+/* tab */
+.productDetail .tabs{
+    margin-top: .5rem;
+}
+
+.tabs{
+    background-color: #FFF;
+}
+
+.tabnav{
+    display: flex;
+    flex-direction: row;
+    font-size: .8rem;
+    border-top: 1px solid #aea5c7;
+    border-bottom: 1px solid #aea5c7;
+}
+
+.tabnav .tab{
+    flex: 1;
+    padding: .75rem 0;
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+}
+
+.tabnav .tab.on{
+    color: #231161;
+}
+
+.tabcontent .tabitem{
+    display: none;
+    text-align: center;
+    font-size: .6rem;
+}
+
+
+
+

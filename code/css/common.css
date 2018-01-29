@@ -145,6 +145,14 @@ html, body{
     bottom: 0;
 }
 
+.topnav-right .btn-share{
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url("../images/icon-share.png") no-repeat;
+    background-size: 100% auto;
+}
+
 .topnav .menu{
     padding: .5rem;
     width: 1.25rem;
