@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="cells">
-                    <div class="cell">
+                    <div class="cell" onclick="showDetail()">
                         <div class="label">
                             选择规格
                         </div>
@@ -159,30 +159,88 @@
 
         </main>
 
-        <footer class="foot">
-            <div class="page-tabs">
-                <a class="page-tab page-home on" href="/pages/index/">
-                    <i class="icon"></i>
-                    <div>首页</div>
+        <div class="cart-bar">
+            <div class="cart-bar-box">
+                <a class="btn-chat" href="javascript:void(0);"><i class="icon"></i><div>客服</div></a>
+                <a class="btn-fav" href="javascript:void(0);"><i class="icon"></i><div>收藏</div></a>
+                <a class="btn-cart" href="cart.html">
+                    <i class="icon"></i><div>购物车</div>
+                    <div class="cart-count"><span>6</span></div>
                 </a>
-                <a class="page-tab page-product" href="/pages/product/">
-                    <i class="icon"></i>
-                    <div>系列</div>
-                </a>
-                <a class="page-tab page-diy" href="/pages/diy/">
-                    <i class="icon"></i>
-                    <div>定制</div>
-                </a>
-                <a class="page-tab page-search" href="/pages/search/">
-                    <i class="icon"></i>
-                    <div>发现</div>
-                </a>
-                <a class="page-tab page-user" href="/pages/user/">
-                    <i class="icon"></i>
-                    <div>我的</div>
-                </a>
+                <a class="btn-add-cart" href="javascript:void(0);">加入购物车</a>
+                <a class="btn-buy-now" href="javascript:void(0);">立即购买</a>
             </div>
-        </footer>
+        </div>
+
+        <div class="mask">
+
+            <div class="popbox">
+
+                <div class="popbox-product">
+                    <img src="../../images/sku-detail-slide-01.jpg" alt="">
+                    <div class="productDetail-info">
+                        <h1>十二星座圆牌925银手链</h1>
+                        <h2>来找到属于你的星座</h2>
+                        <span>¥1299 </span>
+                    </div>
+
+                    <div class="filters">
+                        <div class="filter-item">
+                            <div class="filter-label">
+                                材质
+                            </div>
+                            <div class="filter-list">
+                                <a class="on" href="javascript:void(0);" onclick="filter(this)">铂金</a>
+                                <a href="javascript:void(0);" onclick="filter(this)">珍珠</a>
+                                <a href="javascript:void(0);" onclick="filter(this)">钻石</a>
+                                <a href="javascript:void(0);" onclick="filter(this)">银饰</a>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-label">
+                                尺寸
+                            </div>
+                            <div class="filter-list">
+                                <a class="on"  href="javascript:void(0);" onclick="filter(this)">10cm</a>
+                                <a href="javascript:void(0);" onclick="filter(this)">12cm</a>
+                                <a href="javascript:void(0);" onclick="filter(this)">14cm</a>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-label">
+                                颜色
+                            </div>
+                            <div class="filter-list">
+                                <a class="on"  href="javascript:void(0);" onclick="filter(this)">铂金</a>
+                                <a href="javascript:void(0);" onclick="filter(this)">珍珠</a>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-label">
+                                数量
+                            </div>
+                            <div class="filter-count">
+                                <div class="filter-count-sub" onclick="filterSub()">-</div>
+                                <div class="filter-count-input"><input type="number" readonly min="1" value="1"/></div>
+                                <div class="filter-count-add" onclick="filterAdd()">+</div>
+                            </div>
+                        </div>
+
+                        <div class="filter-item">
+                            <div class="filter-btns">
+                                <a href="javascript:void(0);" class="btn-pay btn-prev" onclick="addCart()">加入购物车</a>
+                                <span class="blank"></span>
+                                <a href="javascript:void(0);" class="btn-pay" onclick="buyNow()">立即购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="javascript:void(0);" class="close" onclick="closePopbox()"></a>
+            </div>
+
+        </div>
+
 
         <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
@@ -190,6 +248,10 @@
 
 
         <script>
+
+            /**
+             * 商品收藏
+             */
             function favSKU(e){
                 var $target = $(e);
 
@@ -200,7 +262,86 @@
                 }
 
             }
-            
+
+            /**
+             * 显示弹窗
+             */
+            function showDetail(){
+                var $mask = $(".mask");
+                var $popbox = $(".popbox");
+
+                $("body").css("overflow", "hidden");
+
+                $mask.fadeIn(function(){
+                    $popbox.addClass("show");
+                })
+            }
+
+            /**
+             *  关闭弹窗
+             */
+            function closePopbox(){
+                var $mask = $(".mask");
+                var $popbox = $(".popbox");
+
+                $("body").css("overflow", "initial");
+
+                $popbox.removeClass("show");
+                $mask.fadeOut(500);
+
+            }
+
+            /**
+             * 加入购物车
+             */
+            function addCart() {
+                alert(" 加入购物车");
+                closePopbox();
+            }
+
+            /**
+             * 立即购买
+             */
+            function buyNow() {
+                alert(" 立即购买");
+                closePopbox();
+            }
+
+            /**
+             *  条件筛选
+             * @param el item
+             */
+            function filter(el){
+                var $this = $(el);
+
+                $this.addClass("on").siblings().removeClass("on");
+            }
+
+            /**
+             * 数量加
+             */
+            function filterAdd(){
+                var $input = $(".filter-count-input input");
+                var value = Number($input.val());
+                $input.val(++value);
+            }
+
+            /**
+             * 数量加
+             */
+            function filterSub(){
+                var $input = $(".filter-count-input input");
+                var value = Number($input.val());
+
+                if(value > 1){
+                    value -= 1;
+                }
+
+                $input.val(value);
+            }
+
+
+
             $(function () {
                 var skuIndexSwiper = new Swiper('.productDetail .swiper-container', {
                     pagination: {
