@@ -1,0 +1,56 @@
+/**
+    create by wangzili on 2018/1/31
+ */
+
+/**
+    个人中心
+ */
+
+.user-index{
+    background-color: #f4f3f7;
+}
+
+.user-cover{
+    height: 8rem;
+    background: url("../images/img01.jpg") no-repeat 50% 50% #4a387b;
+    background-size: cover;
+}
+
+.user-base-info{
+    position: relative;
+    margin-top: -2rem;
+    padding: 0 .8rem 1rem;
+    font-size: .7rem;
+}
+
+.user-base-info .headphoto{
+    margin-bottom: .7rem;
+    width: 4rem;
+}
+
+.btn-bind-tel{
+    position: absolute;
+    bottom: 1rem;
+    right: .8rem;
+    padding: 0 .7rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .6rem;
+    border-radius: .5rem;
+    border:1px solid #4a387b;
+    text-decoration: none;
+    color: #7d7c82;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

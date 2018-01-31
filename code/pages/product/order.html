@@ -1,0 +1,210 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>提交订单</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- //
+            1. 样式文件加载有先后顺序：normalize.css -> common.css
+            2. normalize.css是重置样式，必须首先被加载；
+            3. main.css是公共样式;
+         //-->
+        <link rel="stylesheet" href="../../css/normalize.css">
+
+        <link rel="stylesheet" href="../../css/common.css">
+        <link rel="stylesheet" href="../../css/cart.css">
+    </head>
+    <body>
+        <header class="topnav">
+            <div class="topnav-title">
+                <!--提交订单-->
+            </div>
+            <div class="topnav-left">
+                <a class="btn-back"></a>
+            </div>
+            <div class="topnav-right">
+
+            </div>
+        </header>
+
+        <main class="main main-topnav main-foot">
+
+            <div class="order-container">
+
+                <div class="order-address-container">
+
+                    <div class="order-address">
+
+                        <div class="order-address-info">
+                            <span class="tag">默认</span>
+                            <span class="name">收货人：张小盒</span>
+                            <span class="tel">18221395849</span>
+                        </div>
+
+                        <div class="address">
+                            <i class="icon"></i>收货地址：上海市浦东新区丹桂路999号G1栋
+                        </div>
+
+                    </div>
+
+                    <div class="order-no-address">
+                        <a href="address.html">
+                            <img src="../../images/icon-plane.png" alt="">
+                            <div>请填写收货人信息</div>
+                        </a>
+                    </div>
+
+                    <div class="arrow"><i class="icon"></i></div>
+
+                </div>
+
+                <div class="order-title">
+                    商品信息
+                </div>
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="cart-item-box">
+                            <div class="cart-item-img">
+                                <img src="../../images/sku-detail-slide-01.jpg" alt="">
+                            </div>
+                            <div class="cart-item-info">
+                                <h2>十二星座圆牌925银手链</h2>
+                                <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
+                                <div class="price">￥<b>1200</b></div>
+                                <div class="count">× 1</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item-box">
+                            <div class="cart-item-img">
+                                <img src="../../images/sku-detail-slide-01.jpg" alt="">
+                            </div>
+                            <div class="cart-item-info">
+                                <h2>十二星座圆牌925银手链</h2>
+                                <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
+                                <div class="price">￥<b>1200</b></div>
+                                <div class="count">× 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item-box">
+                            <div class="cart-item-img">
+                                <img src="../../images/sku-detail-slide-01.jpg" alt="">
+                            </div>
+                            <div class="cart-item-info">
+                                <h2>十二星座圆牌925银手链</h2>
+                                <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
+                                <div class="price">￥<b>1200</b></div>
+                                <div class="count">× 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item-box">
+                            <div class="cart-item-img">
+                                <img src="../../images/sku-detail-slide-01.jpg" alt="">
+                            </div>
+                            <div class="cart-item-info">
+                                <h2>十二星座圆牌925银手链</h2>
+                                <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
+                                <div class="price">￥<b>1200</b></div>
+                                <div class="count">× 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item-box">
+                            <div class="cart-item-img">
+                                <img src="../../images/sku-detail-slide-01.jpg" alt="">
+                            </div>
+                            <div class="cart-item-info">
+                                <h2>十二星座圆牌925银手链</h2>
+                                <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
+                                <div class="price">￥<b>1200</b></div>
+                                <div class="count">× 1</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="cells">
+                    <div class="cell" onclick="showCoupon()">
+                        <div class="label">
+                            优惠券(5张可用)
+                        </div>
+                        <div class="state">
+                            -￥100
+                        </div>
+                        <div class="arrow">
+                            <img src="../../images/icon-arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="label">
+                            商品合计
+                        </div>
+                        <div class="state">
+                            ￥2598
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="label">
+                            优惠券
+                        </div>
+                        <div class="state">
+                            -￥100
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="label">
+                            设计费抵扣(赠送余额)
+                        </div>
+                        <div class="state">
+                            -￥100
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cells">
+                    <div class="cell">
+                        <div class="label">
+                            支付方式
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="label">
+                            微信支付
+                        </div>
+                        <div class="state">
+                            ￥2598
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <div class="cart-bar">
+            <div class="cart-bar-box">
+                <div class="btn-select"></div>
+                <div class="cart-total-price">应付金额：<span>￥<b id="total">1200</b></span></div>
+                <a class="btn-buy-now" href="pay.html">提交订单</a>
+            </div>
+        </div>
+
+        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+
+    </body>
+</html>
