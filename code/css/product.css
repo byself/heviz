@@ -330,7 +330,6 @@
     height: .8rem;
     line-height: .8rem;
     font-size: .6rem;
-    color: #FFF;
     border-radius: .4rem;
     background-color: #f00;
     text-align: center;
@@ -338,6 +337,7 @@
 
 .cart-count span{
     padding:0 4px;
+    color: #FFF;
 }
 
 /* 弹窗 */

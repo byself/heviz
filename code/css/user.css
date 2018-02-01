@@ -8,6 +8,7 @@
 
 .user-index{
     background-color: #f4f3f7;
+    overflow: hidden;
 }
 
 .user-cover{
@@ -42,12 +43,115 @@
     color: #7d7c82;
 }
 
+.user-items{
+    margin: .5rem 0;
+    border-top: 1px solid #aea5c7;
+    border-bottom: 1px solid #aea5c7;
+    background-color: #FFF;
+}
 
+.user-item-row{
+    position: relative;
+    display: flex;
+}
 
+.user-item-row:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    left: .5rem;
+    right: .5rem;
+    bottom: 0;
+    border-bottom: 1px dashed #aea5c7;
+}
 
+.user-item{
+    position: relative;
+    flex: 1;
+    padding: .7rem 0;
+    font-size: .6rem;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
 
+.user-item div{
+    margin-top: .3rem;
+    color: #4a387b;
+}
 
+.user-item .icon{
+    margin-bottom: .3rem;
+    width: 1rem;
+    height: 1rem;
+}
 
+.user-divide-vertical .user-item:not(:last-child)::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: .8rem;
+    bottom: .8rem;
+    border-left: 1px dashed #aea5c7;
+}
+
+.cart-count{
+    position: absolute;
+    right: .8rem;
+    top: .2rem;
+    min-width: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .6rem;
+    border-radius: .4rem;
+    background-color: #f00;
+    text-align: center;
+}
+
+.cart-count span{
+    padding:0 4px;
+    color: #FFF;
+}
+
+/* 条目 */
+.cells{
+    margin: .5rem 0;
+    border-top: 1px solid #aea5c7;
+    border-bottom: 1px solid #aea5c7;
+    background-color: #FFF;
+}
+
+.cell{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: .6rem .8rem;
+    font-size: .7rem;
+    line-height: 1.1rem;
+}
+
+.cell:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    left: .8rem;
+    right: .8rem;
+    bottom: 0;
+    height: 1px;
+    background-color: #aea5c7;
+}
+
+.cell .label{
+    flex: 1;
+    color:#333;
+}
+
+.cell .state{
+    color:#333;
+}
+
+.cell .arrow {
+    margin-left: .5rem;
+    width: 1rem;
+}
 
 
 
