@@ -8,22 +8,22 @@
 
 .search-swiper .swiper-slide{
     position: relative;
-    padding: 18px 0;
+    padding: 1rem 0 .7rem;
     width: 4.4rem;
     text-align: center;
     font-size: .75rem;
-    border-bottom: 1px solid #a3a3a3;
+    opacity: .5;
 }
 
 .search-swiper .swiper-slide img{
-    margin-bottom: 7px;
-    width: 3rem;
-    height: auto;
+    margin-bottom: .75rem;
+    width: 3.55rem;
     transition: all .3s ease-out;
 }
 
 .search-swiper .swiper-slide.on{
     color: #4a387b;
+    opacity: 1;
 }
 
 .search-swiper .swiper-slide.on::before{
@@ -31,7 +31,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -1px;
+    bottom: 0;
     height: 2px;
     background-color:#4a387b;
 }

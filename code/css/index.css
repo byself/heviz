@@ -3,13 +3,6 @@
  */
 
 .head{
-    z-index: 999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    max-width: 37.5rem;
     height: 2.8rem;
     border-bottom: 1px solid #a3a3a3;
     background-color: #FFF;
@@ -94,22 +87,8 @@
     padding:0 4px;
 }
 
-.main-index{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    max-width: 37.5rem;
-    padding-top: 0;
-    padding-bottom: 0;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
 .index-mod{
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .index-mod img{
@@ -121,4 +100,10 @@
 /* videojs样式重写 */
 .video-dimensions.vjs-fluid{
     padding-top: 133%;
+}
+
+/* swiper样式重写 */
+.page-slide .swiper-slide .link{
+    display: block;
+    height: 100%;
 }

@@ -21,9 +21,10 @@
         <link rel="stylesheet" href="../../css/cart.css">
     </head>
     <body>
+    <div class="app">
         <header class="topnav">
             <div class="topnav-title">
-                <!--购物车-->
+                购物车
             </div>
             <div class="topnav-left">
                 <a class="btn-back"></a>
@@ -33,109 +34,139 @@
             </div>
         </header>
 
-        <main class="main main-topnav main-foot">
+        <main class="main">
 
             <div class="cart-items">
                 <div class="cart-item">
-                    <a class="cart-item-box" href="productDetail.html">
+                    <div class="cart-item-box">
                         <div class="cart-item-radio">
-                            <div class="btn-select btn-select-radio" href="javascript:void(0);"><i class="icon"></i></div>
+                            <div class="btn-select-radio" href="javascript:void(0);">
+                                <label for="sku1" class="radio">
+                                    <input type="checkbox" name="sku" id="sku1" value=""/>
+                                    <span class="radio-bg"></span>
+                                    <span class="radio-on"></span>
+                                </label>
+                            </div>
                         </div>
                         <div class="cart-item-img">
-                            <img src="../../images/sku-detail-slide-01.jpg" alt="">
+                            <a href="productDetail.html"><img src="../../images/img08.jpg" alt=""></a>
                         </div>
                         <div class="cart-item-info">
-                            <h2>十二星座圆牌925银手链</h2>
+                            <h2><a href="">十二星座圆牌925银手链</a></h2>
                             <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
                             <div class="price">￥<b>1200</b></div>
                             <div class="filter-count">
-                                <div class="filter-count-sub" onclick="filterSub()">-</div>
-                                <div class="filter-count-input"><input type="number" readonly min="1" value="1"/></div>
-                                <div class="filter-count-add" onclick="filterAdd()">+</div>
+                                <div class="filter-count-sub" onclick="filterSub(this)">-</div>
+                                <div class="filter-count-input">1</div>
+                                <div class="filter-count-add" onclick="filterAdd(this)">+</div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
                 <div class="cart-item">
-                    <a class="cart-item-box" href="productDetail.html">
+                    <div class="cart-item-box">
                         <div class="cart-item-radio">
-                            <div class="btn-select btn-select-radio" href="javascript:void(0);"><i class="icon"></i></div>
+                            <div class="btn-select-radio" href="javascript:void(0);">
+                                <label for="sku2" class="radio">
+                                    <input type="checkbox" name="sku" id="sku2" value=""/>
+                                    <span class="radio-bg"></span>
+                                    <span class="radio-on"></span>
+                                </label>
+                            </div>
                         </div>
                         <div class="cart-item-img">
-                            <img src="../../images/sku-detail-slide-01.jpg" alt="">
+                            <a href="productDetail.html"><img src="../../images/img08.jpg" alt=""></a>
                         </div>
                         <div class="cart-item-info">
-                            <h2>十二星座圆牌925银手链</h2>
+                            <h2><a href="">十二星座圆牌925银手链</a></h2>
                             <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
                             <div class="price">￥<b>1200</b></div>
                             <div class="filter-count">
-                                <div class="filter-count-sub" onclick="filterSub()">-</div>
-                                <div class="filter-count-input"><input type="number" readonly min="1" value="1"/></div>
-                                <div class="filter-count-add" onclick="filterAdd()">+</div>
+                                <div class="filter-count-sub" onclick="filterSub(this)">-</div>
+                                <div class="filter-count-input">1</div>
+                                <div class="filter-count-add" onclick="filterAdd(this)">+</div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="cart-item">
-                    <a class="cart-item-box" href="productDetail.html">
+                    <div class="cart-item-box">
                         <div class="cart-item-radio">
-                            <div class="btn-select btn-select-radio" href="javascript:void(0);"><i class="icon"></i></div>
+                            <div class="btn-select-radio" href="javascript:void(0);">
+                                <label for="sku3" class="radio">
+                                    <input type="checkbox" name="sku" id="sku3" value=""/>
+                                    <span class="radio-bg"></span>
+                                    <span class="radio-on"></span>
+                                </label>
+                            </div>
                         </div>
                         <div class="cart-item-img">
-                            <img src="../../images/sku-detail-slide-01.jpg" alt="">
+                            <a href="productDetail.html"><img src="../../images/img08.jpg" alt=""></a>
                         </div>
                         <div class="cart-item-info">
-                            <h2>十二星座圆牌925银手链</h2>
+                            <h2><a href="">十二星座圆牌925银手链</a></h2>
                             <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
                             <div class="price">￥<b>1200</b></div>
                             <div class="filter-count">
-                                <div class="filter-count-sub" onclick="filterSub()">-</div>
-                                <div class="filter-count-input"><input type="number" readonly min="1" value="1"/></div>
-                                <div class="filter-count-add" onclick="filterAdd()">+</div>
+                                <div class="filter-count-sub" onclick="filterSub(this)">-</div>
+                                <div class="filter-count-input">1</div>
+                                <div class="filter-count-add" onclick="filterAdd(this)">+</div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="cart-item">
-                    <a class="cart-item-box" href="productDetail.html">
+                    <div class="cart-item-box">
                         <div class="cart-item-radio">
-                            <div class="btn-select btn-select-radio" href="javascript:void(0);"><i class="icon"></i></div>
+                            <div class="btn-select-radio">
+                                <label for="sku4" class="radio">
+                                    <input type="checkbox" name="sku" id="sku4" value=""/>
+                                    <span class="radio-bg"></span>
+                                    <span class="radio-on"></span>
+                                </label>
+                            </div>
                         </div>
                         <div class="cart-item-img">
-                            <img src="../../images/sku-detail-slide-01.jpg" alt="">
+                            <a href="productDetail.html"><img src="../../images/img08.jpg" alt=""></a>
                         </div>
                         <div class="cart-item-info">
-                            <h2>十二星座圆牌925银手链</h2>
+                            <h2><a href="">十二星座圆牌925银手链</a></h2>
                             <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
                             <div class="price">￥<b>1200</b></div>
                             <div class="filter-count">
-                                <div class="filter-count-sub" onclick="filterSub()">-</div>
-                                <div class="filter-count-input"><input type="number" readonly min="1" value="1"/></div>
-                                <div class="filter-count-add" onclick="filterAdd()">+</div>
+                                <div class="filter-count-sub" onclick="filterSub(this)">-</div>
+                                <div class="filter-count-input">1</div>
+                                <div class="filter-count-add" onclick="filterAdd(this)">+</div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="cart-item">
-                    <a class="cart-item-box" href="productDetail.html">
+                    <div class="cart-item-box">
                         <div class="cart-item-radio">
-                            <div class="btn-select btn-select-radio" href="javascript:void(0);"><i class="icon"></i></div>
+                            <div class="btn-select-radio" href="javascript:void(0);">
+                                <label for="sku5" class="radio">
+                                    <input type="checkbox" name="sku" id="sku5" value=""/>
+                                    <span class="radio-bg"></span>
+                                    <span class="radio-on"></span>
+                                </label>
+                            </div>
                         </div>
                         <div class="cart-item-img">
-                            <img src="../../images/sku-detail-slide-01.jpg" alt="">
+                            <a href="productDetail.html"><img src="../../images/img08.jpg" alt=""></a>
                         </div>
                         <div class="cart-item-info">
-                            <h2>十二星座圆牌925银手链</h2>
+                            <h2><a href="">十二星座圆牌925银手链</a></h2>
                             <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
                             <div class="price">￥<b>1200</b></div>
                             <div class="filter-count">
-                                <div class="filter-count-sub" onclick="filterSub()">-</div>
-                                <div class="filter-count-input"><input type="number" readonly min="1" value="1"/></div>
-                                <div class="filter-count-add" onclick="filterAdd()">+</div>
+                                <div class="filter-count-sub" onclick="filterSub(this)">-</div>
+                                <div class="filter-count-input">1</div>
+                                <div class="filter-count-add" onclick="filterAdd(this)">+</div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
             </div>
@@ -144,14 +175,49 @@
 
         <div class="cart-bar">
             <div class="cart-bar-box">
-                <a class="btn-select btn-select-all on" href="javascript:void(0);"><i class="icon"></i>全选</a>
+                <div class="btn-select btn-select-all">
+                    <label for="skuall" class="radio">
+                        <input type="checkbox" name="sku" id="skuall" value="全部"/>
+                        <span class="radio-bg"></span>
+                        <span class="radio-on"></span>
+                        <span class="radio-text">全部</span>
+                    </label>
+                </div>
+                <!--<a class="btn-select btn-select-all on" href="javascript:void(0);"><i class="icon"></i>全选</a>-->
                 <div class="cart-total-price">商品价格：<span>￥<b id="total">1200</b></span></div>
                 <a class="btn-buy-now" href="order.html">去结算</a>
             </div>
         </div>
+    </div>
 
         <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
 
+        <script>
+            /**
+             * 数量加
+             */
+            function filterAdd(el){
+                var $box = $(el).parent();
+                var $input = $(".filter-count-input", $box);
+                var value = Number($input.text());
+                $input.text(++value);
+            }
+
+            /**
+             * 数量加
+             */
+            function filterSub(el){
+                var $box = $(el).parent();
+                var $input = $(".filter-count-input", $box);
+                var value = Number($input.text());
+
+                if(value > 1){
+                    value -= 1;
+                }
+
+                $input.text(value);
+            }
+        </script>
     </body>
 </html>

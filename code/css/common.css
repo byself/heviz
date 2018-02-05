@@ -3,113 +3,30 @@
  */
 
 html, body{
+    height: 100%;
     font-size: 20px;  /* 设置根字体大小，下文使用rem */
 }
 
-.main-page{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+.app{
+    display: flex;
+    flex-direction: column;
+    max-width: 37.5rem;
+    width: 100%;
+    height: 100%;
 }
 
 .main{
-    margin: auto;
-    max-width: 37.5rem;
-}
-
-.main-topnav{
-    padding-top: 2.25rem;  /*值等于topnav的高度*/
-}
-
-.main-foot{
-    padding-bottom: 3rem;  /*值等于foot的高度*/
-}
-
-/***********
- * 底部导航
- */
-
-.foot{
-    z-index: 99;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-width: 37.5rem;
-    margin: auto;
-    height: 3rem;
-    border-top: 1px solid #a3a3a3;
-    background-color: #FFF;
-}
-
-.page-tabs{
-    display: flex;
-}
-
-.page-tab{
     flex: 1;
-    padding: .4rem .75rem;
-    text-align: center;
-    font-size: .7rem;
-    text-decoration: none;
-    color: #adadad;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
-
-.page-tab .icon{
-    display: inline-block;
-    width: 1.25rem;
-    height: 1.25rem;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-}
-
-.page-home .icon{
-    background-image: url("../images/icon-home.png");
-}
-
-.page-product .icon{
-    background-image: url("../images/icon-product.png");
-}
-
-.page-diy .icon{
-    background-image: url("../images/icon-diy.png");
-}
-
-.page-search .icon{
-    background-image: url("../images/icon-search.png");
-}
-
-.page-user .icon{
-    background-image: url("../images/icon-user.png");
-}
-
-.page-tab.on{
-    color: #856aaf;
-}
-
-.page-tab.on .icon{
-    background-position: 0 -25px;
-}
-
-/* foot end */
-
 
 /***********
  * 顶部导航，带回退按钮
  */
 
 .topnav{
-    z-index: 99;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    max-width: 37.5rem;
+    position: relative;
     height: 2.25rem;
     border-bottom: 1px solid #a3a3a3;
     background-color: #FFF;
@@ -120,6 +37,7 @@ html, body{
     font-size: .95rem;
     text-align: center;
     font-weight: 700;
+    overflow: hidden;
 }
 
 .topnav-left{
@@ -178,12 +96,13 @@ html, body{
 }
 
 .topnav-right .menu .dropdown{
-    padding: .5rem .65rem 1rem;
-    margin: 0;
-    list-style: none;
+    z-index: 99;
     position: absolute;
     top: 2.25rem;
     right: .5rem;
+    margin: 0;
+    padding: .5rem .65rem 1rem;
+    list-style: none;
     background-color: #000;
     opacity: .4;
     transform: scale(0);
@@ -229,14 +148,79 @@ html, body{
 .topnav-input .btn-search{
     position: absolute;
     top: .15rem;
-    right: .65rem;
+    right: .5rem;
     padding: 0;
     width: 1rem;
     height: 1rem;
     border: 0;
+    outline: none;
     background: url("../images/icon-find.png") no-repeat;
     background-size: 100% auto;
 }
+
+/***********
+ * 底部导航
+ */
+
+.foot{
+    height: 3.25rem;
+    border-top: 1px solid #a3a3a3;
+    background-color: #FFF;
+}
+
+.page-tabs{
+    display: flex;
+}
+
+.page-tab{
+    flex: 1;
+    padding: .5rem .75rem;
+    text-align: center;
+    font-size: .7rem;
+    text-decoration: none;
+    color: #adadad;
+}
+
+.page-tab .icon{
+    display: inline-block;
+    margin-bottom: .125rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.page-home .icon{
+    background-image: url("../images/icon-home.png");
+}
+
+.page-product .icon{
+    background-image: url("../images/icon-product.png");
+}
+
+.page-diy .icon{
+    background-image: url("../images/icon-diy.png");
+}
+
+.page-search .icon{
+    background-image: url("../images/icon-search.png");
+}
+
+.page-user .icon{
+    background-image: url("../images/icon-user.png");
+}
+
+.page-tab.on{
+    color: #856aaf;
+}
+
+.page-tab.on .icon{
+    background-position: 0 -25px;
+}
+
+/* foot end */
+
+
 
 /* 重写swiper样式 */
 .page-slide{
@@ -250,7 +234,7 @@ html, body{
 
 .page-slide .swiper-slide{
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     background-position: 50% 50%;
 }
 
@@ -352,7 +336,6 @@ img{
     display: inline-block;
     position: relative;
     line-height: 18px;
-    margin-right: 1.5rem;
     cursor: pointer;
 }
 .radio input{
@@ -362,28 +345,27 @@ img{
     display: inline-block;
     height: 18px;
     width: 18px;
-    margin-right: 5px;
     padding: 0;
-    background-color: #856AAF;
+    border: 1px solid #856AAF;
     border-radius: 100%;
     vertical-align: top;
-    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1) inset, 0 1px 4px rgba(0, 0, 0, 0.1) inset, 1px -1px 2px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.2s ease;
 }
 .radio .radio-on{
     display: none;
 }
-.radio input:checked + span.radio-on{
+
+.radio input:checked + span.radio-bg{
+    background-color:#856AAF;
+}
+
+.radio input:checked + span.radio-bg + span.radio-on{
     width: 10px;
     height: 5px;
     position: absolute;
-    /*border-radius: 100%;*/
-    /*background: #FFFFFF;*/
-    top: 4px;
-    left: 3px;
-    /*box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3), 0 0 1px rgba(255, 255, 255, 0.4) inset;*/
-    /*background-image: linear-gradient(#ffffff 0, #e7e7e7 100%);*/
+    top: 5px;
+    left: 4px;
     border-left: 1px solid #FFF;
     border-bottom: 1px solid #FFF;
     transform: scale(0, 0) rotate(-45deg);
@@ -392,12 +374,16 @@ img{
     display: inline-block;
 }
 
+.radio .radio-text{
+    float: right;
+    margin-top: 1px;
+    margin-left: .3rem;
+}
+
 
 .noline{
     border-bottom: 0;
 }
-
-
 
 
 

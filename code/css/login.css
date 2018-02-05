@@ -62,7 +62,7 @@ html,body{
     text-align: center;
     line-height: 1.9rem;
     font-size: .8rem;
-    border: 1px solid #9092a9;
+    border: 1px solid #cacdd7;
     border-radius: .3rem;
     color: #FFF;
     background-color: transparent;
@@ -84,6 +84,7 @@ html,body{
 }
 
 .form-tip a{
+    text-decoration: none;
     color: #c5cad9;
 }
 
