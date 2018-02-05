@@ -1,0 +1,419 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>登录-HEVIZ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- //
+            1. 样式文件加载有先后顺序：normalize.css -> common.css
+            2. normalize.css是重置样式，必须首先被加载；
+            3. main.css是公共样式;
+         //-->
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../css/common.css">
+        <link rel="stylesheet" href="../../css/user.css">
+    </head>
+    <body>
+        <header class="topnav noline">
+            <div class="topnav-title">
+                <!--个人信息-->
+            </div>
+            <div class="topnav-left">
+                <a class="btn-back"></a>
+            </div>
+            <div class="topnav-right">
+                <a href="" class="btn-text">保存</a>
+            </div>
+        </header>
+
+        <main class="main-topnav">
+
+            <div class="user-info-container">
+
+                <div class="user-info-headphoto">
+                    <img class="headphoto" src="../../images/img04.png" alt="">
+                </div>
+
+                <div class="cells">
+                    <div class="cell cell-input">
+                        <div class="label">
+                            用户ID
+                        </div>
+                        <div class="input">
+                            <input type="text" value="8477659" readonly />
+                        </div>
+                    </div>
+                    <div class="cell cell-input">
+                        <div class="label">
+                            昵称
+                        </div>
+                        <div class="input">
+                            <input type="text" value="张小盒" />
+                        </div>
+                    </div>
+                    <div class="cell cell-input">
+                        <div class="label">
+                            性别
+                        </div>
+                        <div class="input">
+                            <label for="male" class="radio">
+                                <span class="radio-bg"></span>
+                                <input type="radio" name="gender" id="male" value="男" checked="checked" />男
+                                <span class="radio-on"></span>
+                            </label>
+                            <label for="female" class="radio">
+                                <span class="radio-bg"></span>
+                                <input type="radio" name="gender" id="female" value="女" />女
+                                <span class="radio-on"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cell cell-input" id="constellation">
+                        <div class="label">
+                            星座
+                        </div>
+                        <div class="input">
+                            <input type="text" id="constellationVal" value="选择星座" readonly />
+                        </div>
+                        <div class="arrow">
+                            <img src="../../images/icon-arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="cell cell-input" id="birthday">
+                        <div class="label">
+                            生日
+                        </div>
+                        <div class="input">
+                            <input type="text" id="birthdayVal" value="选择生日" readonly />
+                        </div>
+                        <div class="arrow">
+                            <img src="../../images/icon-arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="cell cell-input" id="city">
+                        <div class="label">
+                            城市
+                        </div>
+                        <div class="input">
+                            <input type="text" id="cityVal" value="选择城市" readonly />
+                        </div>
+                        <div class="arrow">
+                            <img src="../../images/icon-arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="cell cell-input">
+                        <div class="label">
+                            职业
+                        </div>
+                        <div class="input">
+                            <input type="text" value="" placeholder="请输入您的职业" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+
+        <!--picker api: https://github.com/ustbhuangyi/picker-->
+        <script src="../../js/vendor/picker/picker.min.js"></script>
+        <script src="../../js/vendor/picker/city.js"></script>
+
+        <script>
+            /**
+             * 选择星座
+             */
+            function setConstellation(){
+                var data = [
+                    {
+                        text: '水瓶座',
+                        value: 1
+                    }, {
+                        text: '双鱼座',
+                        value: 2
+                    },
+                    {
+                        text: '白羊座',
+                        value: 3
+                    },
+                    {
+                        text: '金牛座',
+                        value: 4
+                    },
+                    {
+                        text: '双子座',
+                        value: 5
+                    },
+                    {
+                        text: '巨蟹座',
+                        value: 6
+                    },
+                    {
+                        text: '狮子座',
+                        value: 7
+                    }, {
+                        text: '处女座',
+                        value: 8
+                    },
+                    {
+                        text: '天秤座',
+                        value: 9
+                    },
+                    {
+                        text: '天蝎座',
+                        value: 10
+                    },
+                    {
+                        text: '射手座',
+                        value: 11
+                    },
+                    {
+                        text: '摩羯座',
+                        value: 12
+                    }
+                ];
+
+                var picker = new Picker({
+                    title: '选择星座',
+                    data: [data]
+                });
+
+                var pickerObj = document.getElementById('constellationVal');
+
+                picker.on('picker.select', function (selectedVal, selectedIndex) {
+                    pickerObj.value = data[selectedIndex[0]].text;
+                });
+
+                picker.on('picker.change', function (index, selectedIndex) {
+                    console.log("change", index);
+                    console.log("change", selectedIndex);
+                });
+
+                picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
+                    console.log("valuechange", selectedVal);
+                    console.log("valuechange", selectedIndex);
+                });
+
+                picker.show();
+            }
+
+            /**
+             * 生成年份数组
+             */
+            function generateYear(){
+                var data = [];
+                var length = 50;
+
+                var current = new Date(Date.now()).getFullYear() + "";
+
+                for(var i = 1; i <= length; i++){
+                    data.push({
+                        text: current--,
+                        value: i
+                    })
+                }
+                return data;
+            }
+
+            /**
+             * 生成月份数组
+             */
+            function generateMonth(){
+                var data = [];
+                var length = 12;
+
+                for(var i = 1; i <= length; i++){
+                    data.push({
+                        text: i + "月",
+                        value: i
+                    })
+                }
+                return data;
+            }
+
+            /**
+             * 生成日期数组
+             */
+            function generateDay(){
+                var data = [];
+                var length = 31;
+
+                for(var i = 1; i <= length; i++){
+                    data.push({
+                        text: i,
+                        value: i
+                    })
+                }
+                return data;
+            }
+
+            /**
+             * 选择生日
+             */
+            function setBirthday(){
+
+                var year = generateYear();
+                var month = generateMonth();
+                var day = generateDay();
+
+                var picker = new Picker({
+                    title: '选择生日',
+                    data: [year, month, day]
+                });
+
+                var pickerObj = document.getElementById('birthdayVal');
+
+                picker.on('picker.select', function (selectedVal, selectedIndex) {
+                    var date = year[selectedIndex[0]].text + '-' + month[selectedIndex[1]].text.split("")[0] + '-' + day[selectedIndex[2]].text;
+                    pickerObj.value = date;
+                });
+
+                picker.on('picker.change', function (index, selectedIndex) {
+                    console.log("change", index);
+                    console.log("change", selectedIndex);
+                });
+
+                picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
+                    console.log("valuechange", selectedVal);
+                    console.log("valuechange", selectedIndex);
+                });
+
+                picker.show();
+            }
+
+            /**
+             * 选择城市
+             */
+            function setCity(){
+                var pickerObj = document.getElementById('cityVal');
+
+                var first = []; /* 省，直辖市 */
+                var second = []; /* 市 */
+                var third = []; /* 镇 */
+
+                var selectedIndex = [0, 0, 0]; /* 默认选中的地区 */
+
+                var checked = [0, 0, 0]; /* 已选选项 */
+
+                function creatList(obj, list){
+                    obj.forEach(function(item, index, arr){
+                        var temp = new Object();
+                        temp.text = item.name;
+                        temp.value = index;
+                        list.push(temp);
+                    })
+                }
+
+                creatList(city, first);
+
+                if (city[selectedIndex[0]].hasOwnProperty('sub')) {
+                    creatList(city[selectedIndex[0]].sub, second);
+                } else {
+                    second = [{text: '', value: 0}];
+                }
+
+                if (city[selectedIndex[0]].sub[selectedIndex[1]].hasOwnProperty('sub')) {
+                    creatList(city[selectedIndex[0]].sub[selectedIndex[1]].sub, third);
+                } else {
+                    third = [{text: '', value: 0}];
+                }
+
+                var picker = new Picker({
+                    data: [first, second, third],
+                    selectedIndex: selectedIndex,
+                    title: '选择城市'
+                });
+
+                picker.on('picker.select', function (selectedVal, selectedIndex) {
+                    var text1 = first[selectedIndex[0]].text;
+                    var text2 = second[selectedIndex[1]].text;
+                    var text3 = third[selectedIndex[2]] ? third[selectedIndex[2]].text : '';
+
+                    pickerObj.value = text1 + ' ' + text2 + ' ' + text3;
+                });
+
+                picker.on('picker.change', function (index, selectedIndex) {
+                    if (index === 0){
+                        firstChange();
+                    } else if (index === 1) {
+                        secondChange();
+                    }
+
+                    function firstChange() {
+                        second = [];
+                        third = [];
+                        checked[0] = selectedIndex;
+                        var firstCity = city[selectedIndex];
+                        if (firstCity.hasOwnProperty('sub')) {
+                            creatList(firstCity.sub, second);
+
+                            var secondCity = city[selectedIndex].sub[0]
+                            if (secondCity.hasOwnProperty('sub')) {
+                                creatList(secondCity.sub, third);
+                            } else {
+                                third = [{text: '', value: 0}];
+                                checked[2] = 0;
+                            }
+                        } else {
+                            second = [{text: '', value: 0}];
+                            third = [{text: '', value: 0}];
+                            checked[1] = 0;
+                            checked[2] = 0;
+                        }
+
+                        picker.refillColumn(1, second);
+                        picker.refillColumn(2, third);
+                        picker.scrollColumn(1, 0)
+                        picker.scrollColumn(2, 0)
+                    }
+
+                    function secondChange() {
+                        third = [];
+                        checked[1] = selectedIndex;
+                        var first_index = checked[0];
+                        if (city[first_index].sub[selectedIndex].hasOwnProperty('sub')) {
+                            var secondCity = city[first_index].sub[selectedIndex];
+                            creatList(secondCity.sub, third);
+                            picker.refillColumn(2, third);
+                            picker.scrollColumn(2, 0)
+                        } else {
+                            third = [{text: '', value: 0}];
+                            checked[2] = 0;
+                            picker.refillColumn(2, third);
+                            picker.scrollColumn(2, 0)
+                        }
+                    }
+
+                });
+
+                picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
+                    console.log(selectedVal);
+                    console.log(selectedIndex);
+                });
+
+                picker.show();
+            }
+
+
+            $(function(){
+
+                $("#constellation").on("click", setConstellation);
+                $("#birthday").on("click", setBirthday);
+                $("#city").on("click", setCity);
+
+            })
+
+
+        </script>
+
+    </body>
+</html>

@@ -6,6 +6,12 @@
     个人中心
  */
 
+ul,
+h1{
+    margin:0;
+    padding: 0;
+}
+
 .user-index{
     background-color: #f4f3f7;
     overflow: hidden;
@@ -127,6 +133,7 @@
     padding: .6rem .8rem;
     font-size: .7rem;
     line-height: 1.1rem;
+    text-decoration: none;
 }
 
 .cell:not(:last-child)::after{
@@ -153,8 +160,41 @@
     width: 1rem;
 }
 
+.cell-input.cell .label{
+    flex: none;
+    min-width: 2.8rem;
+}
+
+.cell-input.cell .input{
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.cell-input.cell input{
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+}
 
 
+/* 个人信息 */
+.user-info-headphoto{
+    padding: 1rem 0;
+    text-align: center;
+}
 
+.user-info-headphoto .headphoto{
+    width: 5rem;
+}
 
-
+/* 定制详情 */
+.diy-header{
+    display: flex;
+    padding: 15% 1rem;
+    justify-content: space-between;
+    font-size: .7rem;
+    color: #FFF;
+    background: url("../images/img01.jpg") no-repeat;
+    background-size: cover;
+}
