@@ -30,6 +30,12 @@ html, body{
     height: 2.25rem;
     border-bottom: 1px solid #a3a3a3;
     background-color: #FFF;
+    overflow: hidden;
+    transition: height .3s ease-out;
+    -webkit-transition: height .3s ease-out;
+    -moz-transition: height .3s ease-out;
+    -ms-transition: height .3s ease-out;
+    -o-transition: height .3s ease-out;
 }
 
 .topnav-title{
@@ -166,6 +172,7 @@ html, body{
     height: 3.25rem;
     border-top: 1px solid #a3a3a3;
     background-color: #FFF;
+    overflow: hidden;
 }
 
 .page-tabs{
@@ -242,6 +249,7 @@ html, body{
     width: 3px;
     height: 16px;
     border-radius: 0;
+    border:0;
     background-color: rgba(255, 255, 255, .5);
 }
 
@@ -382,7 +390,7 @@ img{
 
 
 .noline{
-    border-bottom: 0;
+    border-bottom: 0 !important;
 }
 
 /* tabs */
