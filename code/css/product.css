@@ -225,36 +225,12 @@
 /* tab */
 .productDetail .tabs{
     margin-top: .5rem;
-}
-
-.tabs{
     background-color: #FFF;
 }
 
-.tabnav{
-    display: flex;
-    flex-direction: row;
-    font-size: .8rem;
+.productDetail .tabnav{
     border-top: 1px solid #aea5c7;
     border-bottom: 1px solid #aea5c7;
-}
-
-.tabnav .tab{
-    flex: 1;
-    padding: .75rem 0;
-    text-align: center;
-    text-decoration: none;
-    color: #666;
-}
-
-.tabnav .tab.on{
-    color: #231161;
-}
-
-.tabcontent .tabitem{
-    display: none;
-    text-align: center;
-    font-size: .6rem;
 }
 
 .cart-bar{

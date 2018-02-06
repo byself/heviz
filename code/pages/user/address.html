@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>地址管理</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- //
+            1. 样式文件加载有先后顺序：normalize.css -> common.css
+            2. normalize.css是重置样式，必须首先被加载；
+            3. main.css是公共样式;
+         //-->
+        <link rel="stylesheet" href="../../css/normalize.css">
+
+        <link rel="stylesheet" href="../../css/common.css">
+        <link rel="stylesheet" href="../../css/user.css">
+    </head>
+    <body>
+    <div class="app">
+        <header class="topnav">
+            <div class="topnav-title">地址管理</div>
+            <div class="topnav-left">
+                <a class="btn-back"></a>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="address-container">
+
+                <div class="address default">
+
+                    <div class="address-body">
+                        <p><span class="name">收货人：张小盒</span><span class="tel">18221395849</span></p>
+                        <p>收货地址：上海市浦东新区丹桂路999号G1栋上海市浦东新区丹桂路999号G1栋</p>
+                    </div>
+
+                    <div class="address-foot">
+                        <a class="btn" href="javascript:void(0)" onclick="removeAddress(this)"><img class="icon" src="../../images/icon-cart.png" alt="">删除</a>
+                        <a class="btn" href="javascript:void(0)" onclick="editAddress(this)"><img class="icon" src="../../images/icon-cart.png" alt="">编辑</a>
+                    </div>
+
+                </div>
+
+                <div class="address">
+
+                    <div class="address-body">
+                        <p><span class="name">收货人：张小盒</span><span class="tel">18221395849</span></p>
+                        <p>收货地址：上海市浦东新区丹桂路999号G1栋</p>
+                    </div>
+
+                    <div class="address-foot">
+                        <a class="btn" href="javascript:void(0)" onclick="removeAddress(this)"><img class="icon" src="../../images/icon-cart.png" alt="">删除</a>
+                        <a class="btn" href="javascript:void(0)" onclick="editAddress(this)"><img class="icon" src="../../images/icon-cart.png" alt="">编辑</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <div class="address-btn">
+            <a href="newAddress.html">添加新地址</a>
+        </div>
+
+    </div>
+
+    <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+    <script>
+
+        /**
+         * 删除地址
+         * @param el this 当前地址
+         */
+        function removeAddress(el){
+            var $this = $(el);
+            var $address = $this.parents(".address");
+            $address.remove();
+            alert("remove address");
+        }
+
+        /**
+         * 编辑地址
+         * @param el this 当前地址
+         */
+        function editAddress(el){
+            alert("edit address");
+        }
+
+    </script>
+
+    </body>
+</html>

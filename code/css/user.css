@@ -189,6 +189,9 @@ h1{
 }
 
 /* 定制详情 */
+.diy-container{
+    background-color: #F4F3F8;
+}
 .diy-header{
     display: flex;
     padding: 15% 1rem;
@@ -197,4 +200,398 @@ h1{
     color: #FFF;
     background: url("../images/img01.jpg") no-repeat;
     background-size: cover;
+}
+
+.diy-info{
+    padding: .3rem .5rem;
+    text-align: left;
+    border-bottom: 1px solid #D4D1E4;
+    background-color: #FFF;
+}
+
+.diy-info h2{
+    margin: 0 0 .8rem;
+    padding: .8rem .3rem;
+    font-weight: 500;
+    font-size: .8rem;
+    border-bottom: 1px solid #D4D1E4;
+}
+
+.diy-info p{
+    margin: .2rem 0;
+    padding: 0 .3rem;
+    font-size: .7rem;
+    line-height: 1.2rem;
+}
+
+.diy-info .state{
+    float: right;
+    color:#CC0000;
+}
+
+
+.diy-order-info{
+    display: flex;
+}
+
+.diy-order-info .img{
+    width: 5rem;
+}
+
+.diy-order-info .text{
+    flex: 1;
+}
+
+.diy-order-info .r{
+    float: right;
+}
+
+.diy-order-info .r b{
+    color: #4a387b;
+}
+
+.diy-order-info .tip{
+    font-size: .65rem;
+    color:#999;
+}
+
+.diy-box{
+    margin-top: .5rem;
+    padding: .3rem .5rem;
+    border-top: 1px solid #D4D1E4;
+    border-bottom: 1px solid #D4D1E4;
+    background-color:#FFF;
+}
+
+.diy-box h2{
+    margin: 0 0 .8rem;
+    padding: .8rem .3rem;
+    font-weight: 500;
+    font-size: .8rem;
+    border-bottom: 1px solid #D4D1E4;
+}
+
+.diy-box p{
+    margin: .2rem 0;
+    padding: 0 .3rem;
+    font-size: .7rem;
+    line-height: 1.2rem;
+}
+
+.diy-box a{
+    color: #333;
+}
+
+.diy-bar{
+    display: flex;
+    padding: .6rem .5rem;
+    border-top: 1px solid #DDD;
+    background-color: #FFF;
+}
+
+.diy-bar .price{
+    flex: 1;
+    font-size: .7rem;
+    line-height: 1.5rem;
+}
+
+.diy-bar .btn{
+    margin: 0 .3rem;
+    width: 4.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    font-size: .65rem;
+    border-radius: 4px;
+}
+
+.diy-bar .btn-minor{
+    border: 1px solid #bbb;
+}
+
+.diy-bar .btn-primary{
+    border: 1px solid #856AAF;
+    background-color:#856AAF;
+    color:#FFF;
+}
+
+/* 我的定制 */
+.diy-list-container{
+    background-color: #F4F3F8;
+}
+
+.diy-list-container .tabnav .tab{
+    font-size: .65rem;
+}
+
+.diy-list-container .tabnav{
+    position: relative;
+    background-color: #FFF;
+}
+
+.diy-list-container .tabnav::before{
+    content: "";
+    position: absolute;
+    left: .5rem;
+    right: .5rem;
+    bottom: 0;
+    border-top: 1px solid #DDD;
+}
+
+.diy-list-container .tabnav .tab.on::before{
+    content: "";
+    position: absolute;
+    left: .5rem;
+    right: .5rem;
+    bottom: 0;
+    border-top: 2px solid #231161;
+}
+
+.diy-list-container .diy-info{
+    padding-bottom: 0;
+    padding-top: .5rem;
+}
+
+.diy-list-container .diy-info:not(:last-child){
+    margin-bottom: .5rem;
+}
+
+.diy-list-container .diy-info:not(:first-child){
+    border-top: 1px solid #D4D1E4;
+}
+
+.diy-list-container .diy-order-info{
+    padding: .3rem 0;
+}
+
+.diy-list-container .diy-bar{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 优惠券 */
+.coupon-container{
+    min-height: 100%;
+    background-color: #F4F3F8;
+}
+
+.coupon-container .tabnav{
+    background-color: #FFF;
+}
+
+.coupon-container .tabnav .tab.on::before{
+    content: "";
+    position: absolute;
+    left: .5rem;
+    right: .5rem;
+    bottom: 0;
+    border-top: 2px solid #231161;
+}
+
+.coupon-container .tabnav .tab{
+    padding: .5rem 0;
+}
+
+.coupons{
+    padding: 1rem;
+}
+
+.coupon{
+    position: relative;
+    display: flex;
+    margin-bottom: .5rem;
+}
+
+.coupon.used{
+    opacity: .5;
+}
+
+.coupon-price,
+.coupon-type{
+    padding: .8rem 0;
+}
+
+.coupon-price{
+    flex: .6;
+    padding-left: .5rem;
+    color: #FFF;
+    background-color:#5D52B2;
+}
+
+.coupon-type{
+    flex: 1;
+    padding-left: .8rem;
+    text-align: left;
+    color:#5D52B2;
+    background-color:#FFF;
+}
+
+.coupon-price .price,
+.coupon-type .text{
+    margin-bottom: .6rem;
+    font-size: .8rem;
+}
+
+.coupon-price .text,
+.coupon-type .deadline{
+    font-size: .6rem;
+}
+
+.coupon-btn{
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.coupon-btn a{
+    display: block;
+    font-size: .7rem;
+    color:#FFF;
+    text-decoration: none;
+    background-color: #856AAF;
+}
+
+.coupon .radio{
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    margin-top: -.5rem;
+}
+
+/* 我的收藏 */
+.fav-container{
+    background-color: #F4F3F8;
+}
+
+.fav-container .tabnav .tab{
+    font-size: .65rem;
+}
+
+.fav-container .tabnav{
+    position: relative;
+    background-color: #FFF;
+}
+
+.fav-container .tabnav::before{
+    content: "";
+    position: absolute;
+    left: .5rem;
+    right: .5rem;
+    bottom: 0;
+    border-top: 1px solid #DDD;
+}
+
+.fav-container .tabnav .tab.on::before{
+    content: "";
+    position: absolute;
+    left: .5rem;
+    right: .5rem;
+    bottom: 0;
+    border-top: 2px solid #231161;
+}
+
+.fav-container .cart-item{
+    position: relative;
+    margin: 0;
+    border: 0;
+}
+
+.fav-container .cart-item:not(:last-child)::before{
+    content: "";
+    position: absolute;
+    left: .5rem;
+    right: .5rem;
+    bottom: 0;
+    border-top: 1px solid #DDD;
+}
+
+.fav-container .btn-fav-cancel{
+    position: absolute;
+    right: 1rem;
+    bottom: .5rem;
+    margin: 0 .3rem;
+    width: 4rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-size: .6rem;
+    border-radius: 4px;
+    border: 1px solid #856AAF;
+    color: #856AAF;
+}
+
+/* 地址管理 */
+.address-container{
+    background-color: #F4F3F8;
+}
+
+.address{
+    position: relative;
+    background-color:#FFF;
+    border-bottom: 1px solid #a3a3a3;
+}
+
+.address.default::before{
+    content: "默认";
+    position: absolute;
+    left: 1rem;
+    bottom: .55rem;
+    padding: 2px 3px;
+    background-color: #FE4070;
+    border-radius: 3px;
+    color:#FFF;
+    font-size: .6rem;
+}
+
+.address:not(:first-child){
+    border-top: 1px solid #a3a3a3;
+}
+
+.address:not(:last-child){
+    margin-bottom: .5rem;
+}
+
+.address-body{
+    padding: 0 1rem;
+    font-size: .7rem;
+    line-height: 1rem;
+}
+
+.address-body .tel{
+    float: right;
+}
+
+.address-foot{
+    padding: .5rem 1rem;
+    border-top: 1px solid #a3a3a3;
+    overflow: hidden;
+}
+
+.address-foot .btn{
+    float: right;
+    margin-left: 1rem;
+    line-height: 1rem;
+    font-size: .7rem;
+    text-decoration: none;
+    color:#333;
+}
+
+.address-foot .icon{
+    float: left;
+    margin-right: .3rem;
+    width: 1rem;
+}
+
+.address-btn{
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.address-btn a{
+    display: block;
+    font-size: .7rem;
+    color:#FFF;
+    text-decoration: none;
+    background-color: #856AAF;
 }
