@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>首頁</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
@@ -97,8 +97,10 @@
 
         <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="../../js/vendor/ScrollFix.js"></script>
         <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
         <script src="../../js/vendor/videojs/video.min.js"></script>
+        <script src="../../js/main.js"></script>
 
         <script>
 
@@ -128,7 +130,12 @@
                     }
                 });
 
-                var swiper = new Swiper('.swiper-container', {
+                $(".page-slide").on("touchStart", function (e) {
+                    e.defaultPrevented();
+                    e.stopPropagation();
+                });
+
+                var pageSwiper = new Swiper('.swiper-container', {
                     direction: 'vertical',
                     allowTouchMove: false,
                     slidesPerView: 1,
@@ -138,11 +145,15 @@
                     }
                 });
 
-                // 向下滚动到第一屏时，禁用swiper的touch事件
-                swiper.on("touchEnd", function(e){
+                //设置为全局变量，在隐藏头部底部时更新swiper
+                window.pageSwiper = pageSwiper;
 
-                    if(swiper.activeIndex === 0 && swiper.touches.diff > 0){
-                        swiper.allowTouchMove = false;
+                // 向下滚动到第一屏时，禁用swiper的touch事件
+                pageSwiper.on("touchEnd", function(e){
+
+                    if(pageSwiper.activeIndex <= 1 && pageSwiper.touches.diff > 0){
+                        // $("#main").animate({"scrollTop": mod1Height + mod2Height - 250}, 500);
+                        pageSwiper.allowTouchMove = false;
                     }
 
                 });
@@ -152,14 +163,18 @@
 
                 $("#main").scroll(function(){
                     var scrollTop = $("#main").scrollTop();
-//
-//                    console.log("scrollTop:", scrollTop);
-//                    console.log("scrollTop2:", Math.abs(scrollTop - mod1Height - mod2Height));
 
-                    if(  Math.abs(scrollTop - mod1Height - mod2Height) < 1 ){
-                        swiper.allowTouchMove = true;
+
+
+                    if(  Math.abs( mod1Height + mod2Height - scrollTop) < 1 ){
+                        // $("#main").animate({"scrollTop": mod1Height + mod2Height}, 500);
+                        pageSwiper.allowTouchMove = true;
                     }
                 });
+
+                /* 去除橡皮筋效果 */
+                var scrollable = document.getElementById("main");
+                new ScrollFix(scrollable);
 
             });
 

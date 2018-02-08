@@ -17,8 +17,9 @@ html, body{
 
 .main{
     flex: 1;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    /*overflow: hidden;*/
+    overflow: scroll;
+    /*-webkit-overflow-scrolling: touch;*/
 }
 
 /***********
@@ -31,11 +32,11 @@ html, body{
     border-bottom: 1px solid #a3a3a3;
     background-color: #FFF;
     overflow: hidden;
-    transition: height .3s ease-out;
-    -webkit-transition: height .3s ease-out;
-    -moz-transition: height .3s ease-out;
-    -ms-transition: height .3s ease-out;
-    -o-transition: height .3s ease-out;
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
 }
 
 .topnav-title{
@@ -173,6 +174,11 @@ html, body{
     border-top: 1px solid #a3a3a3;
     background-color: #FFF;
     overflow: hidden;
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
 }
 
 .page-tabs{
@@ -424,8 +430,14 @@ img{
     font-size: .6rem;
 }
 
+/* 隐藏head 和 foot */
+.hide-head{
+    margin-top: -3.5rem;
+}
 
-
+.hide-foot{
+    margin-bottom: -3.5rem;
+}
 
 
 

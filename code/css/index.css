@@ -3,9 +3,16 @@
  */
 
 .head{
+    position: relative;
     height: 2.8rem;
     border-bottom: 1px solid #a3a3a3;
     background-color: #FFF;
+    overflow: hidden;
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
 }
 
 .logo{
