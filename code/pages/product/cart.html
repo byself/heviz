@@ -21,7 +21,6 @@
         <link rel="stylesheet" href="../../css/cart.css">
     </head>
     <body>
-    <div class="app">
         <header class="topnav">
             <div class="topnav-title">
                 购物车
@@ -31,6 +30,10 @@
             </div>
             <div class="topnav-right">
                 <a class="btn-cart-edit">编辑</a>
+
+                <!--
+                <a class="btn-cart-edit">完成</a>
+                -->
             </div>
         </header>
 
@@ -183,15 +186,16 @@
                         <span class="radio-text">全部</span>
                     </label>
                 </div>
-                <!--<a class="btn-select btn-select-all on" href="javascript:void(0);"><i class="icon"></i>全选</a>-->
                 <div class="cart-total-price">商品价格：<span>￥<b id="total">1200</b></span></div>
                 <a class="btn-buy-now" href="order.html">去结算</a>
+
+                <!-- 删除按钮
+                <a class="btn-remove" href="order.html">删除</a>
+                -->
             </div>
         </div>
-    </div>
-
-        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>    <script src="../../js/main.js"></script>
 
         <script>
             /**

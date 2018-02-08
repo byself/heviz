@@ -8,7 +8,7 @@
 
 .btn-cart-edit{
     display: block;
-    padding: 0 .75rem;
+    padding: 0 .8rem;
     line-height: 2.25rem;
     font-size: .7rem;
     color: #856aaf;
@@ -18,7 +18,7 @@
     height: 2.4rem;
     border-top: 1px solid #a3a3a3;
     background-color: #FFF;
-    font-size: .7rem;
+    font-size: .75rem;
     line-height: 2.4rem;
 }
 
@@ -37,10 +37,14 @@
     width: 5rem;
     font-size: .65rem;
     color:#FFF;
+    background-color:#856aaf;
 }
 
-.cart-bar-box .btn-buy-now{
-    background-color:#856aaf;
+.cart-bar-box .btn-remove{
+    width: 5rem;
+    font-size: .65rem;
+    color:#FFF;
+    background-color:#cc0000;
 }
 
 .btn-select{
@@ -82,7 +86,7 @@
 }
 
 .cart-total-price b{
-    font-size: .8rem;
+    font-size: .9rem;
 }
 
 /* 购物车-sku list */
@@ -92,10 +96,13 @@
 }
 
 .cart-item{
-    margin: .5rem 0;
-    border-top: 1px solid #cdc3ea;
+    margin-bottom: .5rem;
     border-bottom: 1px solid #cdc3ea;
     background-color: #FFF;
+}
+
+.cart-item:not(:first-child){
+    border-top: 1px solid #cdc3ea;
 }
 
 .cart-item-box{
@@ -120,6 +127,7 @@
 }
 
 .cart-item-img{
+    padding: 0 .5rem;
     width: 5rem;
 }
 
@@ -135,12 +143,12 @@
 }
 
 .cart-item-info h2{
-    font-size: .75rem;
+    font-size: .7rem;
 }
 
 .cart-item-info p{
     margin-bottom: .8rem;
-    font-size: .7rem;
+    font-size: .65rem;
     color: #8b8b8b;
 }
 
@@ -166,7 +174,7 @@
 
 .cart-item-info .filter-count{
     position: absolute;
-    right: 1rem;
+    right: .8rem;
     bottom: .2rem;
     margin: 0;
     width: 4.2rem;
@@ -243,6 +251,11 @@
     color:#333;
 }
 
+.cell .label .icon{
+    margin-right: .3rem;
+    width: 1rem;
+}
+
 .cell .state{
     color:#333;
 }
@@ -271,8 +284,8 @@
 .order-container .cart-item:not(:last-child)::after{
     content: "";
     position: absolute;
-    left: .8rem;
-    right: .8rem;
+    left: .75rem;
+    right: .75rem;
     bottom: 0;
     height: 1px;
     background-color: #aea5c7;
@@ -280,14 +293,15 @@
 
 .order-title{
     padding: .7rem;
-    font-size: .7rem;
+    font-size: .75rem;
     background-color: #FFF;
 }
 
 .order-address-container{
     position: relative;
-    background-color: #FFF;
-    border-bottom: 4px solid #C00;
+    padding-bottom: 4px;
+    background: url("../images/img-line.jpg") repeat-x left bottom #FFF;
+    background-size: auto 4px;
 }
 
 .order-address-container .arrow{
@@ -307,7 +321,7 @@
 }
 
 .order-address{
-    padding: .5rem;
+    padding: .8rem .5rem;
     font-size: .65rem;
 }
 
@@ -346,16 +360,16 @@
 
 .order-no-address a{
     display: block;
-    padding: .5rem 0;
+    padding: .5rem 0 .8rem;
     text-align: center;
-    font-size: .65rem;
+    font-size: .7rem;
     text-decoration: none;
     color: #333;
 }
 
 .order-no-address img{
     margin-bottom: .5rem;
-    width: 2rem;
+    width: 3rem;
 }
 
 

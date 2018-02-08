@@ -2,8 +2,25 @@
     create by wangzili on 2018/1/23
  */
 
+/*.head{*/
+    /*position: relative;*/
+    /*height: 2.8rem;*/
+    /*border-bottom: 1px solid #a3a3a3;*/
+    /*background-color: #FFF;*/
+    /*overflow: hidden;*/
+    /*transition: all .5s ease-out;*/
+    /*-webkit-transition: all .5s ease-out;*/
+    /*-moz-transition: all .5s ease-out;*/
+    /*-ms-transition: all .5s ease-out;*/
+    /*-o-transition: all .5s ease-out;*/
+/*}*/
+
 .head{
-    position: relative;
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
     height: 2.8rem;
     border-bottom: 1px solid #a3a3a3;
     background-color: #FFF;

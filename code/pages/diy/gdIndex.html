@@ -23,7 +23,6 @@
         <link rel="stylesheet" href="../../css/diy.css">
     </head>
     <body>
-    <div class="app">
         <header class="topnav">
             <div class="topnav-title">高端定制</div>
             <div class="topnav-left">
@@ -76,15 +75,19 @@
                 </a>
             </div>
         </footer>
-    </div>
-
-        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>    <script src="../../js/main.js"></script>
         <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
         <script>
 
             $(function(){
 
+                var winHeight = window.innerHeight;
+                var topHeight = $(".topnav").height();
+                var footHeight = $(".foot").height();
+                var height = winHeight - topHeight - footHeight;
+
+                $(".page-slide").height(height);
                 var swiper = new Swiper('.swiper-container', {
                     direction: 'vertical',
                     observer:true,

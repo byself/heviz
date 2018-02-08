@@ -1,6 +1,5 @@
 (function(){
 
-    var $scroll = $(".main");
     scrollEvent();
     //监听页面滚动事件
     function scrollEvent() {
@@ -9,8 +8,8 @@
         var $topnav = $(".topnav");
         var $foot = $(".foot");
 
-        $scroll.scroll(function (e) {
-            alert("main");
+        $(window).scroll(function (e) {
+            // console.log("main:", scrollDirection);
             scrollFunc();
             if(scrollDirection == 'down'){
                 $head.addClass("hide-head");
@@ -22,41 +21,40 @@
                 $foot.removeClass("hide-foot");
             }
 
-            pageSwiper && pageSwiper.update();
-
-            e.stopPropagation();
         });
     }
 
-    var scrollAction = {x: 'undefined', y: 'undefined'}, scrollDirection;
+
+    var distance = 0;
+    var scrollAction = {x: 0, y: 0}, scrollDirection;
+
+    var winHeight = $(window).height();
     function scrollFunc() {
 
-        pageXOffset = $scroll.scrollLeft();
-        pageYOffset = $scroll.scrollTop();
+        var pageYOffset = window.scrollY;
+        var docHeight = $(document).height();
 
-        if (typeof scrollAction.x == 'undefined') {
-            scrollAction.x = pageXOffset;
+        // console.log("pageYOffset:",window.scrollY);
+        // console.log("docHeight:",docHeight);
+        // console.log("winHeight:",winHeight);
+        // console.log("winHeight2:",winHeight + pageYOffset < docHeight);
+
+        if(pageYOffset >= 0 && (winHeight + pageYOffset < docHeight)){
+            var diffY = scrollAction.y - pageYOffset;
+
+            if (diffY < distance) {
+                // Scroll down
+                scrollDirection = 'down';
+            } else if (diffY > distance) {
+                // Scroll up
+                scrollDirection = 'up';
+            }
+
             scrollAction.y = pageYOffset;
         }
-        var diffX = scrollAction.x - pageXOffset;
-        var diffY = scrollAction.y - pageYOffset;
-        if (diffX < 0) {
-            // Scroll right
-            scrollDirection = 'right';
-        } else if (diffX > 0) {
-            // Scroll left
-            scrollDirection = 'left';
-        } else if (diffY < 0) {
-            // Scroll down
-            scrollDirection = 'down';
-        } else if (diffY > 0) {
-            // Scroll up
-            scrollDirection = 'up';
-        } else {
-            // First scroll event
-        }
-        scrollAction.x = pageXOffset;
-        scrollAction.y = pageYOffset;
+
+
     }
+
 
 })();

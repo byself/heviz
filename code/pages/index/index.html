@@ -93,14 +93,11 @@
                 </a>
             </div>
         </footer>
-    </div>
-
         <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
-        <script src="../../js/vendor/ScrollFix.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>    <script src="../../js/main.js"></script>
+        <script src="../../js/main.js"></script>
         <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
         <script src="../../js/vendor/videojs/video.min.js"></script>
-        <script src="../../js/main.js"></script>
 
         <script>
 
@@ -130,10 +127,7 @@
                     }
                 });
 
-                $(".page-slide").on("touchStart", function (e) {
-                    e.defaultPrevented();
-                    e.stopPropagation();
-                });
+                $(".page-slide").height(window.innerHeight);
 
                 var pageSwiper = new Swiper('.swiper-container', {
                     direction: 'vertical',
@@ -145,36 +139,23 @@
                     }
                 });
 
-                //设置为全局变量，在隐藏头部底部时更新swiper
-                window.pageSwiper = pageSwiper;
-
                 // 向下滚动到第一屏时，禁用swiper的touch事件
                 pageSwiper.on("touchEnd", function(e){
-
-                    if(pageSwiper.activeIndex <= 1 && pageSwiper.touches.diff > 0){
-                        // $("#main").animate({"scrollTop": mod1Height + mod2Height - 250}, 500);
+                    console.log("swiper:", pageSwiper.activeIndex);
+                    if(pageSwiper.activeIndex === 0 && pageSwiper.touches.diff > 0){
                         pageSwiper.allowTouchMove = false;
                     }
 
                 });
 
-                var mod1Height = $("#mod1").outerHeight(true);
-                var mod2Height = $("#mod2").outerHeight(true);
+                $(window).scroll(function(){
+                    var scrollTop = window.scrollY;
+                    var offsetTop = $(".page-slide").offset().top;
 
-                $("#main").scroll(function(){
-                    var scrollTop = $("#main").scrollTop();
-
-
-
-                    if(  Math.abs( mod1Height + mod2Height - scrollTop) < 1 ){
-                        // $("#main").animate({"scrollTop": mod1Height + mod2Height}, 500);
+                    if(  Math.abs( offsetTop - scrollTop) < 1 ){
                         pageSwiper.allowTouchMove = true;
                     }
                 });
-
-                /* 去除橡皮筋效果 */
-                var scrollable = document.getElementById("main");
-                new ScrollFix(scrollable);
 
             });
 

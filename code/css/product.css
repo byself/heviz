@@ -286,7 +286,7 @@
     flex: 1;
     font-size: .65rem;
     color:#FFF;
-    line-height: 2.2rem;
+    line-height: 2.4rem;
 }
 
 .cart-bar-box .btn-add-cart{
@@ -364,7 +364,7 @@
     width: 1.5rem;
     height: 1.5rem;
     text-align: center;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     font-size: 1rem;
     border: 1px solid #856aaf;
     color: #856aaf;
