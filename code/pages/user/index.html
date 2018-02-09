@@ -27,7 +27,7 @@
             <div class="user-base-info">
                 <a href="userInfo.html"><img class="headphoto" src="../../images/img04.png" alt=""></a>
                 <div>张小盒（ID:2365894）</div>
-                <a class="btn-bind-tel" href="javascript:void(0)">手机号未绑定</a>
+                <a class="btn-bind-tel" href="javascript:void(0)" onclick="showDetail()">手机号未绑定</a>
             </div>
 
             <div class="user-items user-divide-vertical">
@@ -182,7 +182,75 @@
                 </a>
             </div>
         </footer>
-    <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>    <script src="../../js/main.js"></script>
+
+        <div class="mask">
+
+            <div class="popbox">
+
+                <div class="tel-unbind">
+
+                    <div class="tel-unbind-head">
+                        <img class="icon" src="../../images/icon-cart2.png" alt="">
+                        手机号未绑定
+                    </div>
+
+                    <div class="tel-unbind-text">
+                        <h2>绑定手机号的好处：</h2>
+                        <p>1. 凭手机号参与更多优惠活动</p>
+                        <p>2. 领取会员福利</p>
+                        <p>3. 方便及时沟通您的需求</p>
+                    </div>
+
+                    <div class="tel-unbind-btn">
+                        <a class="btn-bind" href="javascript:void(0)" onclick="bindPhone();">立即绑定</a>
+                    </div>
+
+                </div>
+
+                <a href="javascript:void(0);" class="close" onclick="closePopbox()"></a>
+            </div>
+
+        </div>
+
+        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="../../js/main.js"></script>
+        <script>
+            /**
+             * 显示弹窗
+             */
+            function showDetail(){
+                var $mask = $(".mask");
+                var $popbox = $(".popbox");
+
+                $("body").css("overflow", "hidden");
+
+                $mask.fadeIn(function(){
+                    $popbox.addClass("show");
+                })
+            }
+
+            /**
+             *  关闭弹窗
+             */
+            function closePopbox(){
+                var $mask = $(".mask");
+                var $popbox = $(".popbox");
+
+                $("body").css("overflow", "initial");
+
+                $popbox.removeClass("show");
+                $mask.fadeOut(500);
+
+            }
+
+            /**
+             *  绑定手机号
+             */
+            function bindPhone(){
+                closePopbox();
+                // alert("绑定成功");
+            }
+        </script>
     </body>
 </html>

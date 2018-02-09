@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>我的订单</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- //
+            1. 样式文件加载有先后顺序：normalize.css -> common.css
+            2. normalize.css是重置样式，必须首先被加载；
+            3. main.css是公共样式;
+         //-->
+        <link rel="stylesheet" href="../../css/normalize.css">
+
+        <link rel="stylesheet" href="../../css/common.css">
+        <link rel="stylesheet" href="../../css/user.css">
+        <link rel="stylesheet" href="../../css/cart.css">
+    </head>
+    <body>
+        <header class="topnav">
+            <div class="topnav-title">我的订单</div>
+            <div class="topnav-left">
+                <a class="btn-back"></a>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="diy-list-container">
+
+                <div class="tabs" id="tabs">
+                    <div class="tabnav">
+                        <a class="tab on" href="javascript:void(0);">全部</a>
+                        <a class="tab" href="javascript:void(0);">待付款</a>
+                        <a class="tab" href="javascript:void(0);">待收货</a>
+                        <a class="tab" href="javascript:void(0);">已完成</a>
+                        <a class="tab" href="javascript:void(0);">已取消</a>
+                    </div>
+                    <div class="tabcontent">
+                        <div class="tabitem" style="display: block">
+                            <div class="order-info">
+                                <p>订单编号：256984561 <span class="state">等待付款</span></p>
+                                <div>
+                                    <div class="cart-item-box">
+                                        <div class="cart-item-img">
+                                            <img src="../../images/img08.jpg" alt="">
+                                        </div>
+                                        <div class="cart-item-info">
+                                            <h2>十二星座圆牌925银手链</h2>
+                                            <p>收藏时间：2018-2-6 16：40</p>
+                                            <div class="price">￥<b>1200</b></div>
+                                            <div class="count">× 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diy-bar">
+                                    <div class="price">应付金额：￥1000</div>
+                                    <div class="btn btn-minor">取消订单</div>
+                                    <div class="btn btn-primary">立即付款</div>
+                                </div>
+                            </div>
+                            <div class="order-info">
+                                <p>订单编号：256984561 <span class="state">等待收货</span></p>
+                                <div>
+                                    <div class="cart-item-box">
+                                        <div class="cart-item-img">
+                                            <img src="../../images/img08.jpg" alt="">
+                                        </div>
+                                        <div class="cart-item-info">
+                                            <h2>十二星座圆牌925银手链</h2>
+                                            <p>收藏时间：2018-2-6 16：40</p>
+                                            <div class="price">￥<b>1200</b></div>
+                                            <div class="count">× 1</div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-box">
+                                        <div class="cart-item-img">
+                                            <img src="../../images/img08.jpg" alt="">
+                                        </div>
+                                        <div class="cart-item-info">
+                                            <h2>十二星座圆牌925银手链</h2>
+                                            <p>收藏时间：2018-2-6 16：40</p>
+                                            <div class="price">￥<b>1200</b></div>
+                                            <div class="count">× 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diy-bar">
+                                    <div class="price">应付金额：￥1000</div>
+                                    <div class="btn btn-minor">查看物流</div>
+                                    <div class="btn btn-primary">确认收货</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+    <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>    <script src="../../js/main.js"></script>
+    </body>
+</html>
