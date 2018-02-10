@@ -34,7 +34,15 @@
 
             <div class="photoDiy">
                 <div class="index-mod">
-                    <video id="video" class="video-js vjs-big-play-centered"></video>
+                    <div class="video-container">
+                        <div class="video-poster">
+                            <img src="../../images/diy-photo-video.jpg" alt="">
+                            <img class="icon" onclick="video()" src="../../images/icon-video.png" alt="">
+                        </div>
+                        <div class="video-box" id="videoBox">
+                            <video id="video" class="video-js vjs-big-play-centered"></video>
+                        </div>
+                    </div>
                     <img src="../../images/diy-photo-text.jpg" alt="">
                 </div>
 
@@ -221,7 +229,7 @@
 
         </main>
 
-        <footer class="foot">
+        <footer class="foot fixed-bottom">
             <div class="page-tabs">
                 <a class="page-tab page-home on" href="/pages/index/">
                     <i class="icon"></i>
@@ -246,21 +254,22 @@
             </div>
         </footer>
     <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>    <script src="../../js/main.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
 
         <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
         <script src="../../js/vendor/videojs/video.min.js"></script>
 
         <script>
 
-            $(function(){
-
+            /**
+             * 视频播放
+             */
+            function video() {
+                $("#videoBox").show();
                 videojs("video", {
                     loop: true,
-                    autoplay: false,
                     muted: true,
                     preload: "auto",
-                    poster: "../../images/diy-photo-video.jpg",
                     fluid: true,
                     controls: true,
                     sources: [{
@@ -269,15 +278,21 @@
                     }, {
                         src: 'http://vjs.zencdn.net/v/oceans.webm',
                         type: 'video/webm'
-                    }],
-                    controlBar: {
-                        captionsButton: false,
-                        chaptersButton : false,
-                        liveDisplay:false,
-                        playbackRateMenuButton: false,
-                        subtitlesButton:false
-                    }
+                    }]
+                }, function onPlayerReady() {
+
+                    $("#videoBox").css("opacity", 1);
+                    this.play();
+
+                    this.on("fullscreenchange", function(){
+//                        $("#videoBox").css("opacity", 0);
+                    })
                 });
+            }
+
+
+            $(function(){
+
 
                 var photoSwiper = new Swiper('.photo-swiper .swiper-container', {
                     slidesPerView: 4

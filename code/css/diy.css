@@ -53,12 +53,15 @@
 }
 
 /* 来石定制 */
+.lsShow{
+    padding-bottom: .9rem;
+}
 .lsShow .vjs-fluid{
     padding-top: 100%;
 }
 
 .video-container{
-    margin-top: .5rem;
+    /*margin-top: .5rem;*/
 }
 
 .diy-ls-btn{
@@ -93,6 +96,7 @@
 
 /* 重写swiper：来石定制 */
 .lsIndex{
+    padding-bottom: 1rem;
     background-color: #f6f1ff;
 }
 .ls-swiper{
@@ -130,6 +134,10 @@
 }
 
 /* end swiper */
+
+.ls-content{
+    padding-bottom: .9rem;
+}
 
 .ls-content-item{
     background-color: #f5f1ff;
