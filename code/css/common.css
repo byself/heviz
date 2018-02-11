@@ -526,7 +526,10 @@ img{
     margin-left: -1.5em;
 }
 
-
+/* 字体红色 */
+.color-red{
+    color:#CC0000;
+}
 
 
 

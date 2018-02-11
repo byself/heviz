@@ -272,6 +272,7 @@
 /* 提交订单 */
 .order-container{
     background-color: #f4f3f7;
+    overflow: hidden;
 }
 
 .order-container .cart-items{
@@ -325,8 +326,11 @@
 }
 
 .order-address{
+    display: block;
     padding: .8rem .5rem;
     font-size: .65rem;
+    text-decoration: none;
+    color: #333;
 }
 
 .order-address-info{

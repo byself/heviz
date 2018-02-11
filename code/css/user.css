@@ -13,6 +13,7 @@ h1{
 }
 
 .user-index{
+    padding-bottom: 3.25rem;
     background-color: #f4f3f7;
     overflow: hidden;
 }
@@ -245,6 +246,7 @@ h1{
 
 /* 定制详情 */
 .diy-container{
+    padding-bottom: .5rem;
     background-color: #F4F3F8;
 }
 .diy-header{
@@ -311,7 +313,8 @@ h1{
 }
 
 .diy-box{
-    margin-top: .5rem;
+    position: relative;
+    margin: .5rem 0;
     padding: .3rem .5rem;
     border-top: 1px solid #D4D1E4;
     border-bottom: 1px solid #D4D1E4;
@@ -337,6 +340,10 @@ h1{
     color: #333;
 }
 
+.diy-box .icon{
+    width: 1rem;
+}
+
 .diy-bar{
     display: flex;
     padding: .6rem .5rem;
@@ -358,6 +365,8 @@ h1{
     text-align: center;
     font-size: .65rem;
     border-radius: 4px;
+    text-decoration: none;
+    color: #333;
 }
 
 .diy-bar .btn-minor{
@@ -580,13 +589,13 @@ h1{
     background-color: #F4F3F8;
 }
 
-.address{
+.address-container .address{
     position: relative;
     background-color:#FFF;
     border-bottom: 1px solid #a3a3a3;
 }
 
-.address.default::before{
+.address-container .address.default::before{
     content: "默认";
     position: absolute;
     left: 1rem;
@@ -598,11 +607,11 @@ h1{
     font-size: .6rem;
 }
 
-.address:not(:first-child){
+.address-container .address:not(:first-child){
     border-top: 1px solid #a3a3a3;
 }
 
-.address:not(:last-child){
+.address-container .address:not(:last-child){
     margin-bottom: .5rem;
 }
 
@@ -887,3 +896,147 @@ h1{
     box-shadow: 0 0 0 1px #856AAF;
 }
 
+/* 邀请有礼 */
+.invite-container{
+    background-color: #F9F7FC;
+}
+
+.invite-info{
+    padding-top: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #DDD;
+    background-color: #FFF;
+}
+
+.invite-info .icon{
+    width: 3rem;
+    height: auto;
+}
+
+.invite-info h2{
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    font-size: .9rem;
+    font-weight: 500;
+}
+.invite-info .price{
+    margin-right: .3rem;
+    color: #F00;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.user-btns{
+    display: flex;
+    justify-content: center;
+}
+
+.user-btns a{
+    display: block;
+    flex: 1;
+    margin: .75rem;
+    max-width: 17rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: .3rem;
+    font-size: .75rem;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #856aaf;
+}
+
+.user-btns .btn-minor{
+    opacity: .5;
+}
+
+.invite-count{
+    display: flex;
+    margin-top: .5rem;
+    padding: 0 1rem;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    justify-content: space-between;
+    background-color:#FFF;
+}
+
+.invite-count-item{
+    position: relative;
+    padding: .9rem 1.5rem;
+    font-size: .75rem;
+    line-height: 1rem;
+}
+
+.invite-count-item .count{
+    margin-right: .3rem;
+    color: #F00;
+    font-weight: 700;
+}
+
+.invite-count-item .icon{
+    position: absolute;
+    left: 0;
+    top: .9rem;
+    width: 1rem;
+}
+
+.invite-list{
+    margin-top: .5rem;
+    border-top: 1px solid #DDD;
+    background-color: #FFF;
+}
+
+.invite-list h2{
+    padding: 0 1rem;
+    font-size: .8rem;
+}
+
+.invite-item{
+    display: flex;
+    padding: .6rem 1rem;
+    white-space: nowrap;
+}
+
+.invite-item:not(:first-child){
+    border-top: 1px solid #DDD;
+}
+
+.invite-item-img{
+    margin-right: 5%;
+    flex: .4;
+    line-height: 3rem;
+}
+
+.invite-item-name{
+    flex: .8;
+    margin-right: .5rem;
+    font-size: .65rem;
+}
+.invite-item-time{
+    flex: 1;
+    font-size: .65rem;
+}
+
+/* 订单详情 */
+.order-track{
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: #333;
+}
+
+.order-track .arrow{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -.5rem;
+    width: 1rem;
+    height: 1rem;
+}
+.order-track .arrow .icon{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/icon-arrow.png") no-repeat;
+    background-size: 100% auto;
+}

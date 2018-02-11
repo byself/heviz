@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>提交订单</title>
+        <title>订单详情</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -19,17 +19,15 @@
 
         <link rel="stylesheet" href="../../css/common.css">
         <link rel="stylesheet" href="../../css/cart.css">
+        <link rel="stylesheet" href="../../css/user.css">
     </head>
     <body>
         <header class="topnav">
             <div class="topnav-title">
-                提交订单
+                订单详情
             </div>
             <div class="topnav-left">
                 <a class="btn-back"></a>
-            </div>
-            <div class="topnav-right">
-
             </div>
         </header>
 
@@ -37,9 +35,14 @@
 
             <div class="order-container">
 
+                <div class="diy-header">
+                    <span>状态：等待付款</span>
+                    <span>订单编号：25469875</span>
+                </div>
+
                 <div class="order-address-container">
 
-                    <a class="order-address" href="../user/address.html">
+                    <a class="order-address" href="address.html">
 
                         <div class="order-address-info">
                             <span class="tag">默认</span>
@@ -52,13 +55,6 @@
                         </div>
 
                     </a>
-
-                    <div class="order-no-address">
-                        <a href="../user/address.html">
-                            <img src="../../images/img-no-address.jpg" alt="">
-                            <div>请填写收货人信息</div>
-                        </a>
-                    </div>
 
                     <div class="arrow"><i class="icon"></i></div>
 
@@ -137,58 +133,27 @@
 
                 </div>
 
-                <div class="cells">
-                    <div class="cell" onclick="showCoupon()">
-                        <div class="label">
-                            优惠券(5张可用)
-                        </div>
-                        <div class="state">
-                            -￥100
-                        </div>
-                        <div class="arrow">
-                            <img src="../../images/icon-arrow.png" alt="">
-                        </div>
-                    </div>
-                    <div class="cell">
-                        <div class="label">
-                            商品合计
-                        </div>
-                        <div class="state">
-                            ￥2598
-                        </div>
-                    </div>
-                    <div class="cell">
-                        <div class="label">
-                            优惠券
-                        </div>
-                        <div class="state">
-                            -￥100
-                        </div>
-                    </div>
-                    <div class="cell">
-                        <div class="label">
-                            设计费抵扣(赠送余额)
-                        </div>
-                        <div class="state">
-                            -￥100
-                        </div>
-                    </div>
+                <div class="diy-box">
+                    <h2>订单信息</h2>
+                    <p>商品合计：￥2598</p>
+                    <p>优惠券：-￥100.00</p>
+                    <p>定金抵扣：-￥100.00</p>
+                    <p class="color-red">实际支付：￥2398.00</p>
                 </div>
 
-                <div class="cells">
-                    <div class="cell">
-                        <div class="label">
-                            支付方式
-                        </div>
-                    </div>
-                    <div class="cell">
-                        <div class="label">
-                            <img class="icon" src="../../images/icon-wechat.png" alt="">微信支付
-                        </div>
-                        <div class="state">
-                            ￥2598
-                        </div>
-                    </div>
+                <div class="diy-box">
+                    <p>订单编号：256984561</p>
+                    <p>提交时间：2018-2-6 14:16</p>
+                    <p>支付方式：微信支付</p>
+                </div>
+
+                <div class="diy-box">
+                    <a class="order-track" href="track.html">
+                        <p><img class="icon" src="../../images/icon-cart.png" alt=""></p>
+                        <p>您的订单暂未投递</p>
+                        <p>2017-5-1 14:14</p>
+                        <div class="arrow"><i class="icon"></i></div>
+                    </a>
                 </div>
 
             </div>
