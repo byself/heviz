@@ -3,7 +3,7 @@
  */
 
 html, body{
-    /*height: 100%;*/
+    height: 100%;
     font-size: 20px;  /* 设置根字体大小，下文使用rem */
 }
 
@@ -20,6 +20,7 @@ html{
     /*-webkit-overflow-scrolling: touch;*/
     padding-top: 2.25rem;
     padding-bottom: 2.4rem;
+    min-height: 100%;
 }
 
 .fixed-bottom{
@@ -52,7 +53,7 @@ html{
 
 .topnav-title{
     line-height: 2.25rem;
-    font-size: .95rem;
+    font-size: .9rem;
     text-align: center;
     font-weight: 700;
     overflow: hidden;

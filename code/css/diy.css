@@ -272,9 +272,9 @@
 
 .diyText .text-box{
     margin: .5rem 0;
-    padding: .75rem;
+    padding: .75rem .75rem 0.2rem;
     font-size: .65rem;
-    line-height: 1.1rem;
+    line-height: 1rem;
     text-align: justify;
     background-color: #f4f3f7;
 }
@@ -291,10 +291,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 1.25rem;
-    height: 1.25rem;
-    background: url("../images/icon-diy.png") no-repeat 0 -27px;
-    background-size: 100% auto;
+    width: 1rem;
+    height: 1rem;
 }
 
 .diyText .text-box h3{
@@ -303,7 +301,7 @@
 }
 
 .diyText .text-box p{
-    margin: .5rem 0;
+    margin: .2rem 0 .5rem;
 }
 
 
