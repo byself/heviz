@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>订单详情</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- //
+            1. 样式文件加载有先后顺序：normalize.css -> common.css
+            2. normalize.css是重置样式，必须首先被加载；
+            3. main.css是公共样式;
+         //-->
+        <link rel="stylesheet" href="../../css/normalize.css">
+
+        <link rel="stylesheet" href="../../css/common.css">
+        <link rel="stylesheet" href="../../css/cart.css">
+        <link rel="stylesheet" href="../../css/user.css">
+    </head>
+    <body>
+        <header class="topnav">
+            <div class="topnav-title">
+                订单详情
+            </div>
+            <div class="topnav-left">
+                <a class="btn-back"></a>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="order-container">
+
+                <div class="diy-header">
+                    <span>状态：等待付款</span>
+                    <span>订单编号：25469875</span>
+                </div>
+
+                <div class="order-address-container">
+
+                    <a class="order-address" href="address.html">
+
+                        <div class="order-address-info">
+                            <span class="tag">默认</span>
+                            <span class="name">收货人：张小盒</span>
+                            <span class="tel">18221395849</span>
+                        </div>
+
+                        <div class="address">
+                            <i class="icon"></i>收货地址：上海市浦东新区丹桂路999号G1栋
+                        </div>
+
+                    </a>
+
+                    <div class="arrow"><i class="icon"></i></div>
+
+                </div>
+
+                <div class="order-title">
+                    商品信息
+                </div>
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="cart-item-box">
+                            <div class="cart-item-img">
+                                <img src="../../images/img08.jpg" alt="">
+                            </div>
+                            <div class="cart-item-info">
+                                <h2>十二星座圆牌925银手链</h2>
+                                <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
+                                <div class="price">￥<b>1200</b></div>
+                                <div class="count">× 1</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item-box">
+                            <div class="cart-item-img">
+                                <img src="../../images/img08.jpg" alt="">
+                            </div>
+                            <div class="cart-item-info">
+                                <h2>十二星座圆牌925银手链</h2>
+                                <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
+                                <div class="price">￥<b>1200</b></div>
+                                <div class="count">× 1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="diy-box">
+                    <h2>订单信息</h2>
+                    <p>商品合计：￥2598</p>
+                    <p>优惠券：-￥100.00</p>
+                    <p>定金抵扣：-￥100.00</p>
+                    <p class="color-red">实际支付：￥2398.00</p>
+                </div>
+
+                <div class="diy-box">
+                    <p>订单编号：256984561</p>
+                    <p>提交时间：2018-2-6 14:16</p>
+                    <p>支付方式：微信支付</p>
+                </div>
+
+                <div class="diy-box">
+                    <a class="order-track" href="track.html">
+                        <p><img class="icon" src="../../images/icon-car.png" alt=""></p>
+                        <p>您的订单暂未投递</p>
+                        <p>2017-5-1 14:14</p>
+                        <div class="arrow"><i class="icon"></i></div>
+                    </a>
+                </div>
+
+            </div>
+
+        </main>
+
+        <div class="diy-bar fixed-bottom">
+            <div class="price">应付金额：￥1000</div>
+            <div class="btn btn-minor">取消订单</div>
+            <div class="btn btn-primary">支付设计费</div>
+        </div>
+
+        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+
+    </body>
+</html>

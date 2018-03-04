@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>登录-HEVIZ</title>
+        <title>个人信息</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -20,15 +20,15 @@
         <link rel="stylesheet" href="../../css/user.css">
     </head>
     <body>
-        <header class="topnav noline">
+        <header class="topnav">
             <div class="topnav-title">
-                <!--个人信息-->
+                个人信息
             </div>
             <div class="topnav-left">
                 <a class="btn-back"></a>
             </div>
             <div class="topnav-right">
-                <a href="" class="btn-text">保存</a>
+                <a href="javascript:void(0);" onclick="toast('保存成功')" class="btn-text">保存</a>
             </div>
         </header>
 
@@ -404,6 +404,25 @@
                 picker.show();
             }
 
+            /**
+             *  toast
+             * @param msg
+             */
+            function toast(msg){
+
+                if($(".toast").length) return;
+
+                var delay = 1000;
+                var html = '<div class="toast" style="z-index:999;position: absolute;left:0;right:0;top:0;bottom:0;margin:auto;width: 7rem;height:2rem;line-height:2rem;text-align:center;border-radius:1rem;font-size:.8rem;color:#FFF;background-color:rgba(0,0,0,.7);">'+msg+'</div>';
+                var $html = $(html);
+                $html.appendTo($("body"));
+
+                setTimeout(function(){
+                    console.log("timeout");
+                    $html.remove();
+                    $html = null;
+                }, delay);
+            }
 
             $(function(){
 
