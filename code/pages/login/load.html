@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>登录-HEVIZ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- //
+            1. 样式文件加载有先后顺序：normalize.css -> common.css
+            2. normalize.css是重置样式，必须首先被加载；
+            3. main.css是公共样式;
+         //-->
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <style>
+            html,body{
+                height: 100%;
+                font-size:20px;
+            }
+
+            .load{
+                margin: 0 auto;
+                max-width: 37.5rem;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .ad{
+                flex: 1%;
+                background: url(../../images/ad.jpg) no-repeat;
+                background-size: cover;
+            }
+
+            .ad img{
+                width: 100%;
+            }
+
+            .logo{
+                padding: 1rem 0 1rem;
+                text-align: center;
+                background-color:#FFF;
+            }
+
+            .skip-ad{
+                position: fixed;
+                top: .75rem;
+                right:.75rem;
+                height: 1.4rem;
+                line-height:1.4rem;
+                padding: 0 .8rem;
+                color:#FFF;
+                font-size:.6rem;
+                text-decoration: none;
+                border-radius: .7rem;
+                background-color:rgba(0,0,0,.5);
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="load">
+            <div class="ad">
+
+            </div>
+            <div class="logo">
+                <img src="../../images/logo2.png" width="200" alt="">
+            </div>
+        </div>
+
+        <a class="skip-ad" href="../index/index.html">跳过广告</a>
+
+        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+        <script>
+
+            /*
+            setTimeout(function(){
+                location.href = "../index/index.html";
+            }, 5000);
+            */
+
+        </script>
+
+    </body>
+</html>

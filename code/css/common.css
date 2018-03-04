@@ -369,6 +369,54 @@ img{
 }
 
 /* radio美化 */
+/*.radio{*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+    /*line-height: 18px;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.radio input{*/
+    /*display: none;*/
+/*}*/
+/*.radio .radio-bg{*/
+    /*display: inline-block;*/
+    /*height: 18px;*/
+    /*width: 18px;*/
+    /*padding: 0;*/
+    /*border: 1px solid #856AAF;*/
+    /*border-radius: 100%;*/
+    /*vertical-align: top;*/
+    /*cursor: pointer;*/
+    /*transition: all 0.2s ease;*/
+/*}*/
+/*.radio .radio-on{*/
+    /*display: none;*/
+/*}*/
+
+/*.radio input:checked + span.radio-bg{*/
+    /*background-color:#856AAF;*/
+/*}*/
+
+/*.radio input:checked + span.radio-bg + span.radio-on{*/
+    /*width: 10px;*/
+    /*height: 5px;*/
+    /*position: absolute;*/
+    /*top: 5px;*/
+    /*left: 4px;*/
+    /*border-left: 1px solid #FFF;*/
+    /*border-bottom: 1px solid #FFF;*/
+    /*transform: scale(0, 0) rotate(-45deg);*/
+    /*transition: all 0.2s ease;*/
+    /*transform: scale(1, 1) rotate(-45deg);*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.radio .radio-text{*/
+    /*float: right;*/
+    /*margin-top: 1px;*/
+    /*margin-left: .3rem;*/
+/*}*/
+
 .radio{
     display: inline-block;
     position: relative;
@@ -376,10 +424,13 @@ img{
     cursor: pointer;
 }
 .radio input{
-    display: none;
+    width:0;
+    height:0;
 }
-.radio .radio-bg{
-    display: inline-block;
+.radio input::before{
+    content:"";
+    position: absolute;
+    top:0;
     height: 18px;
     width: 18px;
     padding: 0;
@@ -389,15 +440,13 @@ img{
     cursor: pointer;
     transition: all 0.2s ease;
 }
-.radio .radio-on{
-    display: none;
-}
 
-.radio input:checked + span.radio-bg{
+.radio input:checked::before{
     background-color:#856AAF;
 }
 
-.radio input:checked + span.radio-bg + span.radio-on{
+.radio input:checked::after{
+    content: "";
     width: 10px;
     height: 5px;
     position: absolute;
@@ -414,8 +463,9 @@ img{
 .radio .radio-text{
     float: right;
     margin-top: 1px;
-    margin-left: .3rem;
+    margin-left: 1.3rem;
 }
+
 
 
 .noline{
