@@ -155,11 +155,10 @@
 
                 // 向下滚动到第一屏时，禁用swiper的touch事件
                 pageSwiper.on("touchEnd", function(e){
-                    console.log("swiper:", pageSwiper.activeIndex);
                     if(pageSwiper.activeIndex === 0 && pageSwiper.touches.diff > 0){
-                        pageSwiper.allowTouchMove = false;
+                        var offsetTop = $(".page-slide").offset().top;
+                        $("html,body").animate({"scrollTop": offsetTop-window.innerHeight+66}, 1000);
                     }
-
                 });
 
                 $(window).scroll(function(){
