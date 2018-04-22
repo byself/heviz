@@ -377,6 +377,20 @@ img{
   vertical-align: middle;
 }
 
+/* 面包屑 */
+.position{
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+  color:#999;
+  background-color:#f7f6f9;
+}
+
+.position a,
+.position span{
+  color:#999;
+}
+
 /* video    */
 .video-container{
   position: relative;
@@ -492,6 +506,7 @@ img{
 .banner-swiper-container .banner-swiper-pagination{
   border-radius:10px;
   background-color:#88888b;
+  opacity: .8;
 }
 
 .banner-swiper-container .swiper-pagination-bullet{
@@ -640,3 +655,215 @@ img{
 .shutter-item.active .p2{
   display: block;
 }
+
+/**********************************************************
+  定制
+ */
+
+.diy{
+  padding: 50px 0;
+}
+
+.diy-swiper{
+  height: 465px;
+}
+
+.tabs{
+  border-bottom: 2px solid #9e7eca;
+}
+
+.tab{
+  display: inline-block;
+  width: 154px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  border-top: 1px solid #e3e3e3;
+  color:#000;
+}
+
+.tab.on{
+  color:#FFF;
+  background-color:#9e7eca;
+  border-color:#9e7eca;
+}
+
+.tab-content{
+  margin-top: 30px;
+}
+
+.tab-item{
+  display: none;
+  /*overflow: hidden;*/
+}
+
+.tab-item ul{
+  margin-left: -10px;
+  margin-right: -10px;
+  font-size: 0;
+}
+
+.tab-item li{
+  display: inline-block;
+  margin: 10px;
+}
+
+.tab-item li a:hover{
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+/* 定制文案 */
+.diyText{
+
+}
+
+.diyText .text-box{
+  font-size: 16px;
+  line-height: 40px;
+  text-align: justify;
+}
+
+.diyText .text-box h2{
+  position: relative;
+  margin: 0 0 12px;
+  font-size: 20px;
+
+}
+
+.diyText .text-box h2 .icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.diyText .text-box h3{
+  margin: 0;
+  font-size: .65rem;
+}
+
+.diyText .text-box p{
+  margin: 0;
+}
+
+.diyText .diy-form{
+  margin-top: 20px;
+  padding: 28px;
+  background-color: #f4f3f7;
+}
+
+.diy-form-item label{
+  font-size: 16px;
+  color: #333;
+}
+
+.diy-form-item .box{
+  margin-top: 20px;
+  overflow:hidden;
+}
+
+.diy-form-input{
+  padding: 12px;
+  width: 816px;
+  border: 1px solid #ada8bb;
+}
+
+.diy-form-input input{
+  width: 100%;
+  height: 20px;
+  line-height: 18px;
+  border: 0;
+  font-size: 14px;
+  outline: none;
+  background-color: transparent;
+}
+
+.diy-form-textarea{
+  margin-top: .5rem;
+  padding: .3rem .5rem;
+  border: 1px solid #ada8bb;
+}
+
+.diy-form-textarea textarea{
+  padding: 0;
+  width: 100%;
+  height: 5rem;
+  line-height: 1rem;
+  border: 0;
+  font-size: .65rem;
+  outline: none;
+  background-color: transparent;
+  resize: none;
+}
+
+.diy-form-btn{
+  width: 270px;
+  height: 48px;
+}
+
+.diy-form-btn a{
+  display: block;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  border-radius: 6px;
+  background-color: #856aaf;
+}
+
+.diy-form-protocol{
+  position: relative;
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: 12px;
+  color: #b3b1bf;
+}
+
+.diy-form-protocol i{
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/img-005.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.diy-form-protocol .accept{
+  background-position: 0 -44px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

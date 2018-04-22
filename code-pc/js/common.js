@@ -40,24 +40,4 @@ $(function(){
         $(".top-search").toggle();
     });
 
-    var bannerSwiper = new Swiper('.banner-swiper-container', {
-        loop : true,
-        pagination: {
-            el: '.banner-swiper-pagination'
-        }
-    });
-
-    var bannerSwiper = new Swiper('.index-swiper-container-1', {
-        loop : true,
-        pagination: {
-            el: '.index-swiper-pagination'
-        }
-    });
-
-    $(".shutter-item").on("click", function(){
-        var $this = $(this);
-        $(".shutter-item.active").removeClass("active");
-        $this.addClass("active");
-    })
-
 });

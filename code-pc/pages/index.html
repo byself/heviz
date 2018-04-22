@@ -113,7 +113,7 @@
         <div class="index-item">
             <div class="fl index-swiper">
                 <!-- Swiper -->
-                <div class="swiper-container index-swiper-container-1">
+                <div class="swiper-container index-swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" style="background-image: url('../images/index-banner.jpg')"><a class="link" href=""></a></div>
                         <div class="swiper-slide" style="background-image: url('../images/index-banner.jpg')"><a class="link" href=""></a></div>
@@ -138,7 +138,7 @@
         <div class="index-item">
             <div class="fl index-swiper">
                 <!-- Swiper -->
-                <div class="swiper-container index-swiper-container-1">
+                <div class="swiper-container index-swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" style="background-image: url('../images/index-banner2.jpg')"><a class="link" href=""></a></div>
                         <div class="swiper-slide" style="background-image: url('../images/index-banner2.jpg')"><a class="link" href=""></a></div>
@@ -163,7 +163,7 @@
         <div class="index-item">
             <div class="fl index-swiper">
                 <!-- Swiper -->
-                <div class="swiper-container index-swiper-container-1">
+                <div class="swiper-container index-swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" style="background-image: url('../images/index-banner3.jpg')"><a class="link" href=""></a></div>
                         <div class="swiper-slide" style="background-image: url('../images/index-banner3.jpg')"><a class="link" href=""></a></div>
@@ -336,6 +336,32 @@
 <script src="../js/videojs/video.min.js"></script>
 
 <script src="../js/common.js"></script>
+
+<script>
+
+    $(function(){
+        new Swiper('.banner-swiper-container', {
+            loop : true,
+            pagination: {
+                el: '.banner-swiper-pagination'
+            }
+        });
+
+        new Swiper('.index-swiper-container', {
+            loop : true,
+            pagination: {
+                el: '.index-swiper-pagination'
+            }
+        });
+
+        $(".shutter-item").on("click", function(){
+            var $this = $(this);
+            $(".shutter-item.active").removeClass("active");
+            $this.addClass("active");
+        })
+    })
+
+</script>
 
 </body>
 </html>
