@@ -841,7 +841,109 @@ img{
   background-position: 0 -44px;
 }
 
+/* 提交订单 */
 
+.diyPay{
+  text-align: center;
+  background-color: #FFF;
+}
+
+.diyPay .icon{
+  width: 80px;
+  height: auto;
+}
+
+.diyPay h2{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.diyPay p{
+  font-size: 16px;
+  text-align: center;
+}
+
+.diyPay .price{
+  color: #F00;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.diyPay .icon-wechat,
+.diyPay .icon-fee{
+  display: inline-block;
+  margin-right: .3rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  vertical-align: middle;
+}
+
+.diyPay .icon-wechat{
+  background-image: url(../images/icon-wechat.png);
+}
+
+.diyPay .icon-fee{
+  background-image: url(../images/icon-fee.png);
+}
+
+.diyPay-btns{
+  display: flex;
+  justify-content: center;
+}
+
+.diyPay-btns a{
+  display: block;
+  flex: 1;
+}
+
+.diyPay-btns .btn-pay{
+  margin: .75rem;
+  max-width: 17rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: .3rem;
+  font-size: .75rem;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #856aaf;
+}
+
+.diyPay-btns .btn-prev{
+  opacity: .5;
+}
+
+.diyPay-tips{
+  /*margin: 1.5rem auto 0;*/
+  /*max-width: 17rem;*/
+  /*width: 80%;*/
+  margin: .75rem;
+  padding: 1rem .8rem;
+  background-color: #f9f7fb;
+}
+
+.diyPay-tips p{
+  margin: 0;
+  font-size: .65rem;
+  line-height: 1.2rem;
+  color: #7d7c82;
+  text-indent: 0;
+  text-align: justify;
+}
+
+/* 支付成功 */
+.diyPaySuccess{
+  background-color: #f5f3f9;
+}
+
+.diyPaySuccess .diyPay{
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #b5adcd;
+}
 
 
 

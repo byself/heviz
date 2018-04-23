@@ -47,13 +47,15 @@
         <main class="main" id="main">
             <div class="index-mod" id="mod1">
                 <div class="video-container">
-                    <div class="video-poster">
-                        <img src="../../images/thumb-video.jpg" alt="">
-                        <img class="icon" onclick="video()" src="../../images/icon-video.png" alt="">
-                    </div>
+                    <!--<div class="video-poster">-->
+                        <!--<img src="../../images/thumb-video.jpg" alt="">-->
+                        <!--<img class="icon" onclick="video()" src="../../images/icon-video.png" alt="">-->
+                    <!--</div>-->
                     <div class="video-box" id="videoBox">
-                        <video id="video" class="video-js vjs-big-play-centered"></video>
+                        <!--<video id="video" class="video-js vjs-big-play-centered"></video>-->
                     </div>
+
+                    <video src="http://vjs.zencdn.net/v/oceans.mp4" controls="controls" muted="muted" autoplay="autoplay"></video>
                 </div>
             </div>
 
@@ -116,6 +118,7 @@
             function video() {
                 $("#videoBox").show();
                 videojs("video", {
+                    autoplay: true,
                     loop: true,
                     muted: true,
                     preload: "auto",
@@ -140,6 +143,8 @@
             }
 
             $(function(){
+
+                //video();
 
                 $(".page-slide").height(window.innerHeight);
 
