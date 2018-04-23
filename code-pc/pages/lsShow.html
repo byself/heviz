@@ -103,30 +103,23 @@
 
 <div class="container">
     <div class="diy">
-
-        <div class="diyPay">
-            <img class="icon" src="../images/icon-plane.png" alt="">
-            <h2>定制需求已提交成功，请尽快支付设计费</h2>
-            <p><i class="icon-fee"></i>支付设计费：<span class="price">¥100</span></p>
-            <div class="line"></div>
-            <div class="diy-pay-type">
-                <label for="alipay"><input id="alipay" type="radio" name="payType" /><img src="../images/img-alipay.jpg" alt=""></label>
-                <label for="wechatpay"><input id="wechatpay" type="radio" name="payType" /><img src="../images/img-wechat-pay.jpg" alt=""></label>
-                <label for="bankcardpay"><input id="bankcardpay" type="radio" name="payType" /><img src="../images/img-bankcard-pay.jpg" alt=""></label>
-            </div>
-            <div class="diyPay-btns">
-                <a href="diyPaySuccess.html" class="btn-pay">支付</a>
-            </div>
-
-            <div class="diyPay-tips">
-                <p>温馨提示：</p>
-                <p>1、设计费在支付成功之后，自动转化成赠送余额，可在“会员中心”查看。</p>
-                <p>2、此赠送余额可在商品订单支付中抵扣。</p>
+        <div class="ls-video">
+            <div class="video-container">
+                <div class="video-poster">
+                    <img src="../images/img01.jpg" alt="">
+                    <img class="icon" onclick="video('video')" src="../images/icon-video.png" alt="">
+                </div>
+                <div class="video-box">
+                    <video id="video" class="video-js vjs-big-play-centered" poster="../images/img01.jpg"></video>
+                </div>
             </div>
         </div>
 
+        <div class="ls-diy-btn">
+            <img src="../images/img10.jpg" alt="">
+            <a href="" class="btn">开始定制</a>
+        </div>
     </div>
-
 </div>
 
 <div class="bottom">

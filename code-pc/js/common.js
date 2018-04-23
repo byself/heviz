@@ -24,6 +24,17 @@ function video(id) {
     });
 }
 
+function favSKU(e){
+    var $target = $(e);
+
+    if($target.hasClass("on")){
+        $target.removeClass("on");
+    }else{
+        $target.addClass("on");
+    }
+
+}
+
 $(function(){
 
     $(".nav-menu").hover(function(){

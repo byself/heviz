@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>婚介定制</title>
+    <title>注册</title>
     <link rel="stylesheet" href="../css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="../js/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="../js/videojs/video.min.css">
@@ -95,38 +95,44 @@
     </div>
 </div>
 
-<div class="position">
+<div class="login-container">
     <div class="container">
-        <a href="">首页</a> > <span>定制</span>
-    </div>
-</div>
+        <div class="login">
+            <h2>注册</h2>
+            <div class="form">
 
-<div class="container">
-    <div class="diy">
+                <div class="form-item">
+                    <img class="icon" src="../images/img-001.png" alt="tel" />
+                    <input type="tel" maxlength="11" value="" placeholder="请输入您的手机号码" />
+                </div>
 
-        <div class="diyPay">
-            <img class="icon" src="../images/icon-plane.png" alt="">
-            <h2>定制需求已提交成功，请尽快支付设计费</h2>
-            <p><i class="icon-fee"></i>支付设计费：<span class="price">¥100</span></p>
-            <div class="line"></div>
-            <div class="diy-pay-type">
-                <label for="alipay"><input id="alipay" type="radio" name="payType" /><img src="../images/img-alipay.jpg" alt=""></label>
-                <label for="wechatpay"><input id="wechatpay" type="radio" name="payType" /><img src="../images/img-wechat-pay.jpg" alt=""></label>
-                <label for="bankcardpay"><input id="bankcardpay" type="radio" name="payType" /><img src="../images/img-bankcard-pay.jpg" alt=""></label>
-            </div>
-            <div class="diyPay-btns">
-                <a href="diyPaySuccess.html" class="btn-pay">支付</a>
-            </div>
+                <div class="form-item">
+                    <img class="icon" src="../images/img-004.png" alt="验证码" />
+                    <input type="tel" maxlength="11" value="" placeholder="请输入您的验证码" />
+                    <div class="form-vcode" id="btnVcode">发送验证码</div>
+                </div>
 
-            <div class="diyPay-tips">
-                <p>温馨提示：</p>
-                <p>1、设计费在支付成功之后，自动转化成赠送余额，可在“会员中心”查看。</p>
-                <p>2、此赠送余额可在商品订单支付中抵扣。</p>
+                <div class="form-item">
+                    <img class="icon" src="../images/img-002.png" alt="tel" />
+                    <input type="tel" maxlength="11" value="" placeholder="请输入您的密码" />
+                </div>
+
+                <div class="form-btns">
+                    <button class="form-btn">注册</button>
+                </div>
+
+                <div class="form-protocol">
+                    <i id="btnProtocol" class="accept"></i>
+                    已阅读并同意<a href="">《HEVlZ用户注册协议》</a>
+                </div>
+
+                <div class="form-tip">
+                    <p>已有账号，点击<a href="login.html">登录</a>！</p>
+                </div>
+
             </div>
         </div>
-
     </div>
-
 </div>
 
 <div class="bottom">
