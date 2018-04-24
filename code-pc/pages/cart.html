@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>注册</title>
+    <title>购物车</title>
     <link rel="stylesheet" href="../css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="../js/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="../js/videojs/video.min.css">
@@ -95,43 +95,82 @@
     </div>
 </div>
 
-<div class="login-container">
+<div class="position">
     <div class="container">
-        <div class="login">
-            <h2>注册</h2>
-            <div class="form">
+        <a href="">首页</a> > <span>系列</span>
+    </div>
+</div>
 
-                <div class="form-item">
-                    <img class="icon" src="../images/img-001.png" alt="tel" />
-                    <input type="tel" maxlength="11" value="" placeholder="请输入您的手机号码" />
-                </div>
-
-                <div class="form-item">
-                    <img class="icon" src="../images/img-004.png" alt="验证码" />
-                    <input type="tel" maxlength="11" value="" placeholder="请输入您的验证码" />
-                    <div class="form-vcode" id="btnVcode">发送验证码</div>
-                </div>
-
-                <div class="form-item">
-                    <img class="icon" src="../images/img-002.png" alt="tel" />
-                    <input type="tel" maxlength="11" value="" placeholder="请输入您的密码" />
-                </div>
-
-                <div class="form-btns">
-                    <button class="form-btn">注册</button>
-                </div>
-
-                <div class="form-protocol">
-                    <i id="btnProtocol" class="accept"></i>
-                    已阅读并同意<a href="">《HEVlZ用户注册协议》</a>
-                </div>
-
-                <div class="form-tip">
-                    <p>已有账号，点击<a href="login.html">登录</a>！</p>
-                </div>
-
-            </div>
-        </div>
+<div class="container">
+    <div class="cart">
+        <table cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="btn-select btn-select-all">
+                            <label for="skuall" class="radio">
+                                <span><input type="checkbox" name="sku" id="skuall" value="全部"/></span>
+                            </label>
+                        </div>
+                    </th>
+                    <th>商品信息</th>
+                    <th></th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>合计</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="cart-item-radio">
+                            <div class="btn-select-radio" href="javascript:void(0);">
+                                <label for="sku5" class="radio">
+                                    <span><input type="checkbox" name="sku" id="sku5" value=""/></span>
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <a href=""><img src="../images/img08.jpg" alt=""></a>
+                    </td>
+                    <td>
+                        <div class="cart-item-info">
+                            <h2><a href="">十二星座圆牌925银手链</a></h2>
+                            <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cart-item-info">
+                            <div class="price">￥<b>1200</b></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cart-item-info">
+                            <div class="filter-count">
+                                <div class="filter-count-sub" onclick="filterSub(this)">-</div>
+                                <div class="filter-count-input">1</div>
+                                <div class="filter-count-add" onclick="filterAdd(this)">+</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cart-item-info">
+                            <div class="price">￥<b>1200</b></div>
+                        </div>
+                    </td>
+                    <td>
+                        <button>删除</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
     </div>
 </div>
 
@@ -219,72 +258,6 @@
 <script src="../js/videojs/video.min.js"></script>
 
 <script src="../js/common.js"></script>
-
-<script>
-
-    /**
-     *  发送验证码倒计时
-     */
-
-    function CountDown() {
-        var SECONDS = 60; // 倒计时描述
-
-        var $btn = $("#btnVcode");
-        var timer = null;
-
-        var text = SECONDS + "s后重新发送";
-        $btn.unbind().text(text);
-
-        var count = function(){
-            if(SECONDS > 0){
-                text = --SECONDS + "s后重新发送";
-            }else{
-                clearInterval(timer);
-                text = "发送验证码";
-                $btn.on("click", CountDown);
-            }
-
-            $btn.text(text);
-
-        };
-
-        timer = setInterval(count, 1000);
-    }
-
-    function toast(msg){
-
-        if($(".toast").length) return;
-
-        var delay = 1000;
-        var html = '<div class="toast" style="z-index:999;position: absolute;left:0;right:0;top:0;bottom:0;margin:auto;width: 7rem;height:2rem;line-height:2rem;text-align:center;border-radius:1rem;font-size:.8rem;color:#FFF;background-color:rgba(0,0,0,.7);">'+msg+'</div>';
-        var $html = $(html);
-        $html.appendTo($("body"));
-
-        setTimeout(function(){
-            console.log("timeout");
-            $html.remove();
-            $html = null;
-        }, delay);
-    }
-
-    $(function(){
-
-        $("#btnVcode").on("click", CountDown);
-
-        $("#btnProtocol").on("click", function () {
-            var $this = $(this);
-
-            if($this.hasClass("accept")){
-                $this.removeClass("accept");
-            }else{
-                $this.addClass("accept");
-            }
-
-        });
-
-    })
-
-</script>
 
 </body>
 </html>
