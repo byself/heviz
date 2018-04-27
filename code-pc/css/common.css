@@ -1085,15 +1085,22 @@ img{
   padding-bottom: 40px;
 }
 
-.sku-list ul{
-  height: 362px;
+/*.sku-list ul{*/
+  /*height: 362px;*/
+/*}*/
+
+.sku-list ul::after{
+  content: "";
+  display: block;
+  clear: both;
 }
+
 
 .sku-list li{
   float: left;
   position: relative;
-  width: 284px;
-  margin: 0 8px;
+  width: 280px;
+  margin: 0 10px;
 }
 
 .sku-list li a{
@@ -1845,6 +1852,251 @@ img{
 .pro-content .tabs{
   background-color:#f9f9f9;
 }
+
+
+.pro-index-item{
+  padding-top: 65px;
+}
+
+.pro-index-item-gray{
+  background-color: #f4f3f5;
+}
+
+.pro-index-title{
+  position: relative;
+  height:202px;
+}
+
+.pro-index-title-text{
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 0;
+  bottom:0;
+  margin: auto;
+  width:430px;
+  height:120px;
+  text-align: center;
+  background-color:rgba(133,106,175,.8);
+}
+
+.pro-index-title-text a{
+  display: block;
+  margin-top:37px;
+  font-size:24px;
+  color:#FFF;
+}
+
+.pro-index-title-text::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 75px;
+  margin: auto;
+  width: 55px;
+  border-top:1px solid #FFF;
+}
+
+/* 系列列表swiper */
+.sku-list-swiper{
+  position: relative;
+  padding: 0 60px;
+  background-color:#FFF;
+}
+
+.sku-list-swiper .swiper-container{
+  padding: 60px 0;
+}
+
+.sku-list-swiper .swiper-slide{
+  width: 280px;
+  height: 380px;
+}
+
+.sku-list-swiper .swiper-slide.swiper-slide-active{
+  box-shadow: 0 0 16px rgba(35, 17, 97, .23);
+}
+
+.sku-sort-swiper{
+  margin-top: 20px;
+}
+
+.skuList .sku-list{
+  padding-top: 0;
+}
+
+.sku-list-swiper .swiper-slide img{
+  width:100%;
+  height: auto;
+  vertical-align:middle;
+}
+
+
+.sku-sort-swiper .swiper-slide{
+  position: relative;
+  padding: 18px 0;
+  width: 96px;
+  text-align: center;
+  font-size: 15px;
+  opacity: .3;
+}
+
+.sku-sort-swiper .swiper-slide img{
+  margin-bottom: 7px;
+  width: 96px;
+  height: auto;
+  transition: all .3s ease-out;
+}
+
+.sku-sort-swiper .swiper-slide.on{
+  color: #4a387b;
+  opacity: 1;
+}
+
+.pro-list-sort{
+  border-top:2px solid #816bab;
+  background-color:#f2f1f6;
+}
+
+.pro-list-sort .sku-list li{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.pro-list-swiper .pro-swiper-prev,
+.pro-list-swiper .pro-swiper-next{
+  position: absolute;
+  top: 50%;
+  margin-top:-29px;
+  width: 32px;
+  height: 58px;
+  background-image:url("../images/icon-swiper-nav.png");
+  background-repeat:no-repeat;
+  cursor: pointer;
+  opacity: .5;
+}
+
+.pro-list-swiper .pro-swiper-prev{
+  left:0;
+}
+
+.pro-list-swiper .pro-swiper-next{
+  right:0;
+  background-position: -32px 0;
+}
+
+.pro-list-swiper .pro-swiper-prev:hover,
+.pro-list-swiper .pro-swiper-next:hover{
+  opacity: 1;
+}
+
+
+/* 确认订单 */
+
+.order-check{
+  padding: 50px 0;
+}
+
+.order-check-title{
+  position: relative;
+  padding-left:28px;
+  height:20px;
+  line-height:20px;
+  font-size:16px;
+}
+
+.order-check-title::before{
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width:10px;
+  height:10px;
+  background-color:#856aaf;
+}
+
+
+.order-check td{
+  padding:20px 0;
+  border-bottom: 1px solid #dcd9e2;
+}
+
+.address-list{
+  margin-top:20px;
+  margin-right:-25px;
+  overflow: hidden;
+}
+
+.address-item{
+  position: relative;
+  float:left;
+  margin: 0 25px 25px 0;
+  padding: 20px;
+  width: 341px;
+  height:90px;
+  font-size:14px;
+  border:1px solid #dcd9e2;
+  background:url(../images/bg-address-border.jpg) no-repeat;
+}
+
+.address-item.default{
+  background: none;
+  color:#666;
+}
+
+.address-item.default::before{
+  content: "默认";
+  position: absolute;
+  top: 30px;
+  left: 12px;
+  padding:3px;
+  border-radius:3px;
+  background-color:#ea4c6e;
+  font-size:12px;
+  color:#FFF;
+}
+
+
+.address-item.default::after{
+  content:"";
+  position: absolute;
+  top: 61px;
+  left: 20px;
+  width: 24px;
+  height:30px;
+  background:url("../images/icon-position.png") no-repeat;
+  background-size: 24px auto;
+}
+
+.address-item p{
+  margin:8px 0;
+  padding: 0 30px;
+  line-height: 24px;
+  overflow: hidden;
+}
+
+.address-item .tel{
+  float: right;
+}
+
+.switch-address,
+.add-address{
+  float:left;
+  margin: 0 25px 25px 0;
+  width: 177px;
+  height:130px;
+  line-height:130px;
+  font-size:14px;
+  text-align: center;
+  color:#666;
+  border:1px solid #dcd9e2;
+}
+.order-check table{
+  margin-bottom:25px;
+}
+
+
 
 
 
