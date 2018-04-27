@@ -95,73 +95,160 @@
     </div>
 </div>
 
-<style>
-    .pro-swiper{
-        height: 530px;
-    }
+<div class="container">
+    <div class="pro-detail">
+        <div class="pro-detail-info">
+            <div class="pro-swiper">
+                <div class="pro-swiper-show">
+                    <img src="../images/img08.jpg" alt="">
+                </div>
+                <div class="pro-swiper-thumb">
+                    <div class="swiper-container pro-swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
+                            <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
+                            <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
+                        </div>
+                    </div>
+                    <div class="pro-swiper-prev"></div>
+                    <div class="pro-swiper-next"></div>
+                </div>
+            </div>
+            <div class="pro-info">
+                <div class="pro-title">十二星座圆牌925银手链</div>
+                <div class="pro-des">来找到属于你的星座</div>
+                <div class="filters">
+                    <div class="filter-item">
+                        <div class="filter-label">
+                            材质
+                        </div>
+                        <div class="filter-list">
+                            <a class="on" href="javascript:void(0);" onclick="filter(this)">铂金</a>
+                            <a href="javascript:void(0);" onclick="filter(this)">珍珠</a>
+                            <a href="javascript:void(0);" onclick="filter(this)">钻石</a>
+                            <a href="javascript:void(0);" onclick="filter(this)">银饰</a>
+                        </div>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-label">
+                            尺寸
+                        </div>
+                        <div class="filter-list">
+                            <a class="on"  href="javascript:void(0);" onclick="filter(this)">10cm</a>
+                            <a href="javascript:void(0);" onclick="filter(this)">12cm</a>
+                            <a href="javascript:void(0);" onclick="filter(this)">14cm</a>
+                        </div>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-label">
+                            颜色
+                        </div>
+                        <div class="filter-list">
+                            <a class="on"  href="javascript:void(0);" onclick="filter(this)">铂金</a>
+                            <a href="javascript:void(0);" onclick="filter(this)">珍珠</a>
+                        </div>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-label">
+                            数量
+                        </div>
+                        <div class="filter-count">
+                            <div class="filter-count-sub" onclick="filterSub(this)">-</div>
+                            <div class="filter-count-input">1</div>
+                            <div class="filter-count-add" onclick="filterAdd(this)">+</div>
+                        </div>
+                    </div>
+                </div>
 
-    .pro-swiper-show{
-        float: left;
-        width: 400px;
-        height: 283px;
-        overflow: hidden;
-    }
+                <div class="pro-price">
+                    <span class="price">¥1299</span>
+                    <a class="fav">
+                        <i class="icon"></i>
+                        收藏
+                    </a>
+                    <a class="chat">
+                        <i class="icon"></i>
+                        客服
+                    </a>
+                </div>
 
-    .pro-swiper-show img{
-        width: 100%;
-        height: auto;
-    }
+                <div class="filter-btns">
+                    <a href="javascript:void(0);" class="btn-pay btn-prev" onclick="addCart()">加入购物车</a>
+                    <span class="blank"></span>
+                    <a href="javascript:void(0);" class="btn-pay" onclick="buyNow()">立即购买</a>
+                </div>
 
-    .pro-swiper-thumb{
-        position: relative;
-        float:left;
-        margin-left: 10px;
-        width: 100px;
-        height: 283px;
-    }
-
-    .pro-swiper-container{
-        margin: 20px 0;
-        height: 243px;
-    }
-
-    .pro-swiper-container .swiper-slide.on{
-        outline: 1px solid #a787d1;
-    }
-
-    .pro-swiper-thumb .pro-swiper-prev,
-    .pro-swiper-thumb .pro-swiper-next{
-        position: absolute;
-        width: 100%;
-        height: 20px;
-        text-align: center;
-        line-height: 20px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    .pro-swiper-thumb .pro-swiper-prev{
-        top: 0;
-    }
-
-    .pro-swiper-thumb .pro-swiper-next{
-        bottom: 0;
-    }
-</style>
-<div class="pro-swiper">
-    <div class="pro-swiper-show">
-        <img src="../images/ls-03.jpg" alt="">
-    </div>
-    <div class="pro-swiper-thumb">
-        <div class="swiper-container pro-swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('../images/banner.jpg')"></div>
-                <div class="swiper-slide" style="background-image: url('../images/banner.jpg')"></div>
-                <div class="swiper-slide" style="background-image: url('../images/banner.jpg')"></div>
             </div>
         </div>
-        <div class="pro-swiper-prev"><</div>
-        <div class="pro-swiper-next">></div>
+
+        <div class="pro-content">
+            <div class="tabs">
+                <a class="tab on" href="javascript:void(0);">商品详情</a><a class="tab" href="javascript:void(0);">包装售后</a><a class="tab" href="javascript:void(0);">商品搭配</a>
+            </div>
+            <div class="tab-content">
+
+                <div class="tab-item" style="display: block;">
+                    <img src="../images/img-diy-01.jpg" alt="">
+                </div>
+
+                <div class="tab-item">
+                    <img src="../images/img-diy-02.jpg" alt="">
+                </div>
+
+                <div class="tab-item">
+                    <img src="../images/img-diy-03.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="sku-tj">
+    <div class="container">
+        <div class="sku-tj-title">
+            商品推荐
+        </div>
+
+        <div class="sku-list">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="../images/img08.jpg" alt="">
+                        <h2>十二星座圆牌925银手链</h2>
+                        <span class="price">¥1299</span>
+                    </a>
+                    <i class="fav on" onclick="favSKU(this)"></i>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/img08.jpg" alt="">
+                        <h2>十二星座圆牌925银手链</h2>
+                        <span class="price">¥1299</span>
+                    </a>
+                    <i class="fav on" onclick="favSKU(this)"></i>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/img08.jpg" alt="">
+                        <h2>十二星座圆牌925银手链</h2>
+                        <span class="price">¥1299</span>
+                    </a>
+                    <i class="fav" onclick="favSKU(this)"></i>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/img08.jpg" alt="">
+                        <h2>十二星座圆牌925银手链</h2>
+                        <span class="price">¥1299</span>
+                    </a>
+                    <i class="fav" onclick="favSKU(this)"></i>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 
@@ -240,10 +327,11 @@
     </div>
 </div>
 
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script src="../js/jquery-3.2.1.min.js"></script>
 
 <!-- JiaThis Share Button  -->
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!--<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>-->
 
 <script src="../js/swiper/js/swiper.min.js"></script>
 <script src="../js/videojs/video.min.js"></script>
@@ -252,9 +340,43 @@
 
 <script>
 
+    /**
+     *  条件筛选
+     * @param el item
+     */
+    function filter(el){
+        var $this = $(el);
+
+        $this.addClass("on").siblings().removeClass("on");
+    }
+
+    /**
+     * 数量加
+     */
+    function filterAdd(el){
+        var $box = $(el).parent();
+        var $input = $(".filter-count-input", $box);
+        var value = Number($input.text());
+        $input.text(++value);
+    }
+
+    /**
+     * 数量加
+     */
+    function filterSub(el){
+        var $box = $(el).parent();
+        var $input = $(".filter-count-input", $box);
+        var value = Number($input.text());
+
+        if(value > 1){
+            value -= 1;
+        }
+
+        $input.text(value);
+    }
+
     $(function(){
         var proSwiper = new Swiper('.pro-swiper-container', {
-            loop: true,
             slidesPerView: 3,
             direction : 'vertical',
             navigation: {
@@ -267,7 +389,17 @@
             var $target = $(e.target).closest(".swiper-slide");
             $target.addClass("on").siblings().removeClass("on");
             // alert($target.index() &3);
-        })
+        });
+
+        $(".tabs").on("click", ".tab", function(){
+            var $this = $(this);
+            var index = $this.index();
+            $this.addClass("on").siblings().removeClass("on");
+
+            $(".tab-item").eq(index).show().siblings().hide();
+
+        });
+
     })
 
 </script>

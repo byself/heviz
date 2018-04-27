@@ -106,19 +106,19 @@
         <table cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
-                    <th width="80">
+                    <th width="50">
                         <div class="btn-select btn-select-all">
-                            <label for="skuall" class="radio">
-                                <input type="checkbox" name="sku" id="skuall" value="全部"/>
+                            <label for="skuall1" class="radio">
+                                <input type="checkbox" name="sku" id="skuall1" value="全部"/>
                             </label>
                         </div>
                     </th>
-                    <th width="230">商品信息</th>
-                    <th width="230"></th>
-                    <th width="190">单价</th>
-                    <th width="190">数量</th>
-                    <th width="190">合计</th>
-                    <th width="190">操作</th>
+                    <th width="225">商品信息</th>
+                    <th width="225"></th>
+                    <th width="200">单价</th>
+                    <th width="200">数量</th>
+                    <th width="200">合计</th>
+                    <th width="200">操作</th>
                 </tr>
             </thead>
             <tbody>
@@ -207,12 +207,18 @@
                     </td>
                 </tr>
             </tbody>
-            <tfoot>
-                <tr>
-                    <td></td>
-                </tr>
-            </tfoot>
         </table>
+        <div class="cart-foot">
+            <div class="btn-select btn-select-all">
+                <label for="skuall2" class="radio">
+                    <input type="checkbox" name="sku" id="skuall2" value="全部"/>
+                    <span class="radio-text">全部</span>
+                </label>
+            </div>
+            <a class="btn-remove-selected">删除选中</a>
+            <a class="btn-submit-order">去结算</a>
+            <div class="total-price">商品总价：<b>￥</b><span>1299</span></div>
+        </div>
     </div>
 </div>
 
@@ -300,6 +306,33 @@
 <script src="../js/videojs/video.min.js"></script>
 
 <script src="../js/common.js"></script>
+
+<script>
+    /**
+     * 数量加
+     */
+    function filterAdd(el){
+        var $box = $(el).parent();
+        var $input = $(".filter-count-input", $box);
+        var value = Number($input.text());
+        $input.text(++value);
+    }
+
+    /**
+     * 数量加
+     */
+    function filterSub(el){
+        var $box = $(el).parent();
+        var $input = $(".filter-count-input", $box);
+        var value = Number($input.text());
+
+        if(value > 1){
+            value -= 1;
+        }
+
+        $input.text(value);
+    }
+</script>
 
 </body>
 </html>
