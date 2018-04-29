@@ -5,6 +5,7 @@
     <title>确认订单</title>
     <link rel="stylesheet" href="../css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="../js/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../js/select2/select2.min.css">
     <link rel="stylesheet" href="../js/videojs/video.min.css">
     <link rel="stylesheet" href="../css/common.css" type="text/css" />
 </head>
@@ -116,61 +117,159 @@
                     <p><span class="name">收货人：张小盒 </span><span class="tel">13361837909</span></p>
                     <p>收货地址：  上海市普陀区中山北路201弄31号1201室</p>
                 </div>
+                <div class="address-item">
+                    <p><span class="name">收货人：张小盒 </span><span class="tel">13361837909</span></p>
+                    <p>收货地址：  上海市普陀区中山北路201弄31号1201室</p>
+                </div>
             </div>
-            <a href="javascript:void(0);" class="switch-address">切换地址</a>
-            <a href="javascript:void(0);" class="add-address">新增地址</a>
+            <a href="javascript:void(0);" class="switch-address" onclick="showDetail('popbox-switch-address')">切换地址</a>
+            <a href="javascript:void(0);" class="add-address" onclick="showDetail('popbox-add-address')">新增地址</a>
         </div>
 
         <div class="order-check-title">商品信息</div>
 
-        <table cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr>
-                    <td width="150">
-                        <div class="cart-item-img">
-                            <a href=""><img src="../images/img08.jpg" alt=""></a>
-                        </div>
-                    </td>
-                    <td width="300">
-                        <div class="cart-item-info cart-item-info-des">
-                            <h2><a href="">十二星座圆牌925银手链</a></h2>
-                            <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
-                        </div>
-                    </td>
-                    <td width="650">
-                        <div class="cart-item-info">
-                            <div class="price">￥<b>1200</b></div>
-                        </div>
-                    </td>
-                    <td width="100">
-                        x1
-                    </td>
-                </tr>
-                <tr>
-                    <td width="150">
-                        <div class="cart-item-img">
-                            <a href=""><img src="../images/img08.jpg" alt=""></a>
-                        </div>
-                    </td>
-                    <td width="300">
-                        <div class="cart-item-info cart-item-info-des">
-                            <h2><a href="">十二星座圆牌925银手链</a></h2>
-                            <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
-                        </div>
-                    </td>
-                    <td width="650">
-                        <div class="cart-item-info">
-                            <div class="price">￥<b>1200</b></div>
-                        </div>
-                    </td>
-                    <td width="100">
-                        x1
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="order-check-sku">
+
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td width="150">
+                            <div class="cart-item-img">
+                                <a href=""><img src="../images/img08.jpg" alt=""></a>
+                            </div>
+                        </td>
+                        <td width="300">
+                            <div class="cart-item-info cart-item-info-des">
+                                <h2><a href="">十二星座圆牌925银手链</a></h2>
+                                <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
+                            </div>
+                        </td>
+                        <td width="650">
+                            <div class="cart-item-info">
+                                <div class="price">￥<b>1200</b></div>
+                            </div>
+                        </td>
+                        <td width="100">
+                            x1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150">
+                            <div class="cart-item-img">
+                                <a href=""><img src="../images/img08.jpg" alt=""></a>
+                            </div>
+                        </td>
+                        <td width="300">
+                            <div class="cart-item-info cart-item-info-des">
+                                <h2><a href="">十二星座圆牌925银手链</a></h2>
+                                <p><span>材质：铂金</span><span>尺寸：12cm</span></p>
+                            </div>
+                        </td>
+                        <td width="650">
+                            <div class="cart-item-info">
+                                <div class="price">￥<b>1200</b></div>
+                            </div>
+                        </td>
+                        <td width="100">
+                            x1
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
 
         <div class="order-check-title">订单费用</div>
+
+        <div class="order-check-coupons">
+
+            <div class="coupons-title">优惠券（5张可用）
+            </div>
+
+            <div class="coupons">
+                <div class="coupon">
+                    <div class="coupon-price">
+                        <div class="price">￥1000</div>
+                        <div class="text">满￥1000可用</div>
+                    </div>
+                    <div class="coupon-type">
+                        <div class="text">全平台通用券</div>
+                        <div class="deadline">有效期至2018-2-14</div>
+                    </div>
+                    <label for="coupon1" class="radio">
+                        <input type="radio" name="coupon" id="coupon1" value="" />
+                    </label>
+                </div>
+                <div class="coupon">
+                    <div class="coupon-price">
+                        <div class="price">￥1000</div>
+                        <div class="text">满￥1000可用</div>
+                    </div>
+                    <div class="coupon-type">
+                        <div class="text">全平台通用券</div>
+                        <div class="deadline">有效期至2018-2-14</div>
+                    </div>
+                    <label for="coupon2" class="radio">
+                        <input type="radio" name="coupon" id="coupon2" value="" />
+                    </label>
+                </div>
+                <div class="coupon">
+                    <div class="coupon-price">
+                        <div class="price">￥1000</div>
+                        <div class="text">满￥1000可用</div>
+                    </div>
+                    <div class="coupon-type">
+                        <div class="text">全平台通用券</div>
+                        <div class="deadline">有效期至2018-2-14</div>
+                    </div>
+                    <label for="coupon3" class="radio">
+                        <input type="radio" name="coupon" id="coupon3" value="" />
+                    </label>
+                </div>
+                <div class="coupon">
+                    <div class="coupon-price">
+                        <div class="price">￥1000</div>
+                        <div class="text">满￥1000可用</div>
+                    </div>
+                    <div class="coupon-type">
+                        <div class="text">全平台通用券</div>
+                        <div class="deadline">有效期至2018-2-14</div>
+                    </div>
+                    <label for="coupon4" class="radio">
+                        <input type="radio" name="coupon" id="coupon4" value="" />
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="order-check-amount">
+
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+
+                    <tr>
+                        <th>商品合计</th>
+                        <td>¥<b>2598</b></td>
+                    </tr>
+                    <tr>
+                        <th>优惠券</th>
+                        <td><b>-100</b></td>
+                    </tr>
+                    <tr>
+                        <th>设计费抵扣（赠送余额）</th>
+                        <td><b>-100</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="price">应付金额：<span>¥<b>2598</b></span></div>
+                            <a href="javascript:void(0);" class="btn-submit">去结算</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
 
     </div>
 </div>
@@ -250,6 +349,140 @@
     </div>
 </div>
 
+<div class="mask">
+
+    <div class="popbox" id="popbox-add-address">
+
+        <div class="popbox-head">
+            <h2>新增收货人</h2>
+        </div>
+
+        <div class="form-add-address">
+            <div class="form">
+
+                <div class="form-item">
+                    <label>姓名</label>
+                    <input type="text" value="" placeholder="请输入联系人姓名" />
+                </div>
+
+                <div class="form-item">
+                    <label>手机号码</label>
+                    <input type="tel" maxlength="11" value="" placeholder="请输入收货号码" />
+                </div>
+
+                <div class="form-item">
+                    <label>邮政编码</label>
+                    <input type="tel" maxlength="6" value="" placeholder="请输入邮政编码" />
+                </div>
+
+                <div class="form-item">
+                    <label>所在区域</label>
+                    <div class="form-select">
+                        <select name="" id="province">
+                            <option value='请选择'>选择所在省份</option>
+                        </select>
+                        <select name="" id="city">
+                            <option value='请选择'>选择所在城市</option>
+                        </select>
+                        <select name="" id="area">
+                            <option value='请选择'>选择所在区县</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <label>详细地址</label>
+                    <input type="tel" maxlength="6" value="" placeholder="请输入详细地址" />
+                </div>
+
+                <div class="form-item">
+                    <label for="protocol" class="radio">
+                        <input type="checkbox" name="coupon" id="protocol" value="" /><span>设为默认收货地址</span>
+                    </label>
+                </div>
+
+                <div class="form-btns">
+                    <button class="form-btn">保存</button>
+                </div>
+
+            </div>
+        </div>
+
+        <a href="javascript:void(0);" class="close" onclick="closePopbox()"></a>
+    </div>
+
+    <div class="popbox" id="popbox-switch-address">
+
+        <div class="popbox-head">
+            <h2>选择新地址</h2>
+        </div>
+
+        <ul class="popbox-address-list">
+            <li>
+                <a href="javascript:void(0);">
+                    <label for="address1" class="radio">
+                        <input type="checkbox" name="address" id="address1" value="" />
+                    </label>
+                    <p><span class="name">收货人：张小盒 </span><span class="tel">13361837909</span></p>
+                    <p>收货地址：  上海市普陀区中山北路201弄31号1201室</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <label for="address2" class="radio">
+                        <input type="checkbox" name="address" id="address2" value="" />
+                    </label>
+                    <p><span class="name">收货人：张小盒 </span><span class="tel">13361837909</span></p>
+                    <p>收货地址：  上海市普陀区中山北路201弄31号1201室</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <label for="address3" class="radio">
+                        <input type="checkbox" name="address" id="address3" value="" />
+                    </label>
+                    <p><span class="name">收货人：张小盒 </span><span class="tel">13361837909</span></p>
+                    <p>收货地址：  上海市普陀区中山北路201弄31号1201室</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <label for="address4" class="radio">
+                        <input type="checkbox" name="address" id="address4" value="" />
+                    </label>
+                    <p><span class="name">收货人：张小盒 </span><span class="tel">13361837909</span></p>
+                    <p>收货地址：  上海市普陀区中山北路201弄31号1201室</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <label for="address5" class="radio">
+                        <input type="checkbox" name="address" id="address5" value="" />
+                    </label>
+                    <p><span class="name">收货人：张小盒 </span><span class="tel">13361837909</span></p>
+                    <p>收货地址：  上海市普陀区中山北路201弄31号1201室</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <label for="address6" class="radio">
+                        <input type="checkbox" name="address" id="address6" value="" />
+                    </label>
+                    <p><span class="name">收货人：张小盒 </span><span class="tel">13361837909</span></p>
+                    <p>收货地址：  上海市普陀区中山北路201弄31号1201室</p>
+                </a>
+            </li>
+        </ul>
+
+        <div class="form-btns">
+            <button class="form-btn">选择</button>
+        </div>
+
+        <a href="javascript:void(0);" class="close" onclick="closePopbox()"></a>
+    </div>
+
+</div>
+
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <!-- JiaThis Share Button  -->
@@ -257,34 +490,156 @@
 
 <script src="../js/swiper/js/swiper.min.js"></script>
 <script src="../js/videojs/video.min.js"></script>
+<script src="../js/select2/select2.min.js"></script>
+<script src="../js/city.js"></script>
 
 <script src="../js/common.js"></script>
 
 <script>
-    /**
-     * 数量加
-     */
-    function filterAdd(el){
-        var $box = $(el).parent();
-        var $input = $(".filter-count-input", $box);
-        var value = Number($input.text());
-        $input.text(++value);
+
+    function getProvinces(){
+        var arr = [];
+        city.map(function(item){
+            arr.push(item.name);
+        });
+
+        return arr;
+    }
+
+    function getCityByProvinceName(name){
+        var arr = [];
+        var sub = [];
+
+        city.map(function(item){
+            if(name === item.name){
+                sub = item.sub;
+            }
+        });
+
+        sub.map(function(item){
+            arr.push(item.name);
+        });
+
+        return arr;
+
+    }
+
+    function getAreaByCityName(province, cityname){
+        var arr = [];
+        var sub = [];
+        var sub2 = [];
+
+        city.map(function(item){
+            if(province === item.name){
+                sub = item.sub;
+            }
+        });
+
+        sub.map(function(item){
+            if(cityname === item.name){
+                sub2 = item.sub;
+            }
+        });
+
+        sub2.map(function(item){
+            arr.push(item.name);
+        });
+
+        return arr;
+
+    }
+
+    function setProvince(){
+        var province = getProvinces();
+        var options = ["<option value='请选择'>选择所在省份</option>"];
+
+        province.map(function(item){
+            options.push("<option value='"+item+"'>"+item+"</option>")
+        });
+
+        $("#province").html(options.join(""));
+
+    }
+
+    function setCity(province){
+        var cities = getCityByProvinceName(province);
+        var options = ["<option value='请选择'>选择所在城市</option>"];
+
+        cities.map(function(item){
+            options.push("<option value='"+item+"'>"+item+"</option>")
+        });
+
+        $("#city").html(options.join(""));
+
+    }
+
+    function setArea(province, city){
+        var cities = getAreaByCityName(province, city);
+        var options = ["<option value='请选择'>选择所在区县</option>"];
+
+        cities.map(function(item){
+            options.push("<option value='"+item+"'>"+item+"</option>")
+        });
+
+        $("#area").html(options.join(""));
+
     }
 
     /**
-     * 数量加
+     *  关闭弹窗
      */
-    function filterSub(el){
-        var $box = $(el).parent();
-        var $input = $(".filter-count-input", $box);
-        var value = Number($input.text());
+    function closePopbox(){
+        var $mask = $(".mask");
+        var $popbox = $(".popbox");
 
-        if(value > 1){
-            value -= 1;
-        }
+        // $("body").css("overflow", "initial");
 
-        $input.text(value);
+        $popbox.removeClass("show");
+        $mask.fadeOut(500);
+
     }
+
+    /**
+     * 显示弹窗
+     */
+    function showDetail(id){
+        var $mask = $(".mask");
+        var $popbox = $("#"+id);
+
+        // $("body").css("overflow", "hidden");
+
+        $mask.fadeIn(function(){
+            $popbox.addClass("show");
+        })
+    }
+
+</script>
+
+<script>
+
+    $(function () {
+        setProvince();
+
+        $('#province').select2();
+
+        var province, city;
+
+        $('#province').on('select2:select', function (e) {
+            province = e.params.data.text;
+            setCity(province);
+        });
+
+        $('#city').select2();
+
+        $('#city').on('select2:select', function (e) {
+            city = e.params.data.text;
+            setArea(province, city);
+        });
+
+        $('#area').select2();
+    })
+    
+
 </script>
 
 </body>
