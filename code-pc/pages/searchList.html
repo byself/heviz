@@ -229,12 +229,7 @@
                 <dl>
                     <dt>关注分享</dt>
                     <dd>
-                        <div class="jiathis_style_24x24">
-                            <a class="jiathis_button_weixin icon-share"></a>
-                            <a class="jiathis_button_cqq icon-share"></a>
-                            <a class="jiathis_button_tsina icon-share"></a>
-                            <a class="jiathis_button_qzone icon-share"></a>
-                        </div>
+                        <div class="bshare-custom">                             <a class="bshare-weixin jtico"></a>                             <a class="bshare-qqim jtico"></a>                             <a class="bshare-sinaminiblog jtico"></a>                             <a class="bshare-qzone jtico"></a>                         </div>
                     </dd>
                 </dl>
                 <dl>
@@ -258,14 +253,82 @@
 
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<!-- JiaThis Share Button  -->
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- share -->
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&uuid=&pophcol=2lang=zh"></script> <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
 
 <script src="../js/swiper/js/swiper.min.js"></script>
 <script src="../js/videojs/video.min.js"></script>
 
 <script src="../js/common.js"></script>
 <script>
+
+    function waterfall() {
+        var $box = $(".waterfall");
+        var $ul = $box.find("ul");
+        var $items = $box.find("li");
+        var num = $items.length;
+
+        var height = [0, 0 ,0 ,0];
+
+        var width = $items.eq(0).width();
+
+        $items.css("position", "absolute");
+
+        $items.eq(0).css({
+            "left": 0,
+            "top": 0,
+        });
+
+        $items.eq(1).css({
+            "left": width,
+            "top": 0,
+        });
+
+        $items.eq(2).css({
+            "left": width*2,
+            "top": 0,
+        });
+
+        $items.eq(3).css({
+            "left": width*3,
+            "top": 0,
+        });
+
+        height[0] = $items.eq(0).height();
+        height[1] = $items.eq(1).height();
+        height[2] = $items.eq(2).height();
+        height[3] = $items.eq(3).height();
+
+        var min = function(a, b, c, d){
+            if(a < b && a < c && a < d) return 0;
+            if(b < a && b < c && b < d) return 1;
+            if(c < a && c < b && c < d) return 2;
+            if(d < a && d < b && d < c) return 3;
+            return 0;
+        };
+
+
+        for (var i = 4; i < num; i++) {
+
+            var h = $items.eq(i).height();
+
+            var col = min(height[0], height[1], height[2], height[3]);
+
+            $items.eq(i).css({
+                "left": width*col,
+                "top": height[col],
+            });
+
+            height[col] += h;
+
+        }
+
+        var ul_height = Math.max(height[0], Math.max(height[1], Math.max(height[2], height[3])));
+
+        $ul.height(ul_height);
+        $items.css("visibility", "visible");
+
+    }
 
     $(function(){
 
@@ -275,12 +338,13 @@
 
         swiper.on("tap", function(e){
             var $target = $(e.target).closest(".swiper-slide");
-
-            $target.addClass("on").siblings().removeClass("on");
-
-            alert($target.index());
-
+            if($target.index() > 0){
+                $target.addClass("on").siblings().removeClass("on");
+                alert($target.index());
+            }
         })
+
+        waterfall();
 
     });
 

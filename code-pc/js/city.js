@@ -12088,4 +12088,92 @@ var city = [
     ],
     "type": 0
   }
-]
+];
+
+function getProvinces(){
+    var arr = [];
+    city.map(function(item){
+        arr.push(item.name);
+    });
+
+    return arr;
+}
+
+function getCityByProvinceName(name){
+    var arr = [];
+    var sub = [];
+
+    city.map(function(item){
+        if(name === item.name){
+            sub = item.sub;
+        }
+    });
+
+    sub.map(function(item){
+        arr.push(item.name);
+    });
+
+    return arr;
+
+}
+
+function getAreaByCityName(province, cityname){
+    var arr = [];
+    var sub = [];
+    var sub2 = [];
+
+    city.map(function(item){
+        if(province === item.name){
+            sub = item.sub;
+        }
+    });
+
+    sub.map(function(item){
+        if(cityname === item.name){
+            sub2 = item.sub;
+        }
+    });
+
+    sub2.map(function(item){
+        arr.push(item.name);
+    });
+
+    return arr;
+
+}
+
+function setProvince(){
+    var province = getProvinces();
+    var options = ["<option value='请选择'>选择所在省份</option>"];
+
+    province.map(function(item){
+        options.push("<option value='"+item+"'>"+item+"</option>")
+    });
+
+    $("#province").html(options.join(""));
+
+}
+
+function setCity(province){
+    var cities = getCityByProvinceName(province);
+    var options = ["<option value='请选择'>选择所在城市</option>"];
+
+    cities.map(function(item){
+        options.push("<option value='"+item+"'>"+item+"</option>")
+    });
+
+    $("#city").html(options.join(""));
+
+}
+
+function setArea(province, city){
+    var cities = getAreaByCityName(province, city);
+    var options = ["<option value='请选择'>选择所在区县</option>"];
+
+    cities.map(function(item){
+        options.push("<option value='"+item+"'>"+item+"</option>")
+    });
+
+    $("#area").html(options.join(""));
+
+}

@@ -1,4 +1,33 @@
 /**
+ *  发送验证码倒计时
+ */
+
+function CountDown() {
+    var SECONDS = 60; // 倒计时描述
+
+    var $btn = $("#btnVcode");
+    var timer = null;
+
+    var text = SECONDS + "s后重新发送";
+    $btn.unbind().text(text);
+
+    var count = function(){
+        if(SECONDS > 0){
+            text = --SECONDS + "s后重新发送";
+        }else{
+            clearInterval(timer);
+            text = "发送验证码";
+            $btn.on("click", CountDown);
+        }
+
+        $btn.text(text);
+
+    };
+
+    timer = setInterval(count, 1000);
+}
+
+/**
  * 视频播放
  */
 function video(id) {

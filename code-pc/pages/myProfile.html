@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户中心</title>
+    <link rel="stylesheet" href="../css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="../js/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../js/videojs/video.min.css">
+    <link rel="stylesheet" href="../js/select2/select2.min.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css" />
+</head>
+<body>
+<div class="topbar">
+    <div class="container">
+        <div class="fl topbar-l">
+            <a href="" class="topbar-item">最新消息（10）</a>
+            <a href="javascript:void(0);" class="topbar-item" id="top-search-btn">搜索 <img src="../images/icon-search.png" width="14" height="14" alt=""></a>
+        </div>
+        <div class="fr topbar-r">
+            <a href="" class="topbar-item">我的订单</a>|<a href="" class="topbar-item">我的账户</a>|<a href="" class="topbar-item">我的愿意清单</a>
+        </div>
+        <!-- 顶部搜索框 -->
+        <div class="top-search">
+            <input type="text" value="" /><button></button>
+        </div>
+    </div>
+</div>
+<div class="logo">
+    <div class="container">
+        <a href=""><img src="../images/logo.png" alt=""></a>
+        <a href="javascript:void(0)" class="top-cart">
+            <img class="icon" src="../images/icon-cart.png" alt="">我的购物车
+        </a>
+    </div>
+</div>
+<div class="nav">
+    <div class="nav-menu on">
+        <a class="nav-item" href="">首 页</a>
+    </div>
+    <div class="nav-menu">
+        <a class="nav-item" href="">系 列</a>
+        <div class="submenu">
+            <div class="fl submenu-series">
+                <h2><span>产品系列</span><a href="">了解更多></a></h2>
+                <ul>
+                    <li>
+                        <a href=""><img src="../images/img-menu.jpg" alt="" /><span>星座系列</span></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/img-menu.jpg" alt="" /><span>圆满系列</span></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/img-menu.jpg" alt="" /><span>其他系列</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl submenu-sort">
+                <h2><span>产品种类</span>></h2>
+                <ul>
+                    <li>
+                        <a href=""><img src="../images/img-menu2.jpg" alt="" /><span>项链</span></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/img-menu2.jpg" alt="" /><span>项链</span></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/img-menu2.jpg" alt="" /><span>项链</span></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/img-menu2.jpg" alt="" /><span>项链</span></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/img-menu2.jpg" alt="" /><span>项链</span></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/img-menu2.jpg" alt="" /><span>项链</span></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/img-menu2.jpg" alt="" /><span>项链</span></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/img-menu2.jpg" alt="" /><span>项链</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="nav-menu">
+        <a class="nav-item" href="">定 制</a>
+    </div>
+    <div class="nav-menu">
+        <a class="nav-item" href="">发 现</a>
+    </div>
+    <div class="nav-menu">
+        <a class="nav-item" href="">探索赫维兹</a>
+    </div>
+</div>
+
+<div class="position">
+    <div class="container">
+        <a href="">首页</a> > <span>个人中心</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="user-container">
+        <div class="user-nav">
+            <dl>
+                <dt>订单中心</dt>
+                <dd><a href="">我的订单</a></dd>
+                <dd><a href="">我的定制</a></dd>
+                <dd><a href="">售后服务</a></dd>
+                <dd><a href="">产品服务</a></dd>
+            </dl>
+            <dl>
+                <dt>我的资产</dt>
+                <dd><a href="">我的优惠券</a></dd>
+            </dl>
+            <dl>
+                <dt>个人中心</dt>
+                <dd class="on"><a href="">个人信息</a></dd>
+                <dd><a href="">修改密码</a></dd>
+                <dd><a href="">地址管理</a></dd>
+                <dd><a href="">邀请有礼</a></dd>
+                <dd><a href="">站内信</a></dd>
+            </dl>
+            <dl>
+                <dt>我的关注</dt>
+                <dd><a href="">商品收藏</a></dd>
+                <dd><a href="">发现收藏</a></dd>
+            </dl>
+        </div>
+        <div class="user-content">
+            <div class="user-title">
+                <h2>个人中心</h2>
+            </div>
+
+            <div class="user-profile">
+                <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <div class="headphoto">
+                                    <img src="../images/img05.png" alt=""><br/>修改头像
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>用户ID</th>
+                            <td><input type="text" readonly value="8676543"></td>
+                        </tr>
+                        <tr>
+                            <th>昵称</th>
+                            <td><input type="text" readonly value="张小盒"></td>
+                        </tr>
+                        <tr>
+                            <th>性别</th>
+                            <td>
+                                <div class="radios">
+                                    <label for="male" class="radio">
+                                        <input type="radio" name="gender" id="male" value=""/><span>男</span>
+                                    </label>
+                                    <label for="female" class="radio">
+                                        <input type="radio" name="gender" id="female" value=""/><span>女</span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>星座</th>
+                            <td>
+                                <div class="form-select">
+                                    <select name="" id="star">
+                                        <option value='0'>请选择</option>
+                                        <option value='1'>水瓶座</option>
+                                        <option value='2'>双鱼座</option>
+                                        <option value='3'>白羊座</option>
+                                        <option value='4'>金牛座</option>
+                                        <option value='5'>双子座</option>
+                                        <option value='6'>巨蟹座</option>
+                                        <option value='7'>狮子座</option>
+                                        <option value='8'>处女座</option>
+                                        <option value='9'>天秤座</option>
+                                        <option value='10'>天蝎座</option>
+                                        <option value='11'>射手座</option>
+                                        <option value='12'>摩羯座</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>生日</th>
+                            <td><input class="Wdate" type="text" placeholder="请选择生日" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})"></td>
+                        </tr>
+                        <tr>
+                            <th>城市</th>
+                            <td>
+                                <div class="form-select">
+                                    <select name="" id="province">
+                                        <option value='请选择'>选择所在省份</option>
+                                    </select>
+                                    <select name="" id="city">
+                                        <option value='请选择'>选择所在城市</option>
+                                    </select>
+                                    <select name="" id="area">
+                                        <option value='请选择'>选择所在区县</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>职业</th>
+                            <td><input type="text" value="" placeholder="请输入您的职业"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <a class="btn" href="javascript:void(0)">提交</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="user-nav-bottom">
+            <ul>
+                <li class="user-nav-bottom-1 on"><a href="javascript:void(0);">
+                    <i class="icon"></i>
+                    <h2>服务中心</h2>
+                    <p>邀请一个好友成功注册并绑定手机号即可获赠100元优惠卷</p>
+                </a></li>
+                <li class="user-nav-bottom-2"><a href="javascript:void(0);">
+                    <i class="icon"></i>
+                    <h2>邀请有礼</h2>
+                    <p>邀请一个好友成功注册并绑定手机号即可获赠100元优惠卷</p>
+                </a></li>
+                <li class="user-nav-bottom-3"><a href="javascript:void(0);">
+                    <i class="icon"></i>
+                    <h2>绑定手机号</h2>
+                    <p>1.方便平台与您取的联系<br/>2.获取更多会员服务</p>
+                </a></li>
+                <li class="user-nav-bottom-4"><a href="javascript:void(0);">
+                    <i class="icon"></i>
+                    <h2>产品服务</h2>
+                    <p>详细了解产品的品质、包装售后相关等其它的产品服务</p>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="bottom">
+    <div class="container">
+        <div class="fl bottom-l">
+            <div class="bottom-logo">
+                <a href=""><img src="../images/logo.png" alt=""></a>
+                <p>创始人凭借自己在艺术品收藏方面的深厚功底和对国际私人定制时尚的悉心研究，提出了“打造中国私人定制珠宝领导品牌”的公司愿景，以国际化的顶级设计及工艺团队打造独一无二的传世珠宝。</p>
+            </div>
+            <div class="bottom-nav">
+                <dl>
+                    <dt><a href="">网站地图</a></dt>
+                    <dd><a href="">产品细节</a></dd>
+                    <dd><a href="">定制栏目</a></dd>
+                    <dd><a href="">发现栏目</a></dd>
+                    <dd><a href="">探索赫维兹</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="">定制服务</a></dt>
+                    <dd><a href="">定制介绍</a></dd>
+                    <dd><a href="">专属设计</a></dd>
+                    <dd><a href="">定制流程</a></dd>
+                    <dd><a href="">常见问题</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="">服务声明</a></dt>
+                    <dd><a href="">隐私条款</a></dd>
+                    <dd><a href="">版权声明</a></dd>
+                    <dd><a href="">使用条款</a></dd>
+                    <dd><a href="">联系我们</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="">会员中心</a></dt>
+                    <dd><a href="">手机绑定</a></dd>
+                    <dd><a href="">邀请有礼</a></dd>
+                    <dd><a href="">联系客服</a></dd>
+                    <dd><a href="">产品服务</a></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="fr bottom-r">
+            <div class="bottom-card">
+                <p>客服时间：周一至周日，9：00至18：00</p>
+                <p>联系电话：021-00000000</p>
+                <p>电子邮箱：service@heviz.com</p>
+            </div>
+            <div class="bottom-social">
+                <dl>
+                    <dt>关注分享</dt>
+                    <dd>
+                        <div class="bshare-custom">                             <a class="bshare-weixin jtico"></a>                             <a class="bshare-qqim jtico"></a>                             <a class="bshare-sinaminiblog jtico"></a>                             <a class="bshare-qzone jtico"></a>                         </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>手机网站</dt>
+                    <dd><img src="../images/erweima.png" alt=""></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottombar">
+    <div class="container">
+        <div class="fl bottombar-l">
+            <img class="icon" src="../images/icon-gongan.png" alt="">©2001-2014 Rayli.com All Right Reserved 版权所有 不得转载
+        </div>
+        <div class="fr bottombar-r">
+            <img class="icon" src="../images/icon-gongshang.png" alt="">沪 ICP证010512号
+        </div>
+    </div>
+</div>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- share -->
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&uuid=&pophcol=2lang=zh"></script> <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+
+<script src="../js/swiper/js/swiper.min.js"></script>
+<script src="../js/videojs/video.min.js"></script>
+<script src="../js/select2/select2.min.js"></script>
+<script src="../js/datepicker/WdatePicker.js"></script>
+<script src="../js/city.js"></script>
+
+<script src="../js/common.js"></script>
+
+
+<script>
+
+    $(function () {
+        setProvince();
+
+        $('#province').select2({
+            width: "142"
+        });
+
+        var province, city;
+
+        $('#province').on('select2:select', function (e) {
+            province = e.params.data.text;
+            setCity(province);
+        });
+
+        $('#city').select2({
+            width: "142"
+        });
+
+        $('#city').on('select2:select', function (e) {
+            city = e.params.data.text;
+            setArea(province, city);
+        });
+
+        $('#area').select2({
+            width: "142"
+        });
+
+        $('#star').select2({
+            width: "454"
+        });
+    })
+
+
+</script>
+
+</body>
+</html>

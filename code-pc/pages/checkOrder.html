@@ -322,12 +322,7 @@
                 <dl>
                     <dt>关注分享</dt>
                     <dd>
-                        <div class="jiathis_style_24x24">
-                            <a class="jiathis_button_weixin icon-share"></a>
-                            <a class="jiathis_button_cqq icon-share"></a>
-                            <a class="jiathis_button_tsina icon-share"></a>
-                            <a class="jiathis_button_qzone icon-share"></a>
-                        </div>
+                        <div class="bshare-custom">                             <a class="bshare-weixin jtico"></a>                             <a class="bshare-qqim jtico"></a>                             <a class="bshare-sinaminiblog jtico"></a>                             <a class="bshare-qzone jtico"></a>                         </div>
                     </dd>
                 </dl>
                 <dl>
@@ -485,8 +480,8 @@
 
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<!-- JiaThis Share Button  -->
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- share -->
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&uuid=&pophcol=2lang=zh"></script> <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
 
 <script src="../js/swiper/js/swiper.min.js"></script>
 <script src="../js/videojs/video.min.js"></script>
@@ -496,94 +491,6 @@
 <script src="../js/common.js"></script>
 
 <script>
-
-    function getProvinces(){
-        var arr = [];
-        city.map(function(item){
-            arr.push(item.name);
-        });
-
-        return arr;
-    }
-
-    function getCityByProvinceName(name){
-        var arr = [];
-        var sub = [];
-
-        city.map(function(item){
-            if(name === item.name){
-                sub = item.sub;
-            }
-        });
-
-        sub.map(function(item){
-            arr.push(item.name);
-        });
-
-        return arr;
-
-    }
-
-    function getAreaByCityName(province, cityname){
-        var arr = [];
-        var sub = [];
-        var sub2 = [];
-
-        city.map(function(item){
-            if(province === item.name){
-                sub = item.sub;
-            }
-        });
-
-        sub.map(function(item){
-            if(cityname === item.name){
-                sub2 = item.sub;
-            }
-        });
-
-        sub2.map(function(item){
-            arr.push(item.name);
-        });
-
-        return arr;
-
-    }
-
-    function setProvince(){
-        var province = getProvinces();
-        var options = ["<option value='请选择'>选择所在省份</option>"];
-
-        province.map(function(item){
-            options.push("<option value='"+item+"'>"+item+"</option>")
-        });
-
-        $("#province").html(options.join(""));
-
-    }
-
-    function setCity(province){
-        var cities = getCityByProvinceName(province);
-        var options = ["<option value='请选择'>选择所在城市</option>"];
-
-        cities.map(function(item){
-            options.push("<option value='"+item+"'>"+item+"</option>")
-        });
-
-        $("#city").html(options.join(""));
-
-    }
-
-    function setArea(province, city){
-        var cities = getAreaByCityName(province, city);
-        var options = ["<option value='请选择'>选择所在区县</option>"];
-
-        cities.map(function(item){
-            options.push("<option value='"+item+"'>"+item+"</option>")
-        });
-
-        $("#area").html(options.join(""));
-
-    }
 
     /**
      *  关闭弹窗
@@ -620,7 +527,9 @@
     $(function () {
         setProvince();
 
-        $('#province').select2();
+        $('#province').select2({
+            width:"120"
+        });
 
         var province, city;
 
@@ -629,14 +538,18 @@
             setCity(province);
         });
 
-        $('#city').select2();
+        $('#city').select2({
+            width:"120"
+        });
 
         $('#city').on('select2:select', function (e) {
             city = e.params.data.text;
             setArea(province, city);
         });
 
-        $('#area').select2();
+        $('#area').select2({
+            width:"120"
+        });
     })
     
 
