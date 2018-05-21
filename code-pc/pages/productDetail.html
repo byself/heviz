@@ -111,6 +111,9 @@
                 <div class="pro-swiper-thumb">
                     <div class="swiper-container pro-swiper-container">
                         <div class="swiper-wrapper">
+                            <div class="swiper-slide on" style="background-image: url('../images/img08.jpg')"></div>
+                            <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
+                            <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
                             <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
                             <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
                             <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
@@ -201,9 +204,9 @@
                     <img src="../images/img-diy-02.jpg" alt="">
                 </div>
 
-                <div class="tab-item">
-                    <img src="../images/img-diy-03.jpg" alt="">
-                </div>
+                <!--<div class="tab-item">-->
+                    <!--<img src="../images/img-diy-03.jpg" alt="">-->
+                <!--</div>-->
 
             </div>
         </div>
@@ -211,7 +214,6 @@
     </div>
 
 </div>
-
 
 <div class="sku-tj">
     <div class="container">
@@ -378,6 +380,7 @@
 
     $(function(){
         var proSwiper = new Swiper('.pro-swiper-container', {
+            loop:true,
             slidesPerView: 3,
             direction : 'vertical',
             navigation: {
@@ -395,9 +398,15 @@
         $(".tabs").on("click", ".tab", function(){
             var $this = $(this);
             var index = $this.index();
-            $this.addClass("on").siblings().removeClass("on");
 
-            $(".tab-item").eq(index).show().siblings().hide();
+            if(index === 2){
+                var offsetTop = $(".sku-tj").offset().top;
+                $("html,body").animate({"scrollTop" : offsetTop}, 600);
+                // $(window).scrollTop(offsetTop);
+            }else{
+                $this.addClass("on").siblings().removeClass("on");
+                $(".tab-item").eq(index).show().siblings().hide();
+            }
 
         });
 

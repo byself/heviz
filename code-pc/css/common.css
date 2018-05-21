@@ -584,7 +584,18 @@ img{
   border:2px solid #efebf3;
 }
 
+.video-poster:hover::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color:rgba(0,0,0,.4);
+}
+
 .video-poster .icon{
+  z-index:99;
   position: absolute;
   left: 0;
   right: 0;
@@ -890,6 +901,10 @@ img{
   transition: all .3s ease-in;
   overflow: hidden;
   cursor: pointer;
+}
+
+.shutter-item a{
+  color:#333;
 }
 
 .shutter-item .mask{
@@ -5002,4 +5017,46 @@ img{
 
 .diy-photo-step2-right .diy-form-protocol{
   margin-left:12px;
+}
+
+.banner-swiper-button-prev,
+.banner-swiper-button-next{
+  margin-top:-35px;
+  width:38px;
+  height:70px;
+  background-size: 20px;
+  background-color:rgba(0,0,0,.5);
+  opacity:.5;
+}
+
+.banner-swiper-button-prev:hover,
+.banner-swiper-button-next:hover{
+  background-color:rgba(0,0,0,1);
+  opacity:1;
+}
+
+.banner-swiper-button-prev{
+  left:50%!important;
+  margin-left:-600px;
+  background-image:url("../images/icon-arrow-left.png");
+
+}
+
+.banner-swiper-button-next{
+  right:50%!important;
+  margin-right:-600px;
+  background-image:url("../images/icon-arrow-right.png");
+}
+
+.index-swiper-button-prev,
+.index-swiper-button-next{
+  opacity: 0;
+}
+
+.index-swiper-button-prev{
+  background-image:url("../images/icon-arrow-left.png");
+}
+
+.index-swiper-button-next{
+  background-image:url("../images/icon-arrow-right.png");
 }
