@@ -1,28 +1,30 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>首页</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-        <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>首页</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-        <!-- //
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- //
             1. 样式文件加载有先后顺序：normalize.css -> common.css
             2. normalize.css是重置样式，必须首先被加载；
             3. main.css是公共样式;
          //-->
-        <link rel="stylesheet" href="../../css/normalize.css">
-        <link rel="stylesheet" href="../..//js/vendor/swiper/css/swiper.min.css">
-        <link rel="stylesheet" href="../..//js/vendor/videojs/video.min.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../..//js/vendor/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../..//js/vendor/videojs/video.min.css">
 
-        <link rel="stylesheet" href="../../css/common.css">
-        <link rel="stylesheet" href="../../css/index.css">
-    </head>
-    <body>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
 
     <div class="app">
 
@@ -33,45 +35,58 @@
 
             <div class="head-left">
                 <div class="bell-box">
-                    <div class="bell-count"><span>6</span></div>
+                    <div class="bell-count">
+                        <span>6</span>
+                    </div>
                 </div>
             </div>
 
             <div class="head-right">
                 <div class="cart-box">
-                    <div class="cart-count"><span>6</span></div>
+                    <div class="cart-count">
+                        <span>6</span>
+                    </div>
                 </div>
             </div>
         </header>
 
         <main class="main" id="main">
-            <div class="index-mod" id="mod1">
-                <div class="video-container">
-                    <!--<div class="video-poster">-->
-                        <!--<img src="../../images/thumb-video.jpg" alt="">-->
-                        <!--<img class="icon" onclick="video()" src="../../images/icon-video.png" alt="">-->
-                    <!--</div>-->
-                    <div class="video-box" id="videoBox">
-                        <!--<video id="video" class="video-js vjs-big-play-centered"></video>-->
-                    </div>
-
-                    <video src="http://vjs.zencdn.net/v/oceans.mp4" controls="controls" muted="muted" autoplay="autoplay"></video>
-                </div>
-            </div>
-
-            <div class="index-mod" id="mod2">
-                <a href=""><img src="../images/img01.jpg" alt=""></a>
-            </div>
 
             <div class="page-slide">
                 <!-- Swiper -->
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image: url('../../images/slide01.jpg')"><a class="link" href=""></a></div>
-                        <div class="swiper-slide" style="background-image: url('../../images/slide02.jpg')"><a class="link" href=""></a></div>
-                        <div class="swiper-slide" style="background-image: url('../../images/slide03.jpg')"><a class="link" href=""></a></div>
-                        <div class="swiper-slide" style="background-image: url('../../images/slide04.jpg')"><a class="link" href=""></a></div>
-                        <div class="swiper-slide" style="background-image: url('../../images/slide05.jpg')"><a class="link" href=""></a></div>
+                        <div class="swiper-slide swiper-slide-1">
+                            <div class="video-container">
+                                <div class="video-poster">
+                                    <img id="video-thumb" src="../../images/thumb-video.jpg" alt="">
+                                    <img class="icon" onclick="video()" src="../../images/icon-video.png" alt="">
+                                </div>
+                                <div class="video-box" id="videoBox">
+                                    <video id="video" class="video-js vjs-big-play-centered"></video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-2">
+                            <a href="">
+                                <img id="ad" src="/images/img01.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide01.jpg')">
+                            <a class="link" href=""></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide02.jpg')">
+                            <a class="link" href=""></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide03.jpg')">
+                            <a class="link" href=""></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide04.jpg')">
+                            <a class="link" href=""></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('../../images/slide05.jpg')">
+                            <a class="link" href=""></a>
+                        </div>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -104,79 +119,123 @@
             </div>
         </footer>
     </div>
-        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
-        <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
-        <script src="../../js/vendor/videojs/video.min.js"></script>
-        <script src="../../js/main.js"></script>
+    <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="../../js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../../js/vendor/videojs/video.min.js"></script>
+    <script src="../../js/main.js"></script>
 
-        <script>
+    <script>
 
-            /**
-             * 视频播放
-             */
-            function video() {
-                $("#videoBox").show();
-                videojs("video", {
-                    autoplay: true,
-                    loop: true,
-                    muted: true,
-                    preload: "auto",
-                    fluid: true,
-                    controls: true,
-                    sources: [{
-                        src: 'http://vjs.zencdn.net/v/oceans.mp4',
-                        type: 'video/mp4'
-                    }, {
-                        src: 'http://vjs.zencdn.net/v/oceans.webm',
-                        type: 'video/webm'
-                    }]
-                }, function onPlayerReady() {
+        /**
+         * 视频播放
+         */
+        function video() {
+            $("#videoBox").show();
+            videojs("video", {
+                autoplay: true,
+                loop: true,
+                muted: true,
+                preload: "auto",
+                fluid: true,
+                controls: true,
+                sources: [{
+                    src: 'http://vjs.zencdn.net/v/oceans.mp4',
+                    type: 'video/mp4'
+                }, {
+                    src: 'http://vjs.zencdn.net/v/oceans.webm',
+                    type: 'video/webm'
+                }]
+            }, function onPlayerReady() {
 
-                    $("#videoBox").css("opacity", 1);
-                    this.play();
+                $("#videoBox").css("opacity", 1);
+                this.play();
 
-                    this.on("fullscreenchange", function(){
-//                        $("#videoBox").css("opacity", 0);
-                    })
-                });
-            }
+                this.on("fullscreenchange", function () {
+                    //                        $("#videoBox").css("opacity", 0);
+                })
+            });
+        }
 
-            $(function(){
+        $(function () {
 
-                //video();
+            //video();
 
-                $(".page-slide").height(window.innerHeight);
+            $(".page-slide").height(window.innerHeight);
 
-                var pageSwiper = new Swiper('.swiper-container', {
-                    direction: 'vertical',
-                    allowTouchMove: false,
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    pagination: {
-                        el: '.swiper-pagination'
-                    }
-                });
+            var win_width = window.innerWidth;
 
-                // 向下滚动到第一屏时，禁用swiper的touch事件
-                pageSwiper.on("touchEnd", function(e){
-                    if(pageSwiper.activeIndex === 0 && pageSwiper.touches.diff > 0){
-                        var offsetTop = $(".page-slide").offset().top;
-                        $("html,body").animate({"scrollTop": offsetTop-window.innerHeight+66}, 1000);
-                    }
-                });
+            var thumb_width = $("#video-thumb").width();
+            var thumb_height = $("#video-thumb").height();
 
-                $(window).scroll(function(){
-                    var scrollTop = window.scrollY;
-                    var offsetTop = $(".page-slide").offset().top;
+            var ad_width = $("#ad").width();
+            var ad_height = $("#ad").height();
 
-                    if(  Math.abs( offsetTop - scrollTop) < 1 ){
-                        pageSwiper.allowTouchMove = true;
-                    }
-                });
+            var slide_1_height = (win_width * thumb_height) / thumb_width;
+            var slide_2_height = (win_width * ad_height) / ad_width;
 
+            $(".swiper-slide-1").height(slide_1_height)
+            $(".swiper-slide-2").height(slide_2_height)
+
+            var pageSwiper = new Swiper('.swiper-container', {
+                touchRatio: 1,
+                direction: 'vertical',
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                pagination: {
+                    el: '.swiper-pagination'
+                },
+                on: {
+                    init: function () {
+
+                    },
+                }
             });
 
-        </script>
-    </body>
+            var $head = $(".head");
+            var $foot = $(".foot");
+            var $pagination = $(".page-slide .swiper-pagination");
+
+            pageSwiper.on("touchEnd", function (e) {
+                if (pageSwiper.activeIndex === 1 && pageSwiper.touches.diff >= 0) {
+                    $head.removeClass("hide-head");
+                    $foot.removeClass("hide-foot");
+                }
+
+                if (pageSwiper.activeIndex === 0 && pageSwiper.touches.diff < 0) {
+                    $head.addClass("hide-head");
+                    $foot.addClass("hide-foot");
+                }
+
+                if (pageSwiper.activeIndex >= 2 && pageSwiper.touches.diff < 0) {
+                    $pagination.fadeIn();
+                }
+
+                if (pageSwiper.activeIndex <= 2 && pageSwiper.touches.diff > 0) {
+                    $pagination.fadeOut();
+                }
+            });
+
+            // 向下滚动到第一屏时，禁用swiper的touch事件
+            // pageSwiper.on("touchEnd", function (e) {
+            //     if (pageSwiper.activeIndex === 0 && pageSwiper.touches.diff > 0) {
+            //         var offsetTop = $(".page-slide").offset().top;
+            //         $("html,body").animate({ "scrollTop": offsetTop - window.innerHeight + 66 }, 1000);
+            //     }
+            // });
+
+            // $(window).scroll(function () {
+            //     var scrollTop = window.scrollY;
+            //     var offsetTop = $(".page-slide").offset().top;
+
+            //     if (Math.abs(offsetTop - scrollTop) < 1) {
+            //         pageSwiper.allowTouchMove = true;
+            //     }
+            // });
+
+        });
+
+    </script>
+</body>
+
 </html>

@@ -2,124 +2,133 @@
     create by wangzili on 2018/1/23
  */
 
-.main{
-    padding: 0;
+.main {
+  padding: 0;
 }
 
-.head{
-    z-index: 999;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 2.8rem;
-    border-bottom: 1px solid #a3a3a3;
-    background-color: #FFF;
-    overflow: hidden;
-    transition: all .5s ease-out;
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    -ms-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
+.head {
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2.8rem;
+  border-bottom: 1px solid #a3a3a3;
+  background-color: #fff;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
 }
 
-.logo{
-    padding: .25rem 0;
-    text-align: center;
+.logo {
+  padding: 0.25rem 0;
+  text-align: center;
 }
 
-.logo img{
-    width: 110px;
-    height: auto;
-    vertical-align: middle;
+.logo img {
+  width: 110px;
+  height: auto;
+  vertical-align: middle;
 }
 
-.head-left{
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
+.head-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
-.bell-box{
-    position: relative;
-    margin: .75rem;
-    width: 1.25rem;
-    height: 1.25rem;
-    background: url("../images/icon-bells.png") no-repeat;
-    background-size: 100% auto;
+.bell-box {
+  position: relative;
+  margin: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: url('../images/icon-bells.png') no-repeat;
+  background-size: 100% auto;
 }
 
-.bell-count{
-    position: absolute;
-    right: -.3rem;
-    top: -.3rem;
-    min-width: .8rem;
-    height: .8rem;
-    line-height: .8rem;
-    font-size: .6rem;
-    color: #FFF;
-    border-radius: .4rem;
-    background-color: #f00;
-    text-align: center;
+.bell-count {
+  position: absolute;
+  right: -0.3rem;
+  top: -0.3rem;
+  min-width: 0.8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 0.6rem;
+  color: #fff;
+  border-radius: 0.4rem;
+  background-color: #f00;
+  text-align: center;
 }
 
-.bell-count span{
-    padding:0 4px;
+.bell-count span {
+  padding: 0 4px;
 }
 
-.head-right{
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
+.head-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
-.cart-box{
-    position: relative;
-    margin: .75rem;
-    width: 1.25rem;
-    height: 1.25rem;
-    background: url("../images/icon-cart.png") no-repeat;
-    background-size: 100% auto;
+.cart-box {
+  position: relative;
+  margin: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: url('../images/icon-cart.png') no-repeat;
+  background-size: 100% auto;
 }
 
-.cart-count{
-    position: absolute;
-    right: -.3rem;
-    top: -.3rem;
-    min-width: .8rem;
-    height: .8rem;
-    line-height: .8rem;
-    font-size: .6rem;
-    color: #FFF;
-    border-radius: .4rem;
-    background-color: #f00;
-    text-align: center;
+.cart-count {
+  position: absolute;
+  right: -0.3rem;
+  top: -0.3rem;
+  min-width: 0.8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 0.6rem;
+  color: #fff;
+  border-radius: 0.4rem;
+  background-color: #f00;
+  text-align: center;
 }
 
-.cart-count span{
-    padding:0 4px;
+.cart-count span {
+  padding: 0 4px;
 }
 
-.index-mod{
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+.index-mod {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.index-mod img{
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
+.index-mod img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 /* videojs样式重写 */
-.video-dimensions.vjs-fluid{
-    padding-top: 133.5%;
+.video-dimensions.vjs-fluid {
+  padding-top: 133.5%;
 }
 
 /* swiper样式重写 */
-.page-slide .swiper-slide .link{
-    display: block;
-    height: 100%;
+.page-slide .swiper-slide .link {
+  display: block;
+  height: 100%;
+}
+
+.page-slide .swiper-pagination {
+  display: none;
+}
+
+.page-slide .swiper-pagination .swiper-pagination-bullet:nth-child(1),
+.page-slide .swiper-pagination .swiper-pagination-bullet:nth-child(2) {
+  display: none;
 }

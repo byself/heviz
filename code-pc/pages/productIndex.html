@@ -111,6 +111,9 @@
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination-new banner-swiper-pagination"></div>
+
+        <div class="banner-swiper-button-prev swiper-button-prev"></div>
+        <div class="banner-swiper-button-next swiper-button-next"></div>
     </div>
 </div>
 
@@ -347,6 +350,10 @@
             loop : true,
             pagination: {
                 el: '.banner-swiper-pagination'
+            },
+            navigation: {
+                nextEl: '.banner-swiper-button-next',
+                prevEl: '.banner-swiper-button-prev',
             }
         });
     })

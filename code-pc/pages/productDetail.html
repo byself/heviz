@@ -111,12 +111,12 @@
                 <div class="pro-swiper-thumb">
                     <div class="swiper-container pro-swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide on" style="background-image: url('../images/img08.jpg')"></div>
-                            <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
-                            <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
-                            <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
-                            <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
-                            <div class="swiper-slide" style="background-image: url('../images/img08.jpg')"></div>
+                            <div class="swiper-slide on" data-src="../images/img08.jpg" style="background-image: url('../images/img08.jpg')"></div>
+                            <div class="swiper-slide" data-src="../images/img11.jpg" style="background-image: url('../images/img08.jpg')"></div>
+                            <div class="swiper-slide" data-src="../images/img08.jpg" style="background-image: url('../images/img08.jpg')"></div>
+                            <div class="swiper-slide" data-src="../images/img08.jpg" style="background-image: url('../images/img08.jpg')"></div>
+                            <div class="swiper-slide" data-src="../images/img08.jpg" style="background-image: url('../images/img08.jpg')"></div>
+                            <div class="swiper-slide" data-src="../images/img08.jpg" style="background-image: url('../images/img08.jpg')"></div>
                         </div>
                     </div>
                     <div class="pro-swiper-prev"></div>
@@ -380,7 +380,7 @@
 
     $(function(){
         var proSwiper = new Swiper('.pro-swiper-container', {
-            loop:true,
+            // loop:true,
             slidesPerView: 3,
             direction : 'vertical',
             navigation: {
@@ -391,8 +391,35 @@
 
         proSwiper.on('click', function(e){
             var $target = $(e.target).closest(".swiper-slide");
+            var src = $target.data("src");
             $target.addClass("on").siblings().removeClass("on");
             // alert($target.index() &3);
+            $(".pro-swiper-show img").attr("src", src);
+        });
+
+        proSwiper.navigation.$nextEl.on("click", function(){
+            var slides = $(".pro-swiper-thumb .swiper-slide");
+            var length = slides.length;
+            var index = $(".pro-swiper-thumb .swiper-slide.on").index();
+            if(index + 1 === length ) return;
+            $(".pro-swiper-thumb .swiper-slide.on").removeClass("on");
+            slides.eq(index+1).addClass("on");
+
+            var src = slides.eq(index+1).data("src");
+            $(".pro-swiper-show img").attr("src", src);
+        });
+
+        proSwiper.navigation.$prevEl.on("click", function(){
+            var slides = $(".pro-swiper-thumb .swiper-slide");
+            var length = slides.length;
+            var index = $(".pro-swiper-thumb .swiper-slide.on").index();
+            if(index === 0 ) return;
+            $(".pro-swiper-thumb .swiper-slide.on").removeClass("on");
+            slides.eq(index-1).addClass("on");
+
+            var src = slides.eq(index-1).data("src");
+            $(".pro-swiper-show img").attr("src", src);
+
         });
 
         $(".tabs").on("click", ".tab", function(){
